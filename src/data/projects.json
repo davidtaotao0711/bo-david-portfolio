@@ -648,21 +648,8 @@
     "year": "2025",
     "location": "",
     "description": "",
-    "cover": "gh-e84637589700c97bd3c1",
+    "cover": "gh-c0fe89379528cb8a5164",
     "images": [
-      {
-        "id": "gh-42043a2381e101cf3994",
-        "src": "/images/originals/github/08c87849ea4f9aecb3d26e24afa10171dd12652c.jpg",
-        "width": 1704,
-        "height": 2557,
-        "alt": "B&W photograph 1 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-001",
-          "path": "/images/series/b-and-w/001.jpg",
-          "blob": "08c87849ea4f9aecb3d26e24afa10171dd12652c"
-        }
-      },
       {
         "id": "gh-c0fe89379528cb8a5164",
         "src": "/images/originals/github/c1cddb42789bcee9aed8ceeae56d27ba3cd52816.jpg",
@@ -674,6 +661,19 @@
           "photoId": "b-and-w-002",
           "path": "/images/series/b-and-w/002.jpg",
           "blob": "c1cddb42789bcee9aed8ceeae56d27ba3cd52816"
+        }
+      },
+      {
+        "id": "gh-42043a2381e101cf3994",
+        "src": "/images/originals/github/08c87849ea4f9aecb3d26e24afa10171dd12652c.jpg",
+        "width": 1704,
+        "height": 2557,
+        "alt": "B&W photograph 1 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-001",
+          "path": "/images/series/b-and-w/001.jpg",
+          "blob": "08c87849ea4f9aecb3d26e24afa10171dd12652c"
         }
       },
       {
