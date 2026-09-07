@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>本地编辑器 — BO DAVID</title><link rel="stylesheet" href="/__editor/assets/style.css" /></head>
+  <body>
+    <header class="editor-header"><a href="/">BO DAVID</a><span>本地编辑器</span><a href="/?mode=overview" target="_blank" rel="noopener">查看网站 ↗</a></header>
+    <div class="editor-layout">
+      <aside><h2>项目</h2><p class="muted">上下移动可调整网站中的项目顺序。</p><nav id="project-list" aria-label="选择项目"></nav></aside>
+      <main>
+        <div class="project-heading"><div><p class="eyebrow">照片与顺序</p><h1 id="project-name">正在读取项目…</h1><p id="project-count" class="muted"></p></div><a id="project-preview" target="_blank" rel="noopener">预览项目 ↗</a></div>
+        <div class="toolbar">
+          <button id="github-sync" disabled>从 GitHub 同步</button>
+          <label class="button upload-label" for="upload">上传照片<input id="upload" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" /></label>
+          <button id="save" class="primary" disabled>保存顺序与封面</button>
+          <button id="discard" disabled>撤销未保存调整</button>
+          <button id="clear-placeholders" disabled>移除测试色块</button>
+        </div>
+        <p class="help">可一次选择多张照片。拖拽照片排序，或使用每张图下方的前移 / 后移按钮。</p>
+        <p class="help">支持 JPEG、PNG、WebP、AVIF，单张不超过 40 MB。上传成功即保存；顺序和封面调整需点击保存。</p>
+        <p class="help">GitHub 来源：davidtaotao0711/bo-photography。同步新增及变化的照片，保留本地顺序和封面。未分组照片进入 Unassigned；不会自动删除照片。</p>
+        <progress id="sync-progress" hidden aria-label="GitHub 同步进度"></progress>
+        <p id="status" role="status" aria-live="polite">正在读取本地内容。</p>
+        <div id="photo-grid" aria-label="照片排序"></div>
+        <p class="storage-note">照片和修改保存在此项目文件夹内。每次保存都会保留一份修改前的数据备份。</p>
+      </main>
+    </div>
+    <script type="module" src="/__editor/assets/editor.js"></script>
+  </body>
+</html>

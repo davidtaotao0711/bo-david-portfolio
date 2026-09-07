@@ -1,0 +1,61 @@
+---
+import Header from './Header.astro';
+import Photo from './Photo.astro';
+import { projects } from '../data/projects';
+import { profile } from '../data/profile';
+const currentProject = projects.find(project => `/${project.slug}` === Astro.url.pathname.replace(/\/$/, ''));
+---
+<Header />
+<main id="main" tabindex="-1"></main>
+<template id="overview-template">
+  <div class="archive overview" aria-label="Overview — all photographs">
+    {projects.map((project, p) => <>
+      {p > 0 && <span class="archive-space" aria-hidden="true"></span>}
+      {project.images.map((image, i) => <a class="archive-image" href={`/${project.slug}?s=${i}`} data-project={project.slug} data-image={i} id={`photo-${image.id}`} aria-label={`${project.title}, image ${i + 1}`}>
+        <Photo image={image} eager={p === 0 && i < 10} />
+      </a>)}
+    </>)}
+  </div>
+</template>
+<template id="grid-template">
+  <div class="archive index-grid" aria-label="Index — projects">
+    {projects.map((project, p) => <>
+      {(p === 3 || p === 5) && <span class="archive-space" aria-hidden="true"></span>}
+      <a class="archive-image project-cover" href={`/${project.slug}?s=${project.images.findIndex(i => i.id === project.cover)}`} data-project={project.slug} id={`photo-${project.cover}`} aria-label={project.title}>
+        <Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} eager={p < 3} />
+        <span class="cover-caption">{project.title}</span>
+      </a>
+    </>)}
+  </div>
+</template>
+<template id="information-template">
+  <section class="information" aria-label="About BO DAVID">
+    <h1>{profile.name}</h1>
+    <p>{profile.role}<br />{profile.location}</p>
+    <p class="contact-links">
+      {profile.email ? <a href={`mailto:${profile.email}`}>Email</a> : <span title="Contact details forthcoming">Email</span>}
+      {profile.instagram ? <a href={profile.instagram} target="_blank" rel="noopener noreferrer">Instagram</a> : <span title="Profile forthcoming">Instagram</span>}
+      {profile.xiaohongshu ? <a href={profile.xiaohongshu} target="_blank" rel="noopener noreferrer">Xiaohongshu</a> : <span title="Profile forthcoming">Xiaohongshu</span>}
+    </p>
+    <p class="introduction">{profile.introduction}</p>
+  </section>
+</template>
+<template id="viewer-template">
+  <section class="viewer" aria-label="Project viewer">
+    <header class="viewer-header"><h1 id="project-title"></h1><a id="close-viewer" href="/?mode=grid">Close</a></header>
+    <div class="image-stage">
+      <div id="current-photo"></div>
+      <button class="image-hit previous-image" aria-label="Previous image"></button>
+      <button class="image-hit next-image" aria-label="Next image"></button>
+    </div>
+    <nav class="project-navigation" aria-label="Adjacent projects">
+      <a id="previous-project">Prev</a><a id="next-project">Next</a>
+    </nav>
+    <p class="sr-only" id="image-status" aria-live="polite" aria-atomic="true"></p>
+  </section>
+</template>
+<noscript><div class="archive index-grid">
+  {currentProject ? currentProject.images.map(image => <Photo image={image} thumbnail={false} />) : projects.map(project => <a href={`/${project.slug}?s=0`}><Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} /></a>)}
+  <p>Enable JavaScript to browse image sequences and the contact sheet.</p>
+</div><style>.photo img{opacity:1}</style></noscript>
+<script>import '../scripts/portfolio';</script>

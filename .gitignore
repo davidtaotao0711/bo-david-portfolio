@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+public/images/generated/
+src/data/image-manifest.json
+.cache/
+.env
+.env.*
+!.env.example
+.vercel/

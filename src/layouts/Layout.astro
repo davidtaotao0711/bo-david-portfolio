@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string }
+const { title = 'BO DAVID — Photographer', description = 'Photographic projects by BO DAVID. Shanghai.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#fafafa" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+  </head>
+  <body><slot /><script>
+    const reveal = (image: HTMLImageElement) => {
+      image.decode().then(() => image.classList.add('decoded')).catch(() => { if (image.complete && image.naturalWidth) image.classList.add('decoded'); });
+    };
+    document.querySelectorAll<HTMLImageElement>('.photo img').forEach(image => {
+      if (image.complete) reveal(image);
+      else image.addEventListener('load', () => reveal(image), { once: true });
+    });
+  </script></body>
+</html>
