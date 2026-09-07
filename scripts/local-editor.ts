@@ -2,7 +2,7 @@ import type { AstroIntegration } from 'astro';
 import type { IncomingMessage } from 'node:http';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
-import { transpileModule, ScriptTarget, ModuleKind } from 'typescript';
+import { build } from 'esbuild';
 import { EditorStore, EditorError } from './editor-store';
 import { GitHubSync } from './github-sync';
 
@@ -44,7 +44,7 @@ export default function localEditor(root: URL): AstroIntegration {
             const asset = assets[url.pathname];
             if (request.method === 'GET' && asset) {
               let content = await readFile(new URL(asset[0], root), 'utf8');
-              if (asset[0].endsWith('.ts')) content = transpileModule(content, { compilerOptions: { target: ScriptTarget.ES2022, module: ModuleKind.ESNext } }).outputText;
+              if (asset[0].endsWith('.ts')) content = (await build({ entryPoints: [fileURLToPath(new URL(asset[0], root))], bundle: true, write: false, platform: 'browser', format: 'esm', target: 'es2022' })).outputFiles[0].text;
               response.writeHead(200, { 'Content-Type': asset[1], 'Cache-Control': 'no-store' }); response.end(content); return;
             }
             if (request.method === 'GET' && url.pathname === '/__editor/state') return send(200, await store.snapshot());

@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": { "node": "24.x" },
   "scripts": {
     "dev": "npm run images && astro dev --host 127.0.0.1",
-    "build": "npm run images && astro build",
+    "build": "npm run images && astro build && tsx scripts/export-editor.ts",
     "preview": "astro preview --host 127.0.0.1",
     "typecheck": "astro check",
     "images": "tsx scripts/images.ts",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^24.0.0",
+    "esbuild": "^0.28.2",
     "sharp": "^0.35.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"

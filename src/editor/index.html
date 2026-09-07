@@ -3,13 +3,28 @@
   <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>本地编辑器 — BO DAVID</title><link rel="stylesheet" href="/__editor/assets/style.css" /></head>
   <body>
     <header class="editor-header"><a href="/">BO DAVID</a><span>本地编辑器</span><a href="/?mode=overview" target="_blank" rel="noopener">查看网站 ↗</a></header>
+    <section id="github-login" hidden>
+      <h1>连接你的 GitHub</h1>
+      <p>连接私有仓库 davidtaotao0711/bo-david-portfolio，上传照片并保存顺序。</p>
+      <form id="connect-form">
+        <label for="github-token">GitHub 访问令牌</label>
+        <input id="github-token" type="password" autocomplete="off" required placeholder="Fine-grained personal access token" />
+        <details><summary>可选：连接旧仓库用于同步照片</summary><label for="github-source-token">来源仓库只读令牌</label><input id="github-source-token" type="password" autocomplete="off" placeholder="仅授权 bo-photography 的 Contents 读取权限" /></details>
+        <button id="connect" class="primary" type="submit">连接 GitHub</button>
+      </form>
+      <p id="login-status" role="status"></p>
+      <p class="help">令牌只保存在当前标签页内存中，直接用于请求 GitHub。刷新或关闭页面后需要重新连接。</p>
+      <details><summary>首次连接说明</summary><p>在 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">GitHub 创建细粒度访问令牌 ↗</a>，仅选择 bo-david-portfolio 仓库，授予 Contents（内容）读写权限，即可上传和排序。使用“从 GitHub 同步”时，可另建一个仅允许读取 bo-photography 的令牌，填入可选项。</p><p>完成后将令牌粘贴到上方。只有对私有仓库有相应权限的账号能编辑。</p></details>
+    </section>
     <div class="editor-layout">
       <aside><h2>项目</h2><p class="muted">上下移动可调整网站中的项目顺序。</p><nav id="project-list" aria-label="选择项目"></nav></aside>
       <main>
         <div class="project-heading"><div><p class="eyebrow">照片与顺序</p><h1 id="project-name">正在读取项目…</h1><p id="project-count" class="muted"></p></div><a id="project-preview" target="_blank" rel="noopener">预览项目 ↗</a></div>
         <div class="toolbar">
+          <button id="refresh-content" hidden>刷新内容</button>
+          <button id="disconnect" hidden>断开连接</button>
           <button id="github-sync" disabled>从 GitHub 同步</button>
-          <label class="button upload-label" for="upload">上传照片<input id="upload" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" /></label>
+          <label class="button upload-label" for="upload">上传照片<input id="upload" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" disabled /></label>
           <button id="save" class="primary" disabled>保存顺序与封面</button>
           <button id="discard" disabled>撤销未保存调整</button>
           <button id="clear-placeholders" disabled>移除测试色块</button>

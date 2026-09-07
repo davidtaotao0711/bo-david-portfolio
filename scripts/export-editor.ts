@@ -1,0 +1,21 @@
+import { readFile, writeFile, mkdir, copyFile, rm } from 'node:fs/promises';
+import { resolve, sep } from 'node:path';
+import { build } from 'esbuild';
+const output = resolve('dist');
+await mkdir(resolve(output, 'editor'), {recursive:true});
+await mkdir(resolve(output, '__editor/assets'), {recursive:true});
+let html = await readFile('src/editor/index.html','utf8');
+html = html.replace('<html lang="zh-CN">','<html lang="zh-CN" data-editor="github">').replaceAll('本地编辑器','在线编辑器').replace('照片和修改保存在此项目文件夹内。每次保存都会保留一份修改前的数据备份。','照片和修改保存在你的 GitHub 私有仓库。保存会产生版本记录；网站将在部署完成后更新。同步期间请保持页面打开。');
+html = html.replace('<div class="editor-layout">','<div class="editor-layout" hidden>');
+await writeFile(resolve(output,'editor/index.html'),html);
+await copyFile('src/editor/editor.css',resolve(output,'__editor/assets/style.css'));
+await build({entryPoints:['src/editor/editor.ts'],outfile:resolve(output,'__editor/assets/editor.js'),bundle:true,minify:true,platform:'browser',format:'esm',target:'es2022'});
+const projects=JSON.parse(await readFile('src/data/projects.json','utf8'));
+const manifest=JSON.parse(await readFile('src/data/image-manifest.json','utf8'));
+const published=Object.fromEntries(projects.flatMap((p:{images:{id:string;src:string}[]})=>p.images).map((p:{id:string;src:string})=>[p.id,{base:manifest[p.id].base,original:p.src}]));
+await writeFile(resolve(output,'__editor/assets/manifest.json'),JSON.stringify(published));
+// Raw originals remain in the private source repository; the website serves variants.
+const originals=resolve(output,'images/originals');
+if(!originals.startsWith(output+sep)) throw new Error('Invalid build output path');
+await rm(originals,{recursive:true,force:true});
+console.log('Online editor exported; raw originals excluded from website output.');

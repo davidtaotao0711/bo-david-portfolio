@@ -1,6 +1,20 @@
 # BO DAVID
 
-全新的独立摄影作品网站。本地 Astro + TypeScript 静态项目，公开网站无数据库、登录、远程图片或运行时 API；另附仅在本地开发时可用的简易照片编辑器。
+全新的独立摄影作品网站，使用 Astro + TypeScript。摄影前台为静态页面，附本地文件编辑器与 GitHub 在线编辑器。
+
+私有源码仓库：https://github.com/davidtaotao0711/bo-david-portfolio 。原来的 `bo-photography` 仅作为可选的只读图片来源。
+
+## 在线部署与编辑
+
+1. 登录 Vercel，从 GitHub 导入 `bo-david-portfolio` 私有仓库。项目预设 Astro、Node.js 24、构建命令 `npm run build`、输出目录 `dist` 已在配置中准备好，无需添加 GitHub 密钥到托管平台。
+2. 部署成功后，网站地址后加 `/editor/` 即为在线编辑器。摄影前台可直接浏览；编辑器需连接有仓库写入权限的 GitHub 访问令牌。
+3. 在 GitHub 创建细粒度令牌，仅选择 `bo-david-portfolio`，Contents 权限设为读写。粘贴到在线编辑器连接。可选的旧仓库同步使用另一枚仅有 `bo-photography` Contents 读取权限的令牌。
+4. 上传照片、修改排序和封面直接保存到 GitHub，生成版本记录。编辑器立即显示上传预览；Vercel 的 Git 集成在提交后重新发布网站，前台更新需等部署完成。
+5. 令牌只保留在当前标签页内存中，请求直接发给 `api.github.com`，不会保存到浏览器存储、仓库或托管平台。刷新、关闭或断开后需重新连接。同步期间保持页面打开。
+
+首次托管构建需要生成全部图片，会明显慢于后续构建。Vercel 构建复用 `node_modules/.cache/bo-david-images`；缓存失效时仍可从仓库原图重新生成。原图保留在私有仓库，发布目录仅保留网站使用的优化图片，不公开原图文件。
+
+本地版本和在线版本具有独立的数据读取方式：本地 `/editor` 写项目文件；部署后的 `/editor/` 写 GitHub。换回本地编辑前先拉取 GitHub 更新，避免对过期的本地副本操作。
 
 ## 本地运行
 
@@ -28,7 +42,7 @@ npm test
 5. 上传正式照片后，可以点击「移除测试色块」清理该项目的占位内容；至少保留一张正式照片。
 6. 点击「查看网站」或「预览项目」检查效果。未保存时可点击「撤销未保存调整」。
 
-照片位于 `public/images/originals/<slug>/`；项目数据位于 `src/data/projects.json`，`projects.ts` 只定义类型并导出这些数据。每次修改前的数据备份位于 `.cache/editor-history/`。编辑器只在 dev 服务中提供，不进入 `dist` 或未来的公开网站。它不会向云端上传照片。
+照片位于 `public/images/originals/<slug>/`；项目数据位于 `src/data/projects.json`，`projects.ts` 只定义类型并导出这些数据。每次本地修改前的数据备份位于 `.cache/editor-history/`。本地开发编辑器不会自动向云端上传照片；构建时另行生成连接 GitHub 的在线编辑器。
 
 ## 从 GitHub 同步
 
@@ -74,4 +88,4 @@ Overview 的候选图片严格限制为 320px，不包含高清候选。Viewer �
 
 `docs/reference-audit.md` 记录参考站实测；`docs/verification.md` 记录验收。
 
-本阶段不创建 GitHub 仓库、不部署、不设置域名。最初六个项目使用 72 张纯色测试素材；GitHub 导入的真实照片作为独立项目追加，可在编辑器调整。
+新站已有独立私有 GitHub 仓库。最初六个项目使用 72 张纯色测试素材；GitHub 导入的真实照片作为独立项目追加，可在编辑器调整。

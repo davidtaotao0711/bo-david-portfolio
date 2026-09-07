@@ -1,4 +1,7 @@
 import type { Project } from '../data/projects';
+import { GitHubEditor } from './github-client';
+const hosted = document.documentElement.dataset.editor === 'github';
+let remote: GitHubEditor | undefined;
 type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
 const $ = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
 let state: Snapshot;
@@ -12,6 +15,8 @@ let dragged: string | undefined;
 const project = () => state.projects.find(project => project.slug === selected)!;
 function status(text: string, error = false) { $('#status').textContent = text; $('#status').dataset.error = String(error); }
 function controls() {
+  $<HTMLButtonElement>('#disconnect').disabled = busy || dirty;
+  $<HTMLButtonElement>('#refresh-content').disabled = busy || dirty;
   $<HTMLButtonElement>('#github-sync').disabled = busy || dirty;
   $<HTMLButtonElement>('#save').disabled = busy || !dirty;
   $<HTMLButtonElement>('#discard').disabled = busy || !dirty;
@@ -98,6 +103,7 @@ function render() {
   renderPhotos(); controls();
 }
 async function request(path: string, data: unknown, file?: File): Promise<Snapshot> {
+  if (hosted) return remote!.edit(path, selected, data as {ids?:string[];cover?:string}, file);
   const response = await fetch(`/__editor${path}?project=${encodeURIComponent(selected)}`, { method: 'POST', headers: { 'X-BO-Editor': 'local', 'If-Match': state.revision, 'Content-Type': file ? 'application/octet-stream' : 'application/json', ...(file ? { 'X-File-Name': encodeURIComponent(file.name) } : {}) }, body: file ?? JSON.stringify(data) });
   const result = await response.json();
   if (!response.ok) throw new Error(result.error ?? '保存失败，请重试。');
@@ -106,7 +112,7 @@ async function request(path: string, data: unknown, file?: File): Promise<Snapsh
 async function operation(action: () => Promise<Snapshot>, message: string) {
   if (busy) return;
   busy = true; controls(); status('正在保存…');
-  try { setState(await action()); status(message); }
+  try { setState(await action()); status(hosted ? '已保存到 GitHub。网站将在自动部署完成后更新。' : message); }
   catch (error) { status(error instanceof Error ? error.message : '操作失败，请重试。', true); }
   finally { busy = false; controls(); }
 }
@@ -123,13 +129,14 @@ $<HTMLInputElement>('#upload').addEventListener('change', async event => {
       status(`正在上传并生成图片 ${completed + 1} / ${files.length}：${file.name}`);
       setState(await request('/upload', {}, file)); completed++;
     }
-    status(`已上传 ${completed} 张照片。现在可以调整顺序和封面。`);
+    status(`已上传 ${completed} 张照片${hosted ? '到 GitHub，网站将在部署完成后更新' : ''}。现在可以调整顺序和封面。`);
   } catch (error) { status(`已保存 ${completed} 张。${error instanceof Error ? error.message : '上传失败，请重试。'}`, true); }
   finally { busy = false; input.value = ''; controls(); }
 });
 window.addEventListener('beforeunload', event => { if (dirty || busy) event.preventDefault(); });
 type SyncStatus = { state: 'idle' | 'running' | 'complete' | 'error'; message: string; completed: number; total: number };
 async function readSync(): Promise<SyncStatus> {
+  if (hosted) return remote!.job;
   const response = await fetch('/__editor/github-sync', { cache: 'no-store' });
   if (!response.ok) throw new Error('无法读取同步进度，请刷新编辑器。');
   return response.json();
@@ -145,9 +152,7 @@ async function followSync(job: SyncStatus) {
       await new Promise(resolve => setTimeout(resolve, 1000)); job = await readSync();
     }
     if (job.state === 'complete') {
-      const response = await fetch('/__editor/state', { cache: 'no-store' });
-      if (!response.ok) throw new Error('请刷新以载入同步结果。');
-      const next: Snapshot = await response.json();
+      const next: Snapshot = hosted ? await remote!.load() : await loadLocal();
       selected = next.projects.find(p => p.github)?.slug ?? selected; setState(next);
     }
     status(job.message || '已载入本地项目。', job.state === 'error');
@@ -158,6 +163,7 @@ $('#github-sync').addEventListener('click', async () => {
   if (busy || dirty) return;
   busy = true; controls(); status('正在启动 GitHub 同步…');
   try {
+    if (hosted) { await followSync(remote!.startSync()); return; }
     const response = await fetch('/__editor/github-sync', { method: 'POST', headers: { 'X-BO-Editor': 'local', 'If-Match': state.revision } });
     const job = await response.json();
     if (!response.ok) throw new Error(job.error);
@@ -165,8 +171,32 @@ $('#github-sync').addEventListener('click', async () => {
   } catch (error) { status(error instanceof Error ? error.message : '同步启动失败。', true); }
   finally { busy = false; controls(); }
 });
-fetch('/__editor/state', { cache: 'no-store' }).then(async response => {
-  const data = await response.json(); if (!response.ok) throw new Error(data.error);
-  setState(data); status('已载入本地项目。');
-  const job = await readSync(); if (job.state !== 'idle') await followSync(job);
-}).catch(error => status(`无法读取项目：${error.message}。请刷新重试。`, true));
+async function loadLocal(): Promise<Snapshot> {
+  const response = await fetch('/__editor/state', { cache: 'no-store' });
+  const data = await response.json(); if (!response.ok) throw new Error(data.error); return data;
+}
+if (hosted) {
+  $('#github-login').hidden = false; $('.editor-layout').hidden = true;
+  $('#disconnect').hidden = false; $('#refresh-content').hidden = false;
+  $('#connect-form').addEventListener('submit', async event => {
+    event.preventDefault(); const input = $<HTMLInputElement>('#github-token');
+    $<HTMLButtonElement>('#connect').disabled = true; $('#login-status').textContent = '正在验证 GitHub 权限…';
+    try {
+      const response = await fetch('/__editor/assets/manifest.json', {cache:'no-store'});
+      if (!response.ok) throw new Error('网站图片索引暂不可用，请稍后重试。');
+      remote = new GitHubEditor(await response.json());
+      const sourceInput = $<HTMLInputElement>('#github-source-token');
+      const next = await remote.connect(input.value, sourceInput.value); input.value = ''; sourceInput.value = '';
+      $('#github-login').hidden = true; $('.editor-layout').hidden = false;
+      setState(next); status('已连接 GitHub。上传和排序会保存到私有仓库。');
+    } catch (error) { input.value = ''; $<HTMLInputElement>('#github-source-token').value = ''; $('#login-status').textContent = error instanceof Error ? error.message : '连接失败，请重试。'; }
+    finally { $<HTMLButtonElement>('#connect').disabled = false; }
+  });
+  $('#disconnect').addEventListener('click', () => { remote?.disconnect(); location.reload(); });
+  $('#refresh-content').addEventListener('click', () => void operation(() => remote!.load(), '已刷新内容。'));
+} else {
+  loadLocal().then(async data => {
+    setState(data); status('已载入本地项目。');
+    const job = await readSync(); if (job.state !== 'idle') await followSync(job);
+  }).catch(error => status(`无法读取项目：${error.message}。请刷新重试。`, true));
+}
