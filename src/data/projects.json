@@ -9,20 +9,20 @@
     "cover": "lost-in-tokyo-01",
     "images": [
       {
-        "id": "lost-in-tokyo-01",
-        "src": "/images/originals/lost-in-tokyo-01.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 01",
-        "placeholderColor": "#6d7f78"
-      },
-      {
         "id": "lost-in-tokyo-02",
         "src": "/images/originals/lost-in-tokyo-02.jpg",
         "width": 1600,
         "height": 2000,
         "alt": "Lost in Tokyo — color study 02",
         "placeholderColor": "#bac5bd"
+      },
+      {
+        "id": "lost-in-tokyo-01",
+        "src": "/images/originals/lost-in-tokyo-01.jpg",
+        "width": 1600,
+        "height": 2000,
+        "alt": "Lost in Tokyo — color study 01",
+        "placeholderColor": "#6d7f78"
       },
       {
         "id": "lost-in-tokyo-03",

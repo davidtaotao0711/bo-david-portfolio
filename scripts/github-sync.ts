@@ -11,6 +11,8 @@ import { generateAsset, type GeneratedAsset } from './image-pipeline';
 export const repository = 'davidtaotao0711/bo-photography';
 const remote = `https://github.com/${repository}.git`;
 const run = promisify(execFile);
+const gitExecutable = process.env.BO_DAVID_GIT || 'git';
+const delay = (milliseconds: number) => new Promise(resolve => setTimeout(resolve, milliseconds));
 const hash = (value: string) => createHash('sha256').update(value).digest('hex').slice(0, 20);
 import { groupsFromData, mergeGroup as mergeGroupData, type Group } from '../src/lib/github-model';
 export { groupsFromData } from '../src/lib/github-model';
@@ -21,10 +23,28 @@ export class GitHubSync {
   status: SyncStatus = { state: 'idle', message: '', completed: 0, total: 0 };
   constructor(private root: string, private store: EditorStore) {}
   private async git(args: string[], binary = false) {
-    try {
-      const result = await run('git', args, { cwd: this.root, windowsHide: true, env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'Never' }, timeout: 180000, maxBuffer: 100 * 1024 * 1024, encoding: 'buffer' });
-      return binary ? result.stdout : result.stdout.toString('utf8');
-    } catch { throw new EditorError('GitHub 读取失败。请检查网络及本机 Git 对此仓库的登录权限，然后重试；已完成的图片会复用。'); }
+    const stage = ['clone', 'fetch', 'show', 'ls-tree', 'cat-file'].find(command => args.includes(command)) ?? args[0];
+    for (let attempt = 1; attempt <= 5; attempt++) {
+      try {
+        const result = await run(gitExecutable, ['-c', 'http.version=HTTP/1.1', ...args], { cwd: this.root, windowsHide: true, env: { ...process.env, GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'Never' }, timeout: 180000, maxBuffer: 100 * 1024 * 1024, encoding: 'buffer' });
+        return binary ? result.stdout : result.stdout.toString('utf8');
+      } catch (error) {
+        const failure = error as NodeJS.ErrnoException & { stderr?: Buffer | string };
+        const stderr = String(Buffer.isBuffer(failure.stderr) ? failure.stderr.toString('utf8') : failure.stderr ?? '')
+          .replace(/https:\/\/[^@\s]+@/g, 'https://<REDACTED>@')
+          .slice(0, 2000);
+        const retryable = /SSL\/TLS|schannel|failed to connect|could not resolve host|connection reset|timed out/i.test(stderr)
+          || ['ETIMEDOUT', 'ECONNRESET', 'ENETRESET'].includes(String(failure.code));
+        if (retryable && attempt < 5) {
+          console.warn('[github-sync] git_retry', { stage, attempt, code: failure.code });
+          await delay(1000 * 2 ** (attempt - 1));
+          continue;
+        }
+        console.error('[github-sync] git_failure', { stage, executable: gitExecutable, code: failure.code, errno: failure.errno, syscall: failure.syscall, stderr });
+        throw new EditorError('GitHub 读取失败。请检查网络及本机 Git 对此仓库的登录权限，然后重试；已完成的图片会复用。');
+      }
+    }
+    throw new EditorError('GitHub 读取失败。');
   }
   async start(revision: string | undefined) {
     if (this.status.state === 'running') throw new EditorError('已有同步任务正在运行。', 409);
