@@ -1,5 +1,6 @@
 import type { Project } from '../data/projects';
 import { GitHubEditor } from './github-client';
+import { samePhoto } from '../lib/github-model';
 const hosted = document.documentElement.dataset.editor === 'github';
 let remote: GitHubEditor | undefined;
 type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
@@ -13,11 +14,17 @@ let busy = false;
 let dragged: string | undefined;
 
 const project = () => state.projects.find(project => project.slug === selected)!;
-function status(text: string, error = false) { $('#status').textContent = text; $('#status').dataset.error = String(error); }
+function status(text: string, error = false) {
+  $('#status').textContent = !hosted && text === 'Failed to fetch'
+    ? '本地服务连接中断。请双击桌面的 BO DAVID 编辑器.cmd 重新连接，然后再同步。'
+    : text;
+  $('#status').dataset.error = String(error);
+}
 function controls() {
   $<HTMLButtonElement>('#disconnect').disabled = busy || dirty;
   $<HTMLButtonElement>('#refresh-content').disabled = busy || dirty;
   $<HTMLButtonElement>('#github-sync').disabled = busy || dirty;
+  $<HTMLButtonElement>('#from-unassigned').disabled = busy || dirty || project()?.github?.key === 'unassigned';
   $<HTMLButtonElement>('#save').disabled = busy || !dirty;
   $<HTMLButtonElement>('#discard').disabled = busy || !dirty;
   $<HTMLInputElement>('#upload').disabled = busy || dirty;
@@ -117,6 +124,42 @@ async function operation(action: () => Promise<Snapshot>, message: string) {
   finally { busy = false; controls(); }
 }
 $('#save').addEventListener('click', () => void operation(() => request('/order', { ids: order, cover }), '顺序与封面已保存，网站已更新。'));
+const libraryDialog = $<HTMLDialogElement>('#library-dialog');
+function updateLibraryCount() {
+  const count = $('#library-grid').querySelectorAll('input:checked').length;
+  const add = $<HTMLButtonElement>('#library-add');
+  add.disabled = count === 0; add.textContent = `添加到当前项目（${count}）`;
+}
+$('#from-unassigned').addEventListener('click', () => {
+  if (busy || dirty) return;
+  const photos = state.projects.find(p => p.github?.key === 'unassigned')?.images ?? [];
+  const grid = $('#library-grid'); grid.replaceChildren();
+  $('#library-empty').hidden = photos.length > 0;
+  for (const photo of photos) {
+    const label = document.createElement('label'); label.className = 'library-photo';
+    const input = document.createElement('input'); input.type = 'checkbox'; input.value = photo.id;
+    input.disabled = project().images.some(p => samePhoto(p, photo));
+    input.setAttribute('aria-label', `选择 ${photo.alt}`);
+    input.addEventListener('change', updateLibraryCount);
+    const img = document.createElement('img'); img.src = state.thumbnails[photo.id] || photo.src; img.alt = photo.alt; img.loading = 'lazy';
+    const caption = document.createElement('span'); caption.textContent = input.disabled ? '已在当前项目' : photo.alt;
+    label.append(input, img, caption); grid.append(label);
+  }
+  updateLibraryCount(); libraryDialog.showModal();
+});
+$('#library-close').addEventListener('click', () => libraryDialog.close());
+for (const [id, checked] of [['library-all', true], ['library-none', false]] as const) {
+  $(`#${id}`).addEventListener('click', () => {
+    $('#library-grid').querySelectorAll<HTMLInputElement>('input:not(:disabled)').forEach(input => input.checked = checked);
+    updateLibraryCount();
+  });
+}
+$('#library-add').addEventListener('click', () => {
+  const ids = Array.from($('#library-grid').querySelectorAll<HTMLInputElement>('input:checked')).map(input => input.value);
+  if (!ids.length || busy || dirty) return;
+  libraryDialog.close();
+  void operation(() => request('/from-unassigned', { ids }), `已添加 ${ids.length} 张照片并保存，Unassigned 总库已保留。`);
+});
 $('#discard').addEventListener('click', () => { setState(state); status('已撤销未保存的顺序和封面调整。'); });
 $('#clear-placeholders').addEventListener('click', () => void operation(() => request('/clear-placeholders', {}), '测试色块已移除，正式照片已保留。'));
 $<HTMLInputElement>('#upload').addEventListener('change', async event => {

@@ -11,14 +11,21 @@ if (buildCache) await cp(buildCache, output, { recursive: true, force: false, er
 await mkdir('src/data', { recursive: true });
 const manifest: Record<string, { width: number; height: number; tiny: string; base: string; widths: number[] }> = {};
 const usedIds = new Set<string>();
+const imageSources = new Map<string, string>();
 const slugs = new Set<string>();
 for (const project of projects) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project.slug) || slugs.has(project.slug) || !project.images.length) throw new Error(`Invalid project: ${project.slug}`);
   slugs.add(project.slug);
   if (!project.images.some(image => image.id === project.cover)) throw new Error(`Missing cover in ${project.slug}`);
   for (const photo of project.images) {
-    if (!/^[a-z0-9-]+$/.test(photo.id) || usedIds.has(photo.id) || !photo.alt.trim()) throw new Error(`Invalid image: ${photo.id}`);
+    if (!/^[a-z0-9-]+$/.test(photo.id) || !photo.alt.trim()) throw new Error(`Invalid image: ${photo.id}`);
+    const source = JSON.stringify([photo.src, photo.width, photo.height]);
+    if (usedIds.has(photo.id)) {
+      if (imageSources.get(photo.id) !== source) throw new Error(`Conflicting image: ${photo.id}`);
+      continue;
+    }
     usedIds.add(photo.id);
+    imageSources.set(photo.id, source);
     manifest[photo.id] = await generateAsset(photo, root);
 
   }

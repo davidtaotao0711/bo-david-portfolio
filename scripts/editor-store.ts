@@ -5,7 +5,7 @@ import sharp from 'sharp';
 import type { Project } from '../src/data/projects';
 import { generateAsset, type GeneratedAsset } from './image-pipeline';
 
-import { EditorError } from '../src/lib/github-model';
+import { EditorError, addFromUnassigned } from '../src/lib/github-model';
 export { EditorError } from '../src/lib/github-model';
 export function reorder<T extends { id: string }>(items: T[], ids: unknown): T[] {
   if (!Array.isArray(ids) || ids.length !== items.length || new Set(ids).size !== items.length || ids.some(id => typeof id !== 'string' || !items.some(item => item.id === id))) throw new EditorError('顺序数据不完整，请刷新后重试。');
@@ -59,6 +59,9 @@ export class EditorStore {
   }
   saveProjectOrder(revision: string | undefined, ids: unknown) {
     return this.mutate(revision, projects => { const sorted = reorder(projects, ids); projects.splice(0, projects.length, ...sorted); });
+  }
+  addFromLibrary(revision: string | undefined, slug: string, ids: unknown) {
+    return this.mutate(revision, projects => addFromUnassigned(projects, slug, ids));
   }
   clearPlaceholders(revision: string | undefined, slug: string) {
     return this.mutate(revision, projects => {

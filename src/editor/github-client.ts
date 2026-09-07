@@ -1,5 +1,5 @@
 import type { Project, PortfolioImage } from '../data/projects';
-import { groupsFromData, mergeGroup, repository as sourceRepository } from '../lib/github-model';
+import { groupsFromData, mergeGroup, addFromUnassigned, repository as sourceRepository } from '../lib/github-model';
 export type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
 export type Job = { state: 'idle' | 'running' | 'complete' | 'error'; message: string; completed: number; total: number };
 type PublishedAsset = { base: string; original: string };
@@ -75,7 +75,10 @@ export class GitHubEditor {
     const project = projects.find(p => p.slug === slug);
     if (!project) throw new Error('项目不存在，请刷新内容。');
     if (path === '/projects-order') return this.commit(reorder(projects, data.ids!), 'Update project order from online editor');
-    if (path === '/order') {
+    if (path === '/from-unassigned') {
+      addFromUnassigned(projects, slug, data.ids);
+      return this.commit(projects, 'Add library photos to project');
+    } else if (path === '/order') {
       project.images = reorder(project.images, data.ids!);
       if (!project.images.some(p => p.id === data.cover)) throw new Error('封面必须属于当前项目。');
       project.cover = data.cover!;
@@ -118,7 +121,8 @@ export class GitHubEditor {
         this.job.message=`正在同步 ${this.job.completed+1} / ${this.job.total}：${group.title}`;
         const entry=entries.get(`public${photo.image}`);
         if(!entry || entry.type!=='blob' || entry.mode!=='100644' || !/^\/images\/[^\x00-\x1f\\]+\.(jpe?g|png|webp|avif)$/i.test(photo.image) || photo.image.split('/').includes('..')) throw new Error(`原图路径无效：${photo.id}`);
-        const id=`gh-${await sha(`${sourceRepository}:${group.key}:${photo.id}`)}`;
+        const previous=projects.flatMap(p=>p.images).find(image=>image.github?.repository===sourceRepository && image.github.photoId===photo.id);
+        const id=previous?.id ?? `gh-${await sha(`${sourceRepository}:${photo.id}`)}`;
         const existing=projects.flatMap(p=>p.images).find(p=>p.id===id);
         if(existing?.github?.blob===entry.sha && existing.github.path===photo.image) incoming.push(existing);
         else {

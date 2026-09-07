@@ -24,6 +24,7 @@
           <button id="refresh-content" hidden>刷新内容</button>
           <button id="disconnect" hidden>断开连接</button>
           <button id="github-sync" disabled>从 GitHub 同步</button>
+          <button id="from-unassigned" disabled>从 Unassigned 添加图片</button>
           <label class="button upload-label" for="upload">上传照片<input id="upload" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" disabled /></label>
           <button id="save" class="primary" disabled>保存顺序与封面</button>
           <button id="discard" disabled>撤销未保存调整</button>
@@ -31,13 +32,20 @@
         </div>
         <p class="help">可一次选择多张照片。拖拽照片排序，或使用每张图下方的前移 / 后移按钮。</p>
         <p class="help">支持 JPEG、PNG、WebP、AVIF，单张不超过 40 MB。上传成功即保存；顺序和封面调整需点击保存。</p>
-        <p class="help">GitHub 来源：davidtaotao0711/bo-photography。同步新增及变化的照片，保留本地顺序和封面。未分组照片进入 Unassigned；不会自动删除照片。</p>
+        <p class="help">GitHub 来源：davidtaotao0711/bo-photography。所有同步照片保存在 Unassigned 总库，可多选添加到当前项目；总库保留原图，重复添加会自动跳过。同步保留本地顺序与封面。</p>
         <progress id="sync-progress" hidden aria-label="GitHub 同步进度"></progress>
         <p id="status" role="status" aria-live="polite">正在读取本地内容。</p>
         <div id="photo-grid" aria-label="照片排序"></div>
         <p class="storage-note">照片和修改保存在此项目文件夹内。每次保存都会保留一份修改前的数据备份。</p>
       </main>
     </div>
+    <dialog id="library-dialog" aria-labelledby="library-title">
+      <h2 id="library-title">从 Unassigned 添加图片</h2>
+      <p>选择要加入当前项目的照片。添加后立即保存，总库中的照片会保留。</p>
+      <div class="toolbar"><button id="library-all">全选可添加照片</button><button id="library-none">取消选择</button><button id="library-add" class="primary" disabled>添加到当前项目（0）</button><button id="library-close">关闭</button></div>
+      <p id="library-empty" hidden>总库还没有照片，请先点击“从 GitHub 同步”。</p>
+      <div id="library-grid"></div>
+    </dialog>
     <script type="module" src="/__editor/assets/editor.js"></script>
   </body>
 </html>

@@ -64,7 +64,7 @@ test('online GitHub sync uses a separate read-only source credential and does no
   const f=fixture();await f.client.connect('target','source');
   async function finish(){const deadline=Date.now()+3000;while(f.client.job.state==='running'&&Date.now()<deadline)await new Promise(r=>setTimeout(r,5));assert.equal(f.client.job.state,'complete',f.client.job.message);}
   f.client.startSync();await finish();assert.equal(f.projects.length,2);
-  const imported=f.projects[1];assert.equal(imported.title,'One');assert.equal(imported.images.length,1);
+  const imported=f.projects[1];assert.equal(imported.title,'Unassigned');assert.equal(imported.images.length,1);
   const head=f.head;f.client.startSync();await finish();assert.equal(f.head,head);assert.equal(f.projects[1].images.length,1);
   assert.match(f.client.job.message,/新增 0 张，更新 0 张/);
   assert.ok(f.requests.filter(r=>r.path.includes('/bo-photography/')).every(r=>r.method==='GET'));

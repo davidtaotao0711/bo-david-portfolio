@@ -83,9 +83,11 @@ export class GitHubSync {
       if (!entry || entry.type !== 'blob' || entry.mode !== '100644') throw new EditorError(`仓库中找不到原图：${photo.id}`);
       return entry.oid;
     }))];
-    for (let offset = 0; offset < objects.length; offset += 32) {
-      this.status.message = `正在下载原图 ${offset + 1}–${Math.min(offset + 32, objects.length)} / ${objects.length}…`;
-      await git(['-c', 'fetch.negotiationAlgorithm=noop', 'fetch', '--filter=blob:none', '--no-tags', '--no-write-fetch-head', '--recurse-submodules=no', 'origin', ...objects.slice(offset, offset + 32)]);
+    const cachedObjects = new Set(String(await git(['cat-file', '--batch-all-objects', '--batch-check=%(objectname)', '--unordered'])).trim().split(/\s+/));
+    const missingObjects = objects.filter(oid => !cachedObjects.has(oid));
+    for (let offset = 0; offset < missingObjects.length; offset += 32) {
+      this.status.message = `正在下载原图 ${offset + 1}–${Math.min(offset + 32, missingObjects.length)} / ${missingObjects.length}…`;
+      await git(['-c', 'fetch.negotiationAlgorithm=noop', 'fetch', '--filter=blob:none', '--no-tags', '--no-write-fetch-head', '--recurse-submodules=no', 'origin', ...missingObjects.slice(offset, offset + 32)]);
     }
     const manifestPath = resolve(this.root, 'src/data/image-manifest.json');
     const manifest: Record<string, GeneratedAsset> = JSON.parse(await readFile(manifestPath, 'utf8'));
@@ -101,7 +103,8 @@ export class GitHubSync {
         if (!/^\/images\/(?:[^/\\\x00-\x1f]+\/)*[^/\\\x00-\x1f]+\.(jpe?g|png|webp|avif)$/i.test(photo.image) || photo.image.split('/').some(p => p === '.' || p === '..')) throw new EditorError(`不支持的图片路径：${photo.id}`);
         const entry = tree.get(`public${photo.image}`);
         if (!entry || entry.type !== 'blob' || entry.mode !== '100644') throw new EditorError(`仓库中找不到原图：${photo.id}`);
-        const id = `gh-${hash(`${repository}:${group.key}:${photo.id}`)}`;
+        const previous = projects.flatMap(p => p.images).find(image => image.github?.repository === repository && image.github.photoId === photo.id);
+        const id = previous?.id ?? `gh-${hash(`${repository}:${photo.id}`)}`;
         const src = `/images/originals/github/${entry.oid}.${photo.image.split('.').pop()!.toLowerCase()}`;
         const path = resolve(this.root, 'public', `.${src}`);
         if (!originals.has(path)) originals.set(path, (async () => { if (!await stat(path).catch(() => null)) {

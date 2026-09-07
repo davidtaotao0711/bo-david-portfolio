@@ -64,6 +64,7 @@ export default function localEditor(root: URL): AstroIntegration {
             let data;
             try { data = JSON.parse(raw.toString()); } catch { throw new EditorError('请求数据不正确。'); }
             if (url.pathname === '/__editor/order') return send(200, await store.saveOrder(revision, slug, data.ids, data.cover));
+            if (url.pathname === '/__editor/from-unassigned') return send(200, await store.addFromLibrary(revision, slug, data.ids));
             if (url.pathname === '/__editor/projects-order') return send(200, await store.saveProjectOrder(revision, data.ids));
             if (url.pathname === '/__editor/clear-placeholders') return send(200, await store.clearPlaceholders(revision, slug));
             throw new EditorError('未找到此操作。', 404);
