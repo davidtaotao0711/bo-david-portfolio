@@ -1,33 +1,47 @@
 ---
 import Header from './Header.astro';
 import Photo from './Photo.astro';
-import { projects } from '../data/projects';
+import { projects, colorProjects, themeProjects } from '../data/projects';
+import { photoKey } from '../lib/arrangements';
+import { asset } from '../lib/images';
+import { galleryRuns } from '../lib/gallery-layout';
+import { indexCanvas } from '../lib/index-layout';
 import { profile } from '../data/profile';
 const currentProject = projects.find(project => `/${project.slug}` === Astro.url.pathname.replace(/\/$/, ''));
 ---
 <Header />
 <main id="main" tabindex="-1"></main>
-<template id="overview-template">
-  <div class="archive overview" aria-label="Overview — all photographs">
-    {projects.map((project, p) => <>
-      {p > 0 && <span class="archive-space" aria-hidden="true"></span>}
-      {project.images.map((image, i) => <a class="archive-image" href={`/${project.slug}?s=${i}`} data-project={project.slug} data-image={i} id={`photo-${image.id}`} aria-label={`${project.title}, image ${i + 1}`}>
-        <Photo image={image} eager={p === 0 && i < 10} />
-      </a>)}
-    </>)}
+{([['color', colorProjects], ['theme', themeProjects]] as const).map(([arrangement, groups]) => <>
+<template id={`overview-${arrangement}-template`}>
+  <div class="archive overview gallery-sheet" aria-label="Overview — all photographs">
+    {groups.map((project, p) => <section class="gallery-project" aria-label={project.title}>
+      {galleryRuns(project).map(run => <div class="gallery-run" data-orientation={run.orientation}>
+        {run.slots.map(slot => {
+          if (slot.kind === 'blank') return <span class="gallery-cell gallery-blank" aria-hidden="true"></span>;
+          const i = project.images.findIndex(image => image.id === slot.id);
+          const image = project.images[i];
+          return <a class="archive-image gallery-cell" href={`/${project.slug}?s=${i}&sort=${arrangement}`} data-project={project.slug} data-image={i} data-photo={photoKey(image)} data-thumb={`${asset(image).base}-320.webp`} id={`photo-${project.slug}-${image.id}`} aria-label={`${project.title}, image ${i + 1}`}>
+            <Photo image={image} eager={p === 0 && i < 10} />
+          </a>;
+        })}
+      </div>)}
+    </section>)}
   </div>
 </template>
-<template id="grid-template">
-  <div class="archive index-grid" aria-label="Index — projects">
-    {projects.map((project, p) => <>
-      {(p === 3 || p === 5) && <span class="archive-space" aria-hidden="true"></span>}
-      <a class="archive-image project-cover" href={`/${project.slug}?s=${project.images.findIndex(i => i.id === project.cover)}`} data-project={project.slug} id={`photo-${project.cover}`} aria-label={project.title}>
+<template id={`grid-${arrangement}-template`}>
+  <div class="archive index-grid index-layout" aria-label="Index — projects">
+    {indexCanvas(groups,arrangement).layout!.map((slot, p) => {
+      if(slot.kind==='blank')return <span class="index-blank" style={`aspect-ratio:${slot.orientation==='portrait'?'2/3':'3/2'}`} aria-hidden="true"></span>;
+      const project=groups.find(project=>project.id===slot.id)!;
+      return <>
+      <a class="archive-image project-cover" href={`/${project.slug}?s=${project.images.findIndex(i => i.id === project.cover)}&sort=${arrangement}`} data-project={project.slug} data-photo={photoKey(project.images.find(i => i.id === project.cover)!)} data-thumb={`${asset(project.images.find(i => i.id === project.cover)!).base}-320.webp`} id={`photo-${project.slug}-${project.cover}`} aria-label={project.title}>
         <Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} eager={p < 3} />
         <span class="cover-caption">{project.title}</span>
       </a>
-    </>)}
+    </>;})}
   </div>
 </template>
+</>)}
 <template id="information-template">
   <section class="information" aria-label="About BO DAVID">
     <h1>{profile.name}</h1>
@@ -55,7 +69,7 @@ const currentProject = projects.find(project => `/${project.slug}` === Astro.url
   </section>
 </template>
 <noscript><div class="archive index-grid">
-  {currentProject ? currentProject.images.map(image => <Photo image={image} thumbnail={false} />) : projects.map(project => <a href={`/${project.slug}?s=0`}><Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} /></a>)}
+  {currentProject ? currentProject.images.map(image => <Photo image={image} thumbnail={false} />) : colorProjects.map(project => <a href={`/${project.slug}?s=0`}><Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} /></a>)}
   <p>Enable JavaScript to browse image sequences and the contact sheet.</p>
 </div><style>.photo img{opacity:1}</style></noscript>
 <script>import '../scripts/portfolio';</script>

@@ -6,6 +6,15 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 import { EditorStore, reorder } from '../scripts/editor-store';
 import { generateAsset } from '../scripts/image-pipeline';
+const unlinkEventually = async (path: string) => {
+  for (let attempt = 0; ; attempt++) {
+    try { await unlink(path); return; }
+    catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'EBUSY' || attempt === 4) throw error;
+      await new Promise(resolve => setTimeout(resolve, 50 * (attempt + 1)));
+    }
+  }
+};
 
 test('reordering must preserve every photo exactly once', () => {
   const images = [{ id: 'one' }, { id: 'two' }, { id: 'three' }];
@@ -32,13 +41,13 @@ test('upload, order, cover and placeholder removal persist with backups and conf
   assert.match(real.src, /^\/images\/originals\/demo\/demo-[a-f0-9-]+\.jpg$/);
   assert.ok((await readFile(join(root, 'public', real.src))).equals(bytes));
   const manifest = JSON.parse(await readFile(join(root, 'src/data/image-manifest.json'), 'utf8'));
-  for (const width of [320,640,960,1440,2000]) for (const format of ['avif','webp','jpg']) {
+  for (const width of [320,640,960,1440,2000]) for (const format of ['webp','jpg']) {
     const asset = await sharp(join(root, 'public', `${manifest[real.id].base}-${width}.${format}`)).metadata();
     assert.equal(asset.width, width);
   }
   // A late interrupted encode may leave the JPEG marker but lose another variant.
-  const interrupted = join(root, 'public', `${manifest[real.id].base}-2000.avif`);
-  await unlink(interrupted);
+  const interrupted = join(root, 'public', `${manifest[real.id].base}-2000.webp`);
+  await unlinkEventually(interrupted);
   await generateAsset(real, join(root, 'public'));
   assert.equal((await sharp(interrupted).metadata()).width, 2000);
   await assert.rejects(() => store.saveOrder(original.revision, 'demo', [real.id, dummy.id], real.id), /另一个窗口/);

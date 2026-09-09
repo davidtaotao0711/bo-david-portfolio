@@ -1,5 +1,7 @@
 import type { Project, PortfolioImage } from '../data/projects';
-import { groupsFromData, mergeGroup, addFromUnassigned, repository as sourceRepository } from '../lib/github-model';
+import { saveProjectLayout, type LayoutSlot } from '../lib/gallery-layout';
+import { saveIndexLayout } from '../lib/index-layout';
+import { groupsFromData, mergeGroup, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement, repository as sourceRepository } from '../lib/github-model';
 export type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
 export type Job = { state: 'idle' | 'running' | 'complete' | 'error'; message: string; completed: number; total: number };
 type PublishedAsset = { base: string; original: string };
@@ -70,12 +72,41 @@ export class GitHubEditor {
     await this.api(`${contentRepository}/git/refs/heads/main`, 'PATCH', { sha: next.sha, force: false });
     return this.load();
   }
-  async edit(path: string, slug: string, data: {ids?: string[]; cover?: string}, file?: File) {
+  async edit(path: string, slug: string, data: {ids?: string[]; cover?: string; title?: string; arrangement?: 'color' | 'theme'; layout?:LayoutSlot[]}, file?: File) {
     const projects = structuredClone(this.state.projects);
+    if(path==='/index-layout'){
+      saveIndexLayout(projects,data.arrangement,data.layout);
+      return this.commit(projects,'Save INDEX cards and blank spaces');
+    }
+    if (path === '/projects-create') {
+      createProject(projects, data.title, `project-${crypto.randomUUID()}`, data.arrangement);
+      return this.commit(projects, 'Create project from editor');
+    }
+    if (path === '/projects-delete') {
+      deleteProject(projects, slug);
+      return this.commit(projects, 'Delete project and preserve photos in library');
+    }
     const project = projects.find(p => p.slug === slug);
     if (!project) throw new Error('项目不存在，请刷新内容。');
+    if (path === '/layout') {
+      saveProjectLayout(project, data.layout);
+      return this.commit(projects, 'Save photo layout and blank spaces');
+    }
+    if (path === '/projects-arrangement') {
+      setArrangement(projects, slug, data.arrangement);
+      return this.commit(projects, 'Update project color or theme arrangement');
+    }
+    if (path === '/projects-rename') {
+      if (project.github?.key === 'unassigned') throw new Error('Unassigned 是照片总库，名称固定。');
+      if (typeof data.title !== 'string' || !data.title.trim() || data.title.trim().length > 80 || data.title.trim().toLowerCase() === 'unassigned') throw new Error('请输入 1–80 个字的项目名称，不能使用 Unassigned。');
+      project.title = data.title.trim();
+      return this.commit(projects, 'Rename project from editor');
+    }
     if (path === '/projects-order') return this.commit(reorder(projects, data.ids!), 'Update project order from online editor');
-    if (path === '/from-unassigned') {
+    if (path === '/photos-remove') {
+      removePhotos(projects, slug, data.ids);
+      return this.commit(projects, 'Remove photos from project');
+    } else if (path === '/from-unassigned') {
       addFromUnassigned(projects, slug, data.ids);
       return this.commit(projects, 'Add library photos to project');
     } else if (path === '/order') {
@@ -95,6 +126,7 @@ export class GitHubEditor {
       const image = {id,src:`/images/originals/${slug}/${id}.${extension}`,...size,alt:`${project.title} — ${file.name.replace(/\.[^.]+$/, '').slice(0,150)}`};
       const blob = await this.api(`${contentRepository}/git/blobs`, 'POST', {encoding:'base64',content:base64(new Uint8Array(await file.arrayBuffer()))});
       project.images.push(image); this.previews.set(image.src,URL.createObjectURL(file));
+      if (!project.cover) project.cover = image.id;
       return this.commit(projects, 'Upload photo from online editor', [{path:`public${image.src}`,sha:blob.sha}]);
     } else throw new Error('不支持的操作。');
     return this.commit(projects, 'Update photo order and cover from online editor');

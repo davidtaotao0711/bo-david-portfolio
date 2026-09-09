@@ -3,9 +3,11 @@ import { resolve, dirname } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
 import sharp from 'sharp';
 import type { Project } from '../src/data/projects';
+import { saveProjectLayout } from '../src/lib/gallery-layout';
+import { saveIndexLayout } from '../src/lib/index-layout';
 import { generateAsset, type GeneratedAsset } from './image-pipeline';
 
-import { EditorError, addFromUnassigned } from '../src/lib/github-model';
+import { EditorError, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement } from '../src/lib/github-model';
 export { EditorError } from '../src/lib/github-model';
 export function reorder<T extends { id: string }>(items: T[], ids: unknown): T[] {
   if (!Array.isArray(ids) || ids.length !== items.length || new Set(ids).size !== items.length || ids.some(id => typeof id !== 'string' || !items.some(item => item.id === id))) throw new EditorError('顺序数据不完整，请刷新后重试。');
@@ -60,8 +62,32 @@ export class EditorStore {
   saveProjectOrder(revision: string | undefined, ids: unknown) {
     return this.mutate(revision, projects => { const sorted = reorder(projects, ids); projects.splice(0, projects.length, ...sorted); });
   }
+  saveLayout(revision: string | undefined, slug: string, layout: unknown) {
+    return this.mutate(revision, projects => {
+      try { saveProjectLayout(this.project(projects, slug), layout); }
+      catch (error) { throw new EditorError(error instanceof Error ? error.message : '排版保存失败。'); }
+    });
+  }
+  saveIndex(revision:string|undefined, arrangement:unknown, layout:unknown) {
+    return this.mutate(revision,projects=>{
+      try { saveIndexLayout(projects,arrangement,layout); }
+      catch(error){throw new EditorError(error instanceof Error?error.message:'INDEX 保存失败。');}
+    });
+  }
   addFromLibrary(revision: string | undefined, slug: string, ids: unknown) {
     return this.mutate(revision, projects => addFromUnassigned(projects, slug, ids));
+  }
+  createProject(revision: string | undefined, title: unknown, arrangement: unknown = 'color') {
+    return this.mutate(revision, projects => { createProject(projects, title, `project-${randomUUID()}`, arrangement); });
+  }
+  setArrangement(revision: string | undefined, slug: string, arrangement: unknown) {
+    return this.mutate(revision, projects => setArrangement(projects, slug, arrangement));
+  }
+  deleteProject(revision: string | undefined, slug: string) {
+    return this.mutate(revision, projects => deleteProject(projects, slug));
+  }
+  removePhotos(revision: string | undefined, slug: string, ids: unknown) {
+    return this.mutate(revision, projects => removePhotos(projects, slug, ids));
   }
   clearPlaceholders(revision: string | undefined, slug: string) {
     return this.mutate(revision, projects => {
@@ -93,6 +119,7 @@ export class EditorStore {
       // Publish assets before data so the live portfolio never references a missing variant.
       await atomicWrite(this.manifestPath, JSON.stringify(manifest));
       project.images.push(image);
+      if (!project.cover) project.cover = image.id;
     });
   }
 }

@@ -64,6 +64,19 @@ export default function localEditor(root: URL): AstroIntegration {
             let data;
             try { data = JSON.parse(raw.toString()); } catch { throw new EditorError('请求数据不正确。'); }
             if (url.pathname === '/__editor/order') return send(200, await store.saveOrder(revision, slug, data.ids, data.cover));
+            if (url.pathname === '/__editor/layout') return send(200, await store.saveLayout(revision, slug, data.layout));
+            if (url.pathname === '/__editor/index-layout') return send(200, await store.saveIndex(revision, data.arrangement, data.layout));
+            if (url.pathname === '/__editor/projects-create') return send(200, await store.createProject(revision, data.title, data.arrangement));
+            if (url.pathname === '/__editor/projects-arrangement') return send(200, await store.setArrangement(revision, slug, data.arrangement));
+            if (url.pathname === '/__editor/projects-rename') return send(200, await store.mutate(revision, projects => {
+              const project = projects.find(p => p.slug === slug);
+              if (!project) throw new EditorError('项目不存在。', 404);
+              if (project.github?.key === 'unassigned') throw new EditorError('Unassigned 是照片总库，名称固定。');
+              if (typeof data.title !== 'string' || !data.title.trim() || data.title.trim().length > 80 || data.title.trim().toLowerCase() === 'unassigned') throw new EditorError('请输入 1–80 个字的项目名称，不能使用 Unassigned。');
+              project.title = data.title.trim();
+            }));
+            if (url.pathname === '/__editor/projects-delete') return send(200, await store.deleteProject(revision, slug));
+            if (url.pathname === '/__editor/photos-remove') return send(200, await store.removePhotos(revision, slug, data.ids));
             if (url.pathname === '/__editor/from-unassigned') return send(200, await store.addFromLibrary(revision, slug, data.ids));
             if (url.pathname === '/__editor/projects-order') return send(200, await store.saveProjectOrder(revision, data.ids));
             if (url.pathname === '/__editor/clear-placeholders') return send(200, await store.clearPlaceholders(revision, slug));

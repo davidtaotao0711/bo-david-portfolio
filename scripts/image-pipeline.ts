@@ -29,7 +29,7 @@ export async function generateAsset(photo: PortfolioImage, root: string): Promis
     const height = (swapped ? metadata.width : metadata.height)!;
     if (width !== photo.width || height !== photo.height) throw new Error(`Dimensions for ${photo.id} should be ${width} × ${height}`);
     const tiny = `data:image/webp;base64,${(await sharp(buffer).rotate().resize(20).blur().webp({ quality: 30 }).toBuffer()).toString('base64')}`;
-    const missing = new Set((await Promise.all(widths.flatMap(size => ['avif', 'webp', 'jpg'].map(async format => {
+    const missing = new Set((await Promise.all(widths.flatMap(size => ['webp', 'jpg'].map(async format => {
       const name = `${size}.${format}`;
       return await stat(resolve(root, `.${base}-${name}`)).then(file => file.size > 0).catch(() => false) ? null : name;
     })))).filter((name): name is string => name !== null));
@@ -37,7 +37,6 @@ export async function generateAsset(photo: PortfolioImage, root: string): Promis
       for (const size of widths) {
         const resized = sharp(buffer).rotate().resize({ width: size });
         await Promise.all([
-          missing.has(`${size}.avif`) && publish(resized.clone().avif({ quality: 58, effort: 2 }), resolve(root, `.${base}-${size}.avif`)),
           missing.has(`${size}.webp`) && publish(resized.clone().webp({ quality: 80 }), resolve(root, `.${base}-${size}.webp`)),
           missing.has(`${size}.jpg`) && publish(resized.clone().jpeg({ quality: 84, mozjpeg: true }), resolve(root, `.${base}-${size}.jpg`)),
         ]);

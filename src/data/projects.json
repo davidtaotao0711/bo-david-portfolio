@@ -1,850 +1,600 @@
 [
   {
-    "id": "lost-in-tokyo",
-    "slug": "lost-in-tokyo",
-    "title": "Lost in Tokyo",
-    "year": "2026",
-    "location": "Tokyo",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "lost-in-tokyo-01",
-    "images": [
-      {
-        "id": "lost-in-tokyo-02",
-        "src": "/images/originals/lost-in-tokyo-02.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 02",
-        "placeholderColor": "#bac5bd"
-      },
-      {
-        "id": "lost-in-tokyo-01",
-        "src": "/images/originals/lost-in-tokyo-01.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 01",
-        "placeholderColor": "#6d7f78"
-      },
-      {
-        "id": "lost-in-tokyo-03",
-        "src": "/images/originals/lost-in-tokyo-03.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Lost in Tokyo — color study 03",
-        "placeholderColor": "#454f52"
-      },
-      {
-        "id": "lost-in-tokyo-04",
-        "src": "/images/originals/lost-in-tokyo-04.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 04",
-        "placeholderColor": "#6d7f78"
-      },
-      {
-        "id": "lost-in-tokyo-05",
-        "src": "/images/originals/lost-in-tokyo-05.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Lost in Tokyo — color study 05",
-        "placeholderColor": "#bac5bd"
-      },
-      {
-        "id": "lost-in-tokyo-06",
-        "src": "/images/originals/lost-in-tokyo-06.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 06",
-        "placeholderColor": "#454f52"
-      },
-      {
-        "id": "lost-in-tokyo-07",
-        "src": "/images/originals/lost-in-tokyo-07.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 07",
-        "placeholderColor": "#6d7f78"
-      },
-      {
-        "id": "lost-in-tokyo-08",
-        "src": "/images/originals/lost-in-tokyo-08.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 08",
-        "placeholderColor": "#bac5bd"
-      },
-      {
-        "id": "lost-in-tokyo-09",
-        "src": "/images/originals/lost-in-tokyo-09.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Lost in Tokyo — color study 09",
-        "placeholderColor": "#454f52"
-      },
-      {
-        "id": "lost-in-tokyo-10",
-        "src": "/images/originals/lost-in-tokyo-10.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 10",
-        "placeholderColor": "#6d7f78"
-      },
-      {
-        "id": "lost-in-tokyo-11",
-        "src": "/images/originals/lost-in-tokyo-11.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Lost in Tokyo — color study 11",
-        "placeholderColor": "#bac5bd"
-      },
-      {
-        "id": "lost-in-tokyo-12",
-        "src": "/images/originals/lost-in-tokyo-12.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Lost in Tokyo — color study 12",
-        "placeholderColor": "#454f52"
-      }
-    ]
-  },
-  {
-    "id": "specters",
-    "slug": "specters",
-    "title": "Specters",
-    "year": "2026",
-    "location": "Shanghai",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "specters-01",
-    "images": [
-      {
-        "id": "specters-01",
-        "src": "/images/originals/specters-01.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Specters — color study 01",
-        "placeholderColor": "#a6a29a"
-      },
-      {
-        "id": "specters-02",
-        "src": "/images/originals/specters-02.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Specters — color study 02",
-        "placeholderColor": "#5d6263"
-      },
-      {
-        "id": "specters-03",
-        "src": "/images/originals/specters-03.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Specters — color study 03",
-        "placeholderColor": "#d0cdc4"
-      },
-      {
-        "id": "specters-04",
-        "src": "/images/originals/specters-04.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 04",
-        "placeholderColor": "#a6a29a"
-      },
-      {
-        "id": "specters-05",
-        "src": "/images/originals/specters-05.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Specters — color study 05",
-        "placeholderColor": "#5d6263"
-      },
-      {
-        "id": "specters-06",
-        "src": "/images/originals/specters-06.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 06",
-        "placeholderColor": "#d0cdc4"
-      },
-      {
-        "id": "specters-07",
-        "src": "/images/originals/specters-07.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Specters — color study 07",
-        "placeholderColor": "#a6a29a"
-      },
-      {
-        "id": "specters-08",
-        "src": "/images/originals/specters-08.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 08",
-        "placeholderColor": "#5d6263"
-      },
-      {
-        "id": "specters-09",
-        "src": "/images/originals/specters-09.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Specters — color study 09",
-        "placeholderColor": "#d0cdc4"
-      },
-      {
-        "id": "specters-10",
-        "src": "/images/originals/specters-10.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 10",
-        "placeholderColor": "#a6a29a"
-      },
-      {
-        "id": "specters-11",
-        "src": "/images/originals/specters-11.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 11",
-        "placeholderColor": "#5d6263"
-      },
-      {
-        "id": "specters-12",
-        "src": "/images/originals/specters-12.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Specters — color study 12",
-        "placeholderColor": "#d0cdc4"
-      }
-    ]
-  },
-  {
-    "id": "black-bob",
-    "slug": "black-bob",
-    "title": "Black Bob",
-    "year": "2026",
-    "location": "Shanghai",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "black-bob-01",
-    "images": [
-      {
-        "id": "black-bob-01",
-        "src": "/images/originals/black-bob-01.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Black Bob — color study 01",
-        "placeholderColor": "#373a38"
-      },
-      {
-        "id": "black-bob-02",
-        "src": "/images/originals/black-bob-02.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 02",
-        "placeholderColor": "#676860"
-      },
-      {
-        "id": "black-bob-03",
-        "src": "/images/originals/black-bob-03.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Black Bob — color study 03",
-        "placeholderColor": "#95978d"
-      },
-      {
-        "id": "black-bob-04",
-        "src": "/images/originals/black-bob-04.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 04",
-        "placeholderColor": "#373a38"
-      },
-      {
-        "id": "black-bob-05",
-        "src": "/images/originals/black-bob-05.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Black Bob — color study 05",
-        "placeholderColor": "#676860"
-      },
-      {
-        "id": "black-bob-06",
-        "src": "/images/originals/black-bob-06.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 06",
-        "placeholderColor": "#95978d"
-      },
-      {
-        "id": "black-bob-07",
-        "src": "/images/originals/black-bob-07.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Black Bob — color study 07",
-        "placeholderColor": "#373a38"
-      },
-      {
-        "id": "black-bob-08",
-        "src": "/images/originals/black-bob-08.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 08",
-        "placeholderColor": "#676860"
-      },
-      {
-        "id": "black-bob-09",
-        "src": "/images/originals/black-bob-09.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 09",
-        "placeholderColor": "#95978d"
-      },
-      {
-        "id": "black-bob-10",
-        "src": "/images/originals/black-bob-10.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Black Bob — color study 10",
-        "placeholderColor": "#373a38"
-      },
-      {
-        "id": "black-bob-11",
-        "src": "/images/originals/black-bob-11.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Black Bob — color study 11",
-        "placeholderColor": "#676860"
-      },
-      {
-        "id": "black-bob-12",
-        "src": "/images/originals/black-bob-12.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Black Bob — color study 12",
-        "placeholderColor": "#95978d"
-      }
-    ]
-  },
-  {
-    "id": "xinjiang",
-    "slug": "xinjiang",
-    "title": "Xinjiang",
-    "year": "2026",
-    "location": "Xinjiang",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "xinjiang-01",
-    "images": [
-      {
-        "id": "xinjiang-01",
-        "src": "/images/originals/xinjiang-01.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Xinjiang — color study 01",
-        "placeholderColor": "#b3946f"
-      },
-      {
-        "id": "xinjiang-02",
-        "src": "/images/originals/xinjiang-02.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 02",
-        "placeholderColor": "#c9bea0"
-      },
-      {
-        "id": "xinjiang-03",
-        "src": "/images/originals/xinjiang-03.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Xinjiang — color study 03",
-        "placeholderColor": "#788f91"
-      },
-      {
-        "id": "xinjiang-04",
-        "src": "/images/originals/xinjiang-04.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 04",
-        "placeholderColor": "#b3946f"
-      },
-      {
-        "id": "xinjiang-05",
-        "src": "/images/originals/xinjiang-05.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Xinjiang — color study 05",
-        "placeholderColor": "#c9bea0"
-      },
-      {
-        "id": "xinjiang-06",
-        "src": "/images/originals/xinjiang-06.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 06",
-        "placeholderColor": "#788f91"
-      },
-      {
-        "id": "xinjiang-07",
-        "src": "/images/originals/xinjiang-07.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 07",
-        "placeholderColor": "#b3946f"
-      },
-      {
-        "id": "xinjiang-08",
-        "src": "/images/originals/xinjiang-08.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 08",
-        "placeholderColor": "#c9bea0"
-      },
-      {
-        "id": "xinjiang-09",
-        "src": "/images/originals/xinjiang-09.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Xinjiang — color study 09",
-        "placeholderColor": "#788f91"
-      },
-      {
-        "id": "xinjiang-10",
-        "src": "/images/originals/xinjiang-10.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Xinjiang — color study 10",
-        "placeholderColor": "#b3946f"
-      },
-      {
-        "id": "xinjiang-11",
-        "src": "/images/originals/xinjiang-11.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Xinjiang — color study 11",
-        "placeholderColor": "#c9bea0"
-      },
-      {
-        "id": "xinjiang-12",
-        "src": "/images/originals/xinjiang-12.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Xinjiang — color study 12",
-        "placeholderColor": "#788f91"
-      }
-    ]
-  },
-  {
-    "id": "shanghai",
-    "slug": "shanghai",
-    "title": "Shanghai",
-    "year": "2026",
-    "location": "Shanghai",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "shanghai-01",
-    "images": [
-      {
-        "id": "shanghai-01",
-        "src": "/images/originals/shanghai-01.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Shanghai — color study 01",
-        "placeholderColor": "#71847e"
-      },
-      {
-        "id": "shanghai-02",
-        "src": "/images/originals/shanghai-02.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 02",
-        "placeholderColor": "#a4b5b0"
-      },
-      {
-        "id": "shanghai-03",
-        "src": "/images/originals/shanghai-03.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Shanghai — color study 03",
-        "placeholderColor": "#bdafa0"
-      },
-      {
-        "id": "shanghai-04",
-        "src": "/images/originals/shanghai-04.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 04",
-        "placeholderColor": "#71847e"
-      },
-      {
-        "id": "shanghai-05",
-        "src": "/images/originals/shanghai-05.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 05",
-        "placeholderColor": "#a4b5b0"
-      },
-      {
-        "id": "shanghai-06",
-        "src": "/images/originals/shanghai-06.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 06",
-        "placeholderColor": "#bdafa0"
-      },
-      {
-        "id": "shanghai-07",
-        "src": "/images/originals/shanghai-07.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Shanghai — color study 07",
-        "placeholderColor": "#71847e"
-      },
-      {
-        "id": "shanghai-08",
-        "src": "/images/originals/shanghai-08.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Shanghai — color study 08",
-        "placeholderColor": "#a4b5b0"
-      },
-      {
-        "id": "shanghai-09",
-        "src": "/images/originals/shanghai-09.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Shanghai — color study 09",
-        "placeholderColor": "#bdafa0"
-      },
-      {
-        "id": "shanghai-10",
-        "src": "/images/originals/shanghai-10.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 10",
-        "placeholderColor": "#71847e"
-      },
-      {
-        "id": "shanghai-11",
-        "src": "/images/originals/shanghai-11.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Shanghai — color study 11",
-        "placeholderColor": "#a4b5b0"
-      },
-      {
-        "id": "shanghai-12",
-        "src": "/images/originals/shanghai-12.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Shanghai — color study 12",
-        "placeholderColor": "#bdafa0"
-      }
-    ]
-  },
-  {
-    "id": "between-days",
-    "slug": "between-days",
-    "title": "Between Days",
-    "year": "2026",
-    "location": "China",
-    "description": "A working sequence by BO DAVID. Photographs to follow.",
-    "cover": "between-days-01",
-    "images": [
-      {
-        "id": "between-days-01",
-        "src": "/images/originals/between-days-01.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Between Days — color study 01",
-        "placeholderColor": "#b3aaa0"
-      },
-      {
-        "id": "between-days-02",
-        "src": "/images/originals/between-days-02.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 02",
-        "placeholderColor": "#858777"
-      },
-      {
-        "id": "between-days-03",
-        "src": "/images/originals/between-days-03.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 03",
-        "placeholderColor": "#c3c2b7"
-      },
-      {
-        "id": "between-days-04",
-        "src": "/images/originals/between-days-04.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 04",
-        "placeholderColor": "#b3aaa0"
-      },
-      {
-        "id": "between-days-05",
-        "src": "/images/originals/between-days-05.jpg",
-        "width": 2000,
-        "height": 1600,
-        "alt": "Between Days — color study 05",
-        "placeholderColor": "#858777"
-      },
-      {
-        "id": "between-days-06",
-        "src": "/images/originals/between-days-06.jpg",
-        "width": 1334,
-        "height": 2000,
-        "alt": "Between Days — color study 06",
-        "placeholderColor": "#c3c2b7"
-      },
-      {
-        "id": "between-days-07",
-        "src": "/images/originals/between-days-07.jpg",
-        "width": 2000,
-        "height": 1334,
-        "alt": "Between Days — color study 07",
-        "placeholderColor": "#b3aaa0"
-      },
-      {
-        "id": "between-days-08",
-        "src": "/images/originals/between-days-08.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 08",
-        "placeholderColor": "#858777"
-      },
-      {
-        "id": "between-days-09",
-        "src": "/images/originals/between-days-09.jpg",
-        "width": 2000,
-        "height": 2000,
-        "alt": "Between Days — color study 09",
-        "placeholderColor": "#c3c2b7"
-      },
-      {
-        "id": "between-days-10",
-        "src": "/images/originals/between-days-10.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 10",
-        "placeholderColor": "#b3aaa0"
-      },
-      {
-        "id": "between-days-11",
-        "src": "/images/originals/between-days-11.jpg",
-        "width": 2000,
-        "height": 1500,
-        "alt": "Between Days — color study 11",
-        "placeholderColor": "#858777"
-      },
-      {
-        "id": "between-days-12",
-        "src": "/images/originals/between-days-12.jpg",
-        "width": 1600,
-        "height": 2000,
-        "alt": "Between Days — color study 12",
-        "placeholderColor": "#c3c2b7"
-      }
-    ]
-  },
-  {
-    "id": "github-be024fafd1b2e7ee62b6",
-    "slug": "github-be024fafd1b2e7ee62b6",
-    "title": "B&W",
-    "year": "2025",
+    "id": "only-blue",
+    "slug": "only-blue",
+    "title": "Only Blue",
+    "year": "",
     "location": "",
     "description": "",
-    "cover": "gh-e84637589700c97bd3c1",
+    "cover": "gh-72a90fa57b81cfbb9e7d",
     "images": [
       {
-        "id": "gh-42043a2381e101cf3994",
-        "src": "/images/originals/github/08c87849ea4f9aecb3d26e24afa10171dd12652c.jpg",
-        "width": 1704,
-        "height": 2557,
-        "alt": "B&W photograph 1 by Bo David",
+        "id": "gh-929d481b400e65eea28f",
+        "src": "/images/originals/github/29fe6b7534c0ebbc90fd584875e325d085144fc1.jpg",
+        "width": 3582,
+        "height": 4697,
+        "alt": "Scenes photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-001",
-          "path": "/images/series/b-and-w/001.jpg",
-          "blob": "08c87849ea4f9aecb3d26e24afa10171dd12652c"
+          "photoId": "scenes-069",
+          "path": "/images/scenes/scenes-069.jpg",
+          "blob": "29fe6b7534c0ebbc90fd584875e325d085144fc1"
         }
       },
       {
-        "id": "gh-c0fe89379528cb8a5164",
-        "src": "/images/originals/github/c1cddb42789bcee9aed8ceeae56d27ba3cd52816.jpg",
-        "width": 2978,
-        "height": 4656,
-        "alt": "B&W photograph 2 by Bo David",
+        "id": "gh-258da71ba63173de2657",
+        "src": "/images/originals/github/29c2429ab7b7676f888c85c0889c94ea24b62f77.jpg",
+        "width": 2226,
+        "height": 3000,
+        "alt": "Portrait photograph: portrait 002",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-002",
-          "path": "/images/series/b-and-w/002.jpg",
-          "blob": "c1cddb42789bcee9aed8ceeae56d27ba3cd52816"
+          "photoId": "portrait-002",
+          "path": "/images/portrait/portrait-002.jpg",
+          "blob": "29c2429ab7b7676f888c85c0889c94ea24b62f77"
         }
       },
       {
-        "id": "gh-364f1969f0c8e9c4aff5",
-        "src": "/images/originals/github/9fe044e828235a368fe8fdd8cbd7d821d57f1c4b.jpg",
-        "width": 2260,
-        "height": 1458,
-        "alt": "B&W photograph 3 by Bo David",
+        "id": "gh-501cbc5b065b18e30149",
+        "src": "/images/originals/github/ca3acdc18095a8ca8a1822467f12ace8fe2c4a05.jpg",
+        "width": 2509,
+        "height": 3764,
+        "alt": "Nature photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-003",
-          "path": "/images/series/b-and-w/003.jpg",
-          "blob": "9fe044e828235a368fe8fdd8cbd7d821d57f1c4b"
+          "photoId": "nature-013",
+          "path": "/images/nature/nature-013.jpg",
+          "blob": "ca3acdc18095a8ca8a1822467f12ace8fe2c4a05"
         }
       },
       {
-        "id": "gh-8e5bd65863c9d7ba4f4a",
-        "src": "/images/originals/github/d831bd104b0de91bb829928dc43fabcadd560f3f.jpg",
-        "width": 1612,
-        "height": 2458,
-        "alt": "B&W photograph 4 by Bo David",
+        "id": "gh-b9eddd7337eb6738e121",
+        "src": "/images/originals/github/be3cecef6247eb258c65ec793eb20172f4f42cd2.jpg",
+        "width": 2025,
+        "height": 3200,
+        "alt": "Street photograph: street 037",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-004",
-          "path": "/images/series/b-and-w/004.jpg",
-          "blob": "d831bd104b0de91bb829928dc43fabcadd560f3f"
+          "photoId": "street-037",
+          "path": "/images/street/street-037.jpg",
+          "blob": "be3cecef6247eb258c65ec793eb20172f4f42cd2"
         }
       },
       {
-        "id": "gh-a82e67149b2b85dfe57c",
-        "src": "/images/originals/github/a4b2740d326da24b0c68f1cb853400ad712b2d63.jpg",
-        "width": 3457,
-        "height": 2304,
-        "alt": "B&W photograph 5 by Bo David",
+        "id": "gh-5664a85661d67dbf5505",
+        "src": "/images/originals/github/325e456384c2e6bb2f3361137381411087fc4ba7.jpg",
+        "width": 4005,
+        "height": 5663,
+        "alt": "Portrait photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-005",
-          "path": "/images/series/b-and-w/005.jpg",
-          "blob": "a4b2740d326da24b0c68f1cb853400ad712b2d63"
+          "photoId": "portrait-025",
+          "path": "/images/portrait/portrait-025.jpg",
+          "blob": "325e456384c2e6bb2f3361137381411087fc4ba7"
         }
       },
       {
-        "id": "gh-3e30d529c186f0de5648",
-        "src": "/images/originals/github/5a9617363e4dd80ec736c6a40890f237fe050c68.jpg",
-        "width": 1819,
-        "height": 2729,
-        "alt": "B&W photograph 6 by Bo David",
+        "id": "gh-72a90fa57b81cfbb9e7d",
+        "src": "/images/originals/github/80cff8b9b67af10fa7f0dd80296b2720bc86d6dc.jpg",
+        "width": 3250,
+        "height": 4305,
+        "alt": "Scenes photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-006",
-          "path": "/images/series/b-and-w/006.jpg",
-          "blob": "5a9617363e4dd80ec736c6a40890f237fe050c68"
+          "photoId": "scenes-067",
+          "path": "/images/scenes/scenes-067.jpg",
+          "blob": "80cff8b9b67af10fa7f0dd80296b2720bc86d6dc"
         }
       },
       {
-        "id": "gh-a7c8433156442be83eec",
-        "src": "/images/originals/github/ad80f0c288d5e9d5bb092a74d16c418d79b35c04.jpg",
-        "width": 1825,
-        "height": 2737,
-        "alt": "B&W photograph 7 by Bo David",
+        "id": "gh-51def8e0f4e9dbcd5ada",
+        "src": "/images/originals/github/5bf77dca4092eb8dcbc3d5aa1b7a5ca8df2a8ef5.jpg",
+        "width": 3855,
+        "height": 5539,
+        "alt": "Scenes photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-007",
-          "path": "/images/series/b-and-w/007.jpg",
-          "blob": "ad80f0c288d5e9d5bb092a74d16c418d79b35c04"
+          "photoId": "scenes-072",
+          "path": "/images/scenes/scenes-072.jpg",
+          "blob": "5bf77dca4092eb8dcbc3d5aa1b7a5ca8df2a8ef5"
         }
       },
       {
-        "id": "gh-019c27c3d1615615d480",
-        "src": "/images/originals/github/afee9c0357cc91c108a3255b6093e2396e2b9bd5.jpg",
-        "width": 2516,
-        "height": 1857,
-        "alt": "B&W photograph 8 by Bo David",
+        "id": "gh-141f98335bbf1dae754a",
+        "src": "/images/originals/github/d0a1bc0630503f1332b04c89edef744d83ed9c9c.jpg",
+        "width": 5156,
+        "height": 3661,
+        "alt": "Nature photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-008",
-          "path": "/images/series/b-and-w/008.jpg",
-          "blob": "afee9c0357cc91c108a3255b6093e2396e2b9bd5"
+          "photoId": "nature-020",
+          "path": "/images/nature/nature-020.jpg",
+          "blob": "d0a1bc0630503f1332b04c89edef744d83ed9c9c"
         }
       },
       {
-        "id": "gh-926daa039dfcc5911466",
-        "src": "/images/originals/github/845de8f60a7754f3a25eeada7616f0e70cab8bf2.jpg",
-        "width": 1942,
-        "height": 3019,
-        "alt": "B&W photograph 9 by Bo David",
+        "id": "gh-51669789f26eb3f05250",
+        "src": "/images/originals/github/3a56a1ad2f6734baa5bcfffb0262ff9a0e72c695.jpg",
+        "width": 3000,
+        "height": 1774,
+        "alt": "Scene photograph: scenes 012",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-009",
-          "path": "/images/series/b-and-w/009.jpg",
-          "blob": "845de8f60a7754f3a25eeada7616f0e70cab8bf2"
+          "photoId": "scenes-012",
+          "path": "/images/scenes/scenes-012.jpg",
+          "blob": "3a56a1ad2f6734baa5bcfffb0262ff9a0e72c695"
         }
       },
       {
-        "id": "gh-e84637589700c97bd3c1",
-        "src": "/images/originals/github/bfc8fcbcc4c01227824167fc2744263efcaacae5.jpg",
-        "width": 3978,
-        "height": 2340,
-        "alt": "B&W photograph 10 by Bo David",
+        "id": "gh-9bf71f4b04d53c71590b",
+        "src": "/images/originals/github/e7e2900f54a681a1ade931157f58630c65bbfa8e.jpg",
+        "width": 7626,
+        "height": 5471,
+        "alt": "Nature photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-010",
-          "path": "/images/series/b-and-w/010.jpg",
-          "blob": "bfc8fcbcc4c01227824167fc2744263efcaacae5"
+          "photoId": "nature-011",
+          "path": "/images/nature/nature-011.jpg",
+          "blob": "e7e2900f54a681a1ade931157f58630c65bbfa8e"
         }
       },
       {
-        "id": "gh-e847b8bec70d35e8bb6d",
-        "src": "/images/originals/github/511fe11c3a21b35157b267f7ded1eea5d047026e.jpg",
-        "width": 1443,
-        "height": 2377,
-        "alt": "B&W photograph 11 by Bo David",
+        "id": "gh-3939a5c68aa42b17dc42",
+        "src": "/images/originals/github/6b0092d780767e05f8131369b487562c7ad44638.jpg",
+        "width": 5891,
+        "height": 3695,
+        "alt": "Nature photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-011",
-          "path": "/images/series/b-and-w/011.jpg",
-          "blob": "511fe11c3a21b35157b267f7ded1eea5d047026e"
+          "photoId": "nature-006",
+          "path": "/images/nature/nature-006.jpg",
+          "blob": "6b0092d780767e05f8131369b487562c7ad44638"
         }
       },
       {
-        "id": "gh-5d1ba65cad65489f4135",
-        "src": "/images/originals/github/a63de7010a67d08e3c380f71a3cbfe713e87a0cc.jpg",
-        "width": 2147,
-        "height": 3221,
-        "alt": "B&W photograph 12 by Bo David",
+        "id": "gh-8c6feac4b92ea76a6a7a",
+        "src": "/images/originals/github/b94aa1470c2a2011f9d4cff2e1f3d0b19128fc73.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Nature photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-012",
-          "path": "/images/series/b-and-w/012.jpg",
-          "blob": "a63de7010a67d08e3c380f71a3cbfe713e87a0cc"
+          "photoId": "nature-016",
+          "path": "/images/nature/nature-016.jpg",
+          "blob": "b94aa1470c2a2011f9d4cff2e1f3d0b19128fc73"
         }
       },
       {
-        "id": "gh-8690d8f6e00a95c8f19c",
-        "src": "/images/originals/github/181d9d0693370e64545962a31f17c6c463f9a5d9.jpg",
-        "width": 3705,
-        "height": 5558,
-        "alt": "B&W photograph 13 by Bo David",
+        "id": "gh-cb391d4296f9c77529c1",
+        "src": "/images/originals/github/4a240a3c16bebfee77e9700b7bca014b7b8963bc.jpg",
+        "width": 5544,
+        "height": 3570,
+        "alt": "Scenes photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "b-and-w-013",
-          "path": "/images/series/b-and-w/013.jpg",
-          "blob": "181d9d0693370e64545962a31f17c6c463f9a5d9"
+          "photoId": "scenes-076",
+          "path": "/images/scenes/scenes-076.jpg",
+          "blob": "4a240a3c16bebfee77e9700b7bca014b7b8963bc"
         }
       }
     ],
-    "github": {
-      "repository": "davidtaotao0711/bo-photography",
-      "key": "series:b-and-w"
-    }
+    "arrangement": "color",
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "gh-929d481b400e65eea28f"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-258da71ba63173de2657"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-501cbc5b065b18e30149"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b9f3a07d1905ff858eca"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b9eddd7337eb6738e121"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-5664a85661d67dbf5505"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-72a90fa57b81cfbb9e7d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-51def8e0f4e9dbcd5ada"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-1207b4e4-f8ca-4ded-80a6-e0c380e0ae2f",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-464834df-1ab8-4b18-80de-fc6c82a95d11",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-141f98335bbf1dae754a"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b9ade067bac9475f071d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-51669789f26eb3f05250"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-9bf71f4b04d53c71590b"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-3939a5c68aa42b17dc42"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-8c6feac4b92ea76a6a7a"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-cb391d4296f9c77529c1"
+      }
+    ]
   },
   {
-    "id": "github-e50851931e1dc66f8ba1",
-    "slug": "github-e50851931e1dc66f8ba1",
-    "title": "Tokyo",
-    "year": "2026",
+    "id": "green",
+    "slug": "green",
+    "title": "Green",
+    "year": "",
     "location": "",
-    "description": "Passing gestures, hard light, and the quiet order hidden inside the city.",
-    "cover": "gh-f0efdc878279fd70ff56",
+    "description": "",
+    "cover": "gh-1bf0b7d6bf6d47fec634",
     "images": [
       {
-        "id": "gh-f0efdc878279fd70ff56",
-        "src": "/images/originals/github/cbf143a25422acfb32f430c0042036e5d990b1d5.jpg",
-        "width": 5503,
-        "height": 3850,
-        "alt": "A busy street scene viewed from above",
+        "id": "gh-fe90505c531144367ebf",
+        "src": "/images/originals/github/cdc7904644110e387a17fd73c20f75d38195e0a1.jpg",
+        "width": 2208,
+        "height": 3000,
+        "alt": "Portrait photograph: portrait 003",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "home-002",
-          "path": "/images/home/002.jpg",
-          "blob": "cbf143a25422acfb32f430c0042036e5d990b1d5"
+          "photoId": "portrait-003",
+          "path": "/images/portrait/portrait-003.jpg",
+          "blob": "cdc7904644110e387a17fd73c20f75d38195e0a1"
+        }
+      },
+      {
+        "id": "gh-3073c75cf178340e52ad",
+        "src": "/images/originals/github/63651771fe9fb2a60aff3e01503904844b0e357c.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-019",
+          "path": "/images/nature/nature-019.jpg",
+          "blob": "63651771fe9fb2a60aff3e01503904844b0e357c"
+        }
+      },
+      {
+        "id": "gh-f3d93c2ba6e807a72621",
+        "src": "/images/originals/github/daba9b9ad957af37aa3fd2608f6ca2442251a8e1.jpg",
+        "width": 2179,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 053",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-053",
+          "path": "/images/scenes/scenes-053.jpg",
+          "blob": "daba9b9ad957af37aa3fd2608f6ca2442251a8e1"
+        }
+      },
+      {
+        "id": "gh-e2cedbbb36de3436e8bd",
+        "src": "/images/originals/github/6bb4259ff506a16b0d1da4151b202283b3242127.jpg",
+        "width": 3668,
+        "height": 5308,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-073",
+          "path": "/images/scenes/scenes-073.jpg",
+          "blob": "6bb4259ff506a16b0d1da4151b202283b3242127"
+        }
+      },
+      {
+        "id": "gh-23164ff2da57a3116af5",
+        "src": "/images/originals/github/1ab1ae919d6665b09db36f39c0af6d1323bd959e.jpg",
+        "width": 3189,
+        "height": 4791,
+        "alt": "Tokyo photograph 15 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-015",
+          "path": "/images/series/tokyo-2026/015.jpg",
+          "blob": "1ab1ae919d6665b09db36f39c0af6d1323bd959e"
+        }
+      },
+      {
+        "id": "gh-54b126b45bd8d06a99bd",
+        "src": "/images/originals/github/77fa87dfa3f39f16e8b44683e666af891a5cc1c1.jpg",
+        "width": 3925,
+        "height": 5894,
+        "alt": "Tokyo photograph 16 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-016",
+          "path": "/images/series/tokyo-2026/016.jpg",
+          "blob": "77fa87dfa3f39f16e8b44683e666af891a5cc1c1"
+        }
+      },
+      {
+        "id": "gh-08b35e22838c859d7209",
+        "src": "/images/originals/github/183fe817419f363cac3aa04b91e168e25073238d.jpg",
+        "width": 1930,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 043",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-043",
+          "path": "/images/scenes/scenes-043.jpg",
+          "blob": "183fe817419f363cac3aa04b91e168e25073238d"
+        }
+      },
+      {
+        "id": "gh-b6b44f4dabf847f53c55",
+        "src": "/images/originals/github/4b13702d292beecbf21a03f07647ef61d88784cc.jpg",
+        "width": 2941,
+        "height": 4228,
+        "alt": "Tokyo photograph 26 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-030",
+          "path": "/images/series/tokyo-2026/030.jpg",
+          "blob": "4b13702d292beecbf21a03f07647ef61d88784cc"
+        }
+      },
+      {
+        "id": "gh-1bf0b7d6bf6d47fec634",
+        "src": "/images/originals/github/1cec73ea4f0b2128ae25f37fbb8ec88d691127dd.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Tokyo photograph 27 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-031",
+          "path": "/images/series/tokyo-2026/031.jpg",
+          "blob": "1cec73ea4f0b2128ae25f37fbb8ec88d691127dd"
+        }
+      },
+      {
+        "id": "gh-c819b4e13501f6b33f80",
+        "src": "/images/originals/github/c24691ed8f537a0c2a1e6eb308cefb856cb1c4b8.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-001",
+          "path": "/images/nature/nature-001.jpg",
+          "blob": "c24691ed8f537a0c2a1e6eb308cefb856cb1c4b8"
+        }
+      },
+      {
+        "id": "gh-b0f6957f2051fccc1074",
+        "src": "/images/originals/github/3c6aaa0f4329052350e56769274e8516b3ce0e66.jpg",
+        "width": 5940,
+        "height": 3859,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-002",
+          "path": "/images/nature/nature-002.jpg",
+          "blob": "3c6aaa0f4329052350e56769274e8516b3ce0e66"
+        }
+      },
+      {
+        "id": "gh-0e6ad3ae6af7079a8b8d",
+        "src": "/images/originals/github/ecc6a6e99679015ae035cd6ddb7e8202620eb4d9.jpg",
+        "width": 5539,
+        "height": 4032,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-007",
+          "path": "/images/nature/nature-007.jpg",
+          "blob": "ecc6a6e99679015ae035cd6ddb7e8202620eb4d9"
+        }
+      },
+      {
+        "id": "gh-c815dbfceb4e70d59068",
+        "src": "/images/originals/github/7f648c91e3df98c608fdd23f74c8f76fe75a6259.jpg",
+        "width": 5772,
+        "height": 3724,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-005",
+          "path": "/images/nature/nature-005.jpg",
+          "blob": "7f648c91e3df98c608fdd23f74c8f76fe75a6259"
+        }
+      },
+      {
+        "id": "gh-4488fc01b76fba04a1c2",
+        "src": "/images/originals/github/3fc182ca6890c97de1944e57a8a5dcbce8d44d35.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-014",
+          "path": "/images/nature/nature-014.jpg",
+          "blob": "3fc182ca6890c97de1944e57a8a5dcbce8d44d35"
+        }
+      },
+      {
+        "id": "gh-87446c39252fbc18b4ed",
+        "src": "/images/originals/github/179c07f87b2a7c502ae9c6401940aa9ee6b5ec09.jpg",
+        "width": 2600,
+        "height": 1285,
+        "alt": "Scene photograph: scenes 050",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-050",
+          "path": "/images/scenes/scenes-050.jpg",
+          "blob": "179c07f87b2a7c502ae9c6401940aa9ee6b5ec09"
+        }
+      },
+      {
+        "id": "gh-fe4f080bf43cb6993937",
+        "src": "/images/originals/github/5ce91259e4e2c8cb959461a7f37d9a98a7f3cac4.jpg",
+        "width": 5977,
+        "height": 3795,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-017",
+          "path": "/images/nature/nature-017.jpg",
+          "blob": "5ce91259e4e2c8cb959461a7f37d9a98a7f3cac4"
+        }
+      },
+      {
+        "id": "gh-5d4c5351e491455b6ec4",
+        "src": "/images/originals/github/242805d59f1e147327faebfe527d83c251f8f694.jpg",
+        "width": 5022,
+        "height": 3601,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-058",
+          "path": "/images/street/street-058.jpg",
+          "blob": "242805d59f1e147327faebfe527d83c251f8f694"
+        }
+      }
+    ]
+  },
+  {
+    "id": "yellow",
+    "slug": "yellow",
+    "title": "Warm color",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "gh-234eea3720b38ac48326",
+    "images": [
+      {
+        "id": "gh-ec7a8c535cc31a5aea6c",
+        "src": "/images/originals/github/76f28b619018bb9756b297f3b1eb0688de630c50.jpg",
+        "width": 2000,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 013",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-013",
+          "path": "/images/scenes/scenes-013.jpg",
+          "blob": "76f28b619018bb9756b297f3b1eb0688de630c50"
+        }
+      },
+      {
+        "id": "gh-cfe95465a808dd8d6269",
+        "src": "/images/originals/github/c7f7c7e8f4ae81edd06c4be5a91c33452a0858e2.jpg",
+        "width": 1822,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 016",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-016",
+          "path": "/images/scenes/scenes-016.jpg",
+          "blob": "c7f7c7e8f4ae81edd06c4be5a91c33452a0858e2"
+        }
+      },
+      {
+        "id": "gh-9709c64964ee414773b5",
+        "src": "/images/originals/github/820aa7e7ec0d12e69cec7e668249c74fa8722fb5.jpg",
+        "width": 2000,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 019",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-019",
+          "path": "/images/scenes/scenes-019.jpg",
+          "blob": "820aa7e7ec0d12e69cec7e668249c74fa8722fb5"
+        }
+      },
+      {
+        "id": "gh-5c297e0a3ce8956d96a2",
+        "src": "/images/originals/github/bbe5c6c64d2b8d7b31ea4dd8500500c6b7578f68.jpg",
+        "width": 1990,
+        "height": 3000,
+        "alt": "Street photograph: street 002",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-002",
+          "path": "/images/street/street-002.jpg",
+          "blob": "bbe5c6c64d2b8d7b31ea4dd8500500c6b7578f68"
+        }
+      },
+      {
+        "id": "gh-6e55384bc606d1d0b05a",
+        "src": "/images/originals/github/013e7b996baaf2ec01d585723d43f0037d64cb65.jpg",
+        "width": 1680,
+        "height": 2700,
+        "alt": "Street photograph: street 033",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-033",
+          "path": "/images/street/street-033.jpg",
+          "blob": "013e7b996baaf2ec01d585723d43f0037d64cb65"
+        }
+      },
+      {
+        "id": "gh-234eea3720b38ac48326",
+        "src": "/images/originals/github/8c0910d54a262612e192e9730cb4a95cc051ed57.jpg",
+        "width": 3950,
+        "height": 6048,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-068",
+          "path": "/images/scenes/scenes-068.jpg",
+          "blob": "8c0910d54a262612e192e9730cb4a95cc051ed57"
+        }
+      },
+      {
+        "id": "gh-38b64fe7063c6292ddb9",
+        "src": "/images/originals/github/1698c6b904e52c5d701be305080a306e75c9a5fc.jpg",
+        "width": 3984,
+        "height": 5285,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-075",
+          "path": "/images/street/street-075.jpg",
+          "blob": "1698c6b904e52c5d701be305080a306e75c9a5fc"
+        }
+      },
+      {
+        "id": "gh-a72419790a90e38672ff",
+        "src": "/images/originals/github/828661736387dfec85010239003c64673b331d5b.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-077",
+          "path": "/images/scenes/scenes-077.jpg",
+          "blob": "828661736387dfec85010239003c64673b331d5b"
         }
       },
       {
@@ -861,42 +611,846 @@
         }
       },
       {
-        "id": "gh-122f2496b19e35b715be",
-        "src": "/images/originals/github/60a6c8e824bba50db5b8b7084c478e30b45f06ac.jpg",
-        "width": 3586,
-        "height": 4803,
-        "alt": "Tokyo photograph 4 by Bo David",
+        "id": "gh-b35ceebadfc0ff54a12d",
+        "src": "/images/originals/github/137d4b5c21324936f1d42b47d316e524ec973fbe.jpg",
+        "width": 2450,
+        "height": 1633,
+        "alt": "Scene photograph: scenes 010",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-004",
-          "path": "/images/series/tokyo-2026/004.jpg",
-          "blob": "60a6c8e824bba50db5b8b7084c478e30b45f06ac"
+          "photoId": "scenes-010",
+          "path": "/images/scenes/scenes-010.jpg",
+          "blob": "137d4b5c21324936f1d42b47d316e524ec973fbe"
         }
       },
       {
-        "id": "gh-0c2fd3018cca3bfe86e9",
-        "src": "/images/originals/github/f740d3eb34dac470796879eefcec112efbd4c5ee.jpg",
-        "width": 3856,
-        "height": 5684,
-        "alt": "Tokyo photograph 5 by Bo David",
+        "id": "gh-63b0024d83c41dbf46dd",
+        "src": "/images/originals/github/626535a70c18b51bad70dd77c80d8f0ac6daa64d.jpg",
+        "width": 3000,
+        "height": 2000,
+        "alt": "Portrait photograph: portrait 007",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-005",
-          "path": "/images/series/tokyo-2026/005.jpg",
-          "blob": "f740d3eb34dac470796879eefcec112efbd4c5ee"
+          "photoId": "portrait-007",
+          "path": "/images/portrait/portrait-007.jpg",
+          "blob": "626535a70c18b51bad70dd77c80d8f0ac6daa64d"
         }
       },
       {
-        "id": "gh-11b68a2aac3bb842a8c2",
-        "src": "/images/originals/github/15e677514438b5cf2598b45d31720cbe9c27f8d1.jpg",
+        "id": "gh-b2b8f675b9b7440854f3",
+        "src": "/images/originals/github/a036877b39590b0301bdd142db5ef498e1aaac38.jpg",
+        "width": 3000,
+        "height": 2025,
+        "alt": "Street photograph: street 018",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-018",
+          "path": "/images/street/street-018.jpg",
+          "blob": "a036877b39590b0301bdd142db5ef498e1aaac38"
+        }
+      },
+      {
+        "id": "gh-bfde8efabf5c45834afc",
+        "src": "/images/originals/github/8aaa9d245f518a3218c7cdf7778e6cc711991dc7.jpg",
+        "width": 3000,
+        "height": 2047,
+        "alt": "Street photograph: street 023",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-023",
+          "path": "/images/street/street-023.jpg",
+          "blob": "8aaa9d245f518a3218c7cdf7778e6cc711991dc7"
+        }
+      },
+      {
+        "id": "gh-d925ff4caf08af2329c2",
+        "src": "/images/originals/github/763e8b953891ea21447d14c2ef0ef7bf320c7288.jpg",
+        "width": 3000,
+        "height": 2000,
+        "alt": "Scene photograph: scenes 044",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-044",
+          "path": "/images/scenes/scenes-044.jpg",
+          "blob": "763e8b953891ea21447d14c2ef0ef7bf320c7288"
+        }
+      },
+      {
+        "id": "gh-e86ce4f018610d4b0aee",
+        "src": "/images/originals/github/6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee.jpg",
+        "width": 4333,
+        "height": 3476,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-056",
+          "path": "/images/street/street-056.jpg",
+          "blob": "6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee"
+        }
+      },
+      {
+        "id": "gh-1ab91e59654cbabd7133",
+        "src": "/images/originals/github/6de579345a7104896b2b58cd6afb509db2309c8f.jpg",
+        "width": 8256,
+        "height": 5504,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-080",
+          "path": "/images/scenes/scenes-080.jpg",
+          "blob": "6de579345a7104896b2b58cd6afb509db2309c8f"
+        }
+      },
+      {
+        "id": "gh-fd0f33391a3a51e2868c",
+        "src": "/images/originals/github/d8a0c79a7ee3875bf36b78be3ec4e2bb4ee29cac.jpg",
+        "width": 5163,
+        "height": 2983,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-087",
+          "path": "/images/scenes/scenes-087.jpg",
+          "blob": "d8a0c79a7ee3875bf36b78be3ec4e2bb4ee29cac"
+        }
+      },
+      {
+        "id": "gh-6d86f38c6aa3b67ed8b4",
+        "src": "/images/originals/github/ce374146ef8bc3176808372a8ff2bb975ddd598b.jpg",
+        "width": 5779,
+        "height": 3853,
+        "alt": "Tokyo photograph 25 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-025",
+          "path": "/images/series/tokyo-2026/025.jpg",
+          "blob": "ce374146ef8bc3176808372a8ff2bb975ddd598b"
+        }
+      }
+    ]
+  },
+  {
+    "id": "monochrome",
+    "slug": "monochrome",
+    "title": "Monochrome",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "gh-9e061286d91c2f79d7fe",
+    "images": [
+      {
+        "id": "gh-49a7fc95f9855f2e4fb3",
+        "src": "/images/originals/github/fc9ced637309f695ef2e1de7832897cce82bda76.jpg",
+        "width": 960,
+        "height": 1584,
+        "alt": "Portrait photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-055",
+          "path": "/images/portrait/portrait-055.jpg",
+          "blob": "fc9ced637309f695ef2e1de7832897cce82bda76"
+        }
+      },
+      {
+        "id": "gh-3e883eb6c77965416b92",
+        "src": "/images/originals/github/e916f23d5ac54b4c4eaf1792b37d41f4f829911c.jpg",
+        "width": 1280,
+        "height": 2252,
+        "alt": "Portrait photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-057",
+          "path": "/images/portrait/portrait-057.jpg",
+          "blob": "e916f23d5ac54b4c4eaf1792b37d41f4f829911c"
+        }
+      },
+      {
+        "id": "gh-05be2b5842344aa682c0",
+        "src": "/images/originals/github/738e483b70534886456229bb005ba17b3e957cc6.jpg",
         "width": 4032,
         "height": 6048,
-        "alt": "Tokyo photograph 6 by Bo David",
+        "alt": "Portrait photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-006",
-          "path": "/images/series/tokyo-2026/006.jpg",
-          "blob": "15e677514438b5cf2598b45d31720cbe9c27f8d1"
+          "photoId": "portrait-058",
+          "path": "/images/portrait/portrait-058.jpg",
+          "blob": "738e483b70534886456229bb005ba17b3e957cc6"
+        }
+      },
+      {
+        "id": "gh-99e9842ab73da853c4ac",
+        "src": "/images/originals/github/7187c337525dea460ea4cf680bb1b3ad4ab2e57c.jpg",
+        "width": 1933,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 005",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-005",
+          "path": "/images/scenes/scenes-005.jpg",
+          "blob": "7187c337525dea460ea4cf680bb1b3ad4ab2e57c"
+        }
+      },
+      {
+        "id": "gh-8c05281c3d72a5097566",
+        "src": "/images/originals/github/80e327e4bc0595d0c5aa16c09201a92068d0beb2.jpg",
+        "width": 2187,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 039",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-039",
+          "path": "/images/scenes/scenes-039.jpg",
+          "blob": "80e327e4bc0595d0c5aa16c09201a92068d0beb2"
+        }
+      },
+      {
+        "id": "gh-9e061286d91c2f79d7fe",
+        "src": "/images/originals/github/5906e2485f65b9d4c252540d73aeb97ef3da5666.jpg",
+        "width": 1930,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 008",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-008",
+          "path": "/images/scenes/scenes-008.jpg",
+          "blob": "5906e2485f65b9d4c252540d73aeb97ef3da5666"
+        }
+      },
+      {
+        "id": "gh-d2c1e94e466e6444db13",
+        "src": "/images/originals/github/d6c5738f6677ca0bc1277c49db1eb3cc47e226aa.jpg",
+        "width": 2133,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 015",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-015",
+          "path": "/images/scenes/scenes-015.jpg",
+          "blob": "d6c5738f6677ca0bc1277c49db1eb3cc47e226aa"
+        }
+      },
+      {
+        "id": "gh-4f4f1cf97d40e1bb89bb",
+        "src": "/images/originals/github/8bedb7f88f368073ec0b47a2b042c117d622a463.jpg",
+        "width": 1511,
+        "height": 2350,
+        "alt": "Street photograph: street 003",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-003",
+          "path": "/images/street/street-003.jpg",
+          "blob": "8bedb7f88f368073ec0b47a2b042c117d622a463"
+        }
+      },
+      {
+        "id": "gh-25ea87e06e83e2845da9",
+        "src": "/images/originals/github/66580108fcbdee75b1d7b7484db9add4c18c4822.jpg",
+        "width": 2000,
+        "height": 3000,
+        "alt": "Street photograph: street 024",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-024",
+          "path": "/images/street/street-024.jpg",
+          "blob": "66580108fcbdee75b1d7b7484db9add4c18c4822"
+        }
+      },
+      {
+        "id": "gh-7817f97243f4d8dac8e5",
+        "src": "/images/originals/github/52bfa7a0ffe8907868b324a04f8b11ee35dd5afe.jpg",
+        "width": 3606,
+        "height": 5645,
+        "alt": "Portrait photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-022",
+          "path": "/images/portrait/portrait-022.jpg",
+          "blob": "52bfa7a0ffe8907868b324a04f8b11ee35dd5afe"
+        }
+      },
+      {
+        "id": "gh-468bf8a04c8fc01ccf22",
+        "src": "/images/originals/github/e08afe4ded4ec8e9e9b30eddc99f1a8c77657aaa.jpg",
+        "width": 4807,
+        "height": 7492,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-054",
+          "path": "/images/street/street-054.jpg",
+          "blob": "e08afe4ded4ec8e9e9b30eddc99f1a8c77657aaa"
+        }
+      },
+      {
+        "id": "gh-4a55ba7ff06f0f4a8203",
+        "src": "/images/originals/github/7bcfe325cd37b6bb70a013464ba136a0cdf72173.jpg",
+        "width": 3386,
+        "height": 4885,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-057",
+          "path": "/images/street/street-057.jpg",
+          "blob": "7bcfe325cd37b6bb70a013464ba136a0cdf72173"
+        }
+      },
+      {
+        "id": "gh-32ef8b945a567d4de723",
+        "src": "/images/originals/github/cbb9f82507ced1c97fa9ecfe2e40049aab2e5f2a.jpg",
+        "width": 1811,
+        "height": 2860,
+        "alt": "Portrait photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-041",
+          "path": "/images/portrait/portrait-041.jpg",
+          "blob": "cbb9f82507ced1c97fa9ecfe2e40049aab2e5f2a"
+        }
+      },
+      {
+        "id": "gh-0c4899619d250569e51b",
+        "src": "/images/originals/github/7fec0342ff7382e4daf109d97f0c1e44080e783d.jpg",
+        "width": 2679,
+        "height": 2921,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-071",
+          "path": "/images/street/street-071.jpg",
+          "blob": "7fec0342ff7382e4daf109d97f0c1e44080e783d"
+        }
+      },
+      {
+        "id": "gh-1df1078c6af6735e23d8",
+        "src": "/images/originals/github/0cfeb317919445e25a49f9fbdd45ddc69d0d0102.jpg",
+        "width": 3936,
+        "height": 5285,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-075",
+          "path": "/images/scenes/scenes-075.jpg",
+          "blob": "0cfeb317919445e25a49f9fbdd45ddc69d0d0102"
+        }
+      },
+      {
+        "id": "gh-42043a2381e101cf3994",
+        "src": "/images/originals/github/08c87849ea4f9aecb3d26e24afa10171dd12652c.jpg",
+        "width": 1704,
+        "height": 2557,
+        "alt": "B&W photograph 1 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-001",
+          "path": "/images/series/b-and-w/001.jpg",
+          "blob": "08c87849ea4f9aecb3d26e24afa10171dd12652c"
+        }
+      },
+      {
+        "id": "gh-8e5bd65863c9d7ba4f4a",
+        "src": "/images/originals/github/d831bd104b0de91bb829928dc43fabcadd560f3f.jpg",
+        "width": 1612,
+        "height": 2458,
+        "alt": "B&W photograph 4 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-004",
+          "path": "/images/series/b-and-w/004.jpg",
+          "blob": "d831bd104b0de91bb829928dc43fabcadd560f3f"
+        }
+      },
+      {
+        "id": "gh-3e30d529c186f0de5648",
+        "src": "/images/originals/github/5a9617363e4dd80ec736c6a40890f237fe050c68.jpg",
+        "width": 1819,
+        "height": 2729,
+        "alt": "B&W photograph 6 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-006",
+          "path": "/images/series/b-and-w/006.jpg",
+          "blob": "5a9617363e4dd80ec736c6a40890f237fe050c68"
+        }
+      },
+      {
+        "id": "gh-642c5a11fb3f7afc9e3d",
+        "src": "/images/originals/github/c1eefd5e57f576056a8d875ae79f9e9e7948a78b.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Motion&Blur photograph 15 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "motion-and-blur-017",
+          "path": "/images/series/motion-and-blur/017.jpg",
+          "blob": "c1eefd5e57f576056a8d875ae79f9e9e7948a78b"
+        }
+      },
+      {
+        "id": "gh-8bfbb8e8521d6f2fc349",
+        "src": "/images/originals/github/d6cae87f4bbf188693e9fc6c1f0eb2d15b08a79f.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Motion&Blur photograph 25 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "motion-and-blur-033",
+          "path": "/images/series/motion-and-blur/033.jpg",
+          "blob": "d6cae87f4bbf188693e9fc6c1f0eb2d15b08a79f"
+        }
+      },
+      {
+        "id": "gh-a7c8433156442be83eec",
+        "src": "/images/originals/github/ad80f0c288d5e9d5bb092a74d16c418d79b35c04.jpg",
+        "width": 1825,
+        "height": 2737,
+        "alt": "B&W photograph 7 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-007",
+          "path": "/images/series/b-and-w/007.jpg",
+          "blob": "ad80f0c288d5e9d5bb092a74d16c418d79b35c04"
+        }
+      },
+      {
+        "id": "gh-e847b8bec70d35e8bb6d",
+        "src": "/images/originals/github/511fe11c3a21b35157b267f7ded1eea5d047026e.jpg",
+        "width": 1443,
+        "height": 2377,
+        "alt": "B&W photograph 11 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-011",
+          "path": "/images/series/b-and-w/011.jpg",
+          "blob": "511fe11c3a21b35157b267f7ded1eea5d047026e"
+        }
+      },
+      {
+        "id": "gh-8690d8f6e00a95c8f19c",
+        "src": "/images/originals/github/181d9d0693370e64545962a31f17c6c463f9a5d9.jpg",
+        "width": 3705,
+        "height": 5558,
+        "alt": "B&W photograph 13 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-013",
+          "path": "/images/series/b-and-w/013.jpg",
+          "blob": "181d9d0693370e64545962a31f17c6c463f9a5d9"
+        }
+      },
+      {
+        "id": "gh-f0de60e7b4b0dc4630c4",
+        "src": "/images/originals/github/35becba9222c6cad6a7e60b22069f6429fbe375c.jpg",
+        "width": 3286,
+        "height": 4828,
+        "alt": "Motion&Blur photograph 14 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "motion-and-blur-016",
+          "path": "/images/series/motion-and-blur/016.jpg",
+          "blob": "35becba9222c6cad6a7e60b22069f6429fbe375c"
+        }
+      },
+      {
+        "id": "gh-9992682699c1582dfcbc",
+        "src": "/images/originals/github/8d2891390751aaca489d9d7e0b28368f0c4eca0c.jpg",
+        "width": 5361,
+        "height": 3542,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-055",
+          "path": "/images/street/street-055.jpg",
+          "blob": "8d2891390751aaca489d9d7e0b28368f0c4eca0c"
+        }
+      },
+      {
+        "id": "gh-04e0874ee5f5bae6b2ef",
+        "src": "/images/originals/github/ad106a00213d17764f06ff3ee57f3ff8773cdb1a.jpg",
+        "width": 4771,
+        "height": 2991,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-065",
+          "path": "/images/street/street-065.jpg",
+          "blob": "ad106a00213d17764f06ff3ee57f3ff8773cdb1a"
+        }
+      },
+      {
+        "id": "gh-30582e87223b1fe63741",
+        "src": "/images/originals/github/344947fa3ec637c8bb8ae411487488ada64940dc.jpg",
+        "width": 5379,
+        "height": 3140,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-069",
+          "path": "/images/street/street-069.jpg",
+          "blob": "344947fa3ec637c8bb8ae411487488ada64940dc"
+        }
+      },
+      {
+        "id": "gh-216ffc4a9892664d372b",
+        "src": "/images/originals/github/f0c5f380b7fdebc840460353d83bcc0dbf5e9a61.jpg",
+        "width": 1554,
+        "height": 1080,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-071",
+          "path": "/images/scenes/scenes-071.jpg",
+          "blob": "f0c5f380b7fdebc840460353d83bcc0dbf5e9a61"
+        }
+      },
+      {
+        "id": "gh-a82e67149b2b85dfe57c",
+        "src": "/images/originals/github/a4b2740d326da24b0c68f1cb853400ad712b2d63.jpg",
+        "width": 3457,
+        "height": 2304,
+        "alt": "B&W photograph 5 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-005",
+          "path": "/images/series/b-and-w/005.jpg",
+          "blob": "a4b2740d326da24b0c68f1cb853400ad712b2d63"
+        }
+      },
+      {
+        "id": "gh-019c27c3d1615615d480",
+        "src": "/images/originals/github/afee9c0357cc91c108a3255b6093e2396e2b9bd5.jpg",
+        "width": 2516,
+        "height": 1857,
+        "alt": "B&W photograph 8 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-008",
+          "path": "/images/series/b-and-w/008.jpg",
+          "blob": "afee9c0357cc91c108a3255b6093e2396e2b9bd5"
+        }
+      },
+      {
+        "id": "gh-e84637589700c97bd3c1",
+        "src": "/images/originals/github/bfc8fcbcc4c01227824167fc2744263efcaacae5.jpg",
+        "width": 3978,
+        "height": 2340,
+        "alt": "B&W photograph 10 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "b-and-w-010",
+          "path": "/images/series/b-and-w/010.jpg",
+          "blob": "bfc8fcbcc4c01227824167fc2744263efcaacae5"
+        }
+      },
+      {
+        "id": "gh-1d0d78235ee4722dc8f7",
+        "src": "/images/originals/github/ad51ddefbd58d42dd0dfb2638263fd27b88252d1.jpg",
+        "width": 5281,
+        "height": 3468,
+        "alt": "Motion&Blur photograph 1 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "motion-and-blur-001",
+          "path": "/images/series/motion-and-blur/001.jpg",
+          "blob": "ad51ddefbd58d42dd0dfb2638263fd27b88252d1"
+        }
+      }
+    ],
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "gh-49a7fc95f9855f2e4fb3"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-3e883eb6c77965416b92"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-05be2b5842344aa682c0"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-99e9842ab73da853c4ac"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-8c05281c3d72a5097566"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-9e061286d91c2f79d7fe"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-d2c1e94e466e6444db13"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-4f4f1cf97d40e1bb89bb"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-25ea87e06e83e2845da9"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-7817f97243f4d8dac8e5"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-468bf8a04c8fc01ccf22"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-4a55ba7ff06f0f4a8203"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-32ef8b945a567d4de723"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-0c4899619d250569e51b"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-1df1078c6af6735e23d8"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-42043a2381e101cf3994"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-8e5bd65863c9d7ba4f4a"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-3e30d529c186f0de5648"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-642c5a11fb3f7afc9e3d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-8bfbb8e8521d6f2fc349"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-a7c8433156442be83eec"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-e847b8bec70d35e8bb6d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-8690d8f6e00a95c8f19c"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-f0de60e7b4b0dc4630c4"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-7405c1ca-cd85-4a03-8f19-28ea6246c4ba",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-47d7c795-7518-4465-ab40-a01eabbe9085",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-0da90005-f518-486b-9aa7-d5af53fa71c2",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-9992682699c1582dfcbc"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-04e0874ee5f5bae6b2ef"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-30582e87223b1fe63741"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-216ffc4a9892664d372b"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-a82e67149b2b85dfe57c"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-019c27c3d1615615d480"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-e84637589700c97bd3c1"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-1d0d78235ee4722dc8f7"
+      }
+    ]
+  },
+  {
+    "id": "mixed",
+    "slug": "mixed",
+    "title": "Mixed color",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "gh-dc2ba4acdee500c55e28",
+    "images": [
+      {
+        "id": "gh-de07c5afdc2dc3e12ba3",
+        "src": "/images/originals/github/49c6937dbe0a587e39339d8b497ec8251055e5a7.jpg",
+        "width": 4032,
+        "height": 5882,
+        "alt": "An urban street scene with passing traffic",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "home-008",
+          "path": "/images/home/008.jpg",
+          "blob": "49c6937dbe0a587e39339d8b497ec8251055e5a7"
+        }
+      },
+      {
+        "id": "gh-f4f60048fb6547f19ad8",
+        "src": "/images/originals/github/77afbfd70f484cf9a2ba8855bb8d25cafaf2b70d.jpg",
+        "width": 1818,
+        "height": 3000,
+        "alt": "Portrait photograph: portrait 012",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-012",
+          "path": "/images/portrait/portrait-012.jpg",
+          "blob": "77afbfd70f484cf9a2ba8855bb8d25cafaf2b70d"
+        }
+      },
+      {
+        "id": "gh-c114de6ad23078522c7b",
+        "src": "/images/originals/github/021577a2bc1babe42c3ee969b375413cf475911b.jpg",
+        "width": 1873,
+        "height": 3000,
+        "alt": "Street photograph: street 005",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-005",
+          "path": "/images/street/street-005.jpg",
+          "blob": "021577a2bc1babe42c3ee969b375413cf475911b"
+        }
+      },
+      {
+        "id": "gh-736f0e165f5135f479e2",
+        "src": "/images/originals/github/124c8d71360808fc6785bcb52b6c3c83a270df50.jpg",
+        "width": 1604,
+        "height": 3000,
+        "alt": "Street photograph: street 009",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-009",
+          "path": "/images/street/street-009.jpg",
+          "blob": "124c8d71360808fc6785bcb52b6c3c83a270df50"
+        }
+      },
+      {
+        "id": "gh-84982b409f42c228e1b8",
+        "src": "/images/originals/github/ca294495d7b8baac61b05258b3ac028fe49805e2.jpg",
+        "width": 1525,
+        "height": 2650,
+        "alt": "Street photograph: street 011",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-011",
+          "path": "/images/street/street-011.jpg",
+          "blob": "ca294495d7b8baac61b05258b3ac028fe49805e2"
+        }
+      },
+      {
+        "id": "gh-627040cbaf5e158d272c",
+        "src": "/images/originals/github/baa165792733d5687ed4faf33ece14981ccf17e8.jpg",
+        "width": 3280,
+        "height": 5033,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-052",
+          "path": "/images/street/street-052.jpg",
+          "blob": "baa165792733d5687ed4faf33ece14981ccf17e8"
+        }
+      },
+      {
+        "id": "gh-6bfc19549461ffc19a93",
+        "src": "/images/originals/github/963ac6737a81cd45fabe6a2db3eb22ba7d07cce0.jpg",
+        "width": 2089,
+        "height": 3000,
+        "alt": "Portrait photograph: portrait 019",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-019",
+          "path": "/images/portrait/portrait-019.jpg",
+          "blob": "963ac6737a81cd45fabe6a2db3eb22ba7d07cce0"
+        }
+      },
+      {
+        "id": "gh-7f1947d80a53ae69040e",
+        "src": "/images/originals/github/fdf647ab8db1cd24f2f604cbe1d845c7242a7abf.jpg",
+        "width": 1887,
+        "height": 2500,
+        "alt": "Scene photograph: scenes 040",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-040",
+          "path": "/images/scenes/scenes-040.jpg",
+          "blob": "fdf647ab8db1cd24f2f604cbe1d845c7242a7abf"
+        }
+      },
+      {
+        "id": "gh-3201ba23f03b5035f847",
+        "src": "/images/originals/github/b07bd69ae456e3d7618ed3d8e5b03acfb71a0e08.jpg",
+        "width": 2098,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 036",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-036",
+          "path": "/images/scenes/scenes-036.jpg",
+          "blob": "b07bd69ae456e3d7618ed3d8e5b03acfb71a0e08"
+        }
+      },
+      {
+        "id": "gh-dc2ba4acdee500c55e28",
+        "src": "/images/originals/github/0052ae68be81d4cc60bed2cccb6c141db3a71e4f.jpg",
+        "width": 1452,
+        "height": 2450,
+        "alt": "Scene photograph: scenes 054",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-054",
+          "path": "/images/scenes/scenes-054.jpg",
+          "blob": "0052ae68be81d4cc60bed2cccb6c141db3a71e4f"
+        }
+      },
+      {
+        "id": "gh-1ee3128c4989fcd5e7fa",
+        "src": "/images/originals/github/7e742a83e2d3b282429fdd771f47b2274eed1a17.jpg",
+        "width": 3246,
+        "height": 5869,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-076",
+          "path": "/images/street/street-076.jpg",
+          "blob": "7e742a83e2d3b282429fdd771f47b2274eed1a17"
         }
       },
       {
@@ -913,16 +1467,352 @@
         }
       },
       {
-        "id": "gh-6b4adb68a6151cd4648c",
-        "src": "/images/originals/github/a447f5077257ddcfd4e8d85191475b3fe56cb078.jpg",
-        "width": 3796,
-        "height": 5128,
-        "alt": "Tokyo photograph 8 by Bo David",
+        "id": "gh-3e4e7132a7ff1516f8c9",
+        "src": "/images/originals/github/1fd5a803507716300749bc2aee01232c4a2056d1.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Tokyo photograph 13 by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-008",
-          "path": "/images/series/tokyo-2026/008.jpg",
-          "blob": "a447f5077257ddcfd4e8d85191475b3fe56cb078"
+          "photoId": "tokyo-2026-013",
+          "path": "/images/series/tokyo-2026/013.jpg",
+          "blob": "1fd5a803507716300749bc2aee01232c4a2056d1"
+        }
+      },
+      {
+        "id": "gh-df683075a95fd8c59923",
+        "src": "/images/originals/github/7e5595e26ba8e30feb1c0d4e125cded106c1ea0f.jpg",
+        "width": 3433,
+        "height": 4427,
+        "alt": "Tokyo photograph 12 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-012",
+          "path": "/images/series/tokyo-2026/012.jpg",
+          "blob": "7e5595e26ba8e30feb1c0d4e125cded106c1ea0f"
+        }
+      },
+      {
+        "id": "gh-698e2bf9b8d0e230df7f",
+        "src": "/images/originals/github/9c9addf170d907a6422bd94b11282d99ecbc3b01.jpg",
+        "width": 960,
+        "height": 1440,
+        "alt": "Portrait photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-032",
+          "path": "/images/portrait/portrait-032.jpg",
+          "blob": "9c9addf170d907a6422bd94b11282d99ecbc3b01"
+        }
+      },
+      {
+        "id": "gh-6f54f00f85a6c21df57d",
+        "src": "/images/originals/github/ba9bda672b9ff3d45b397b655b599572be280b0c.jpg",
+        "width": 2062,
+        "height": 3000,
+        "alt": "Portrait photograph: portrait 018",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-018",
+          "path": "/images/portrait/portrait-018.jpg",
+          "blob": "ba9bda672b9ff3d45b397b655b599572be280b0c"
+        }
+      },
+      {
+        "id": "gh-24efc444a7d7e67e852c",
+        "src": "/images/originals/github/f3f51accbb4659630f459ab1cd301aa66d2d83d9.jpg",
+        "width": 2500,
+        "height": 1913,
+        "alt": "Scene photograph: scenes 017",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-017",
+          "path": "/images/scenes/scenes-017.jpg",
+          "blob": "f3f51accbb4659630f459ab1cd301aa66d2d83d9"
+        }
+      },
+      {
+        "id": "gh-68ec326ec08a3e2b97c0",
+        "src": "/images/originals/github/0c3f10d6b1070d489ad648c423f7733b6fd33a01.jpg",
+        "width": 3000,
+        "height": 2171,
+        "alt": "Street photograph: street 010",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-010",
+          "path": "/images/street/street-010.jpg",
+          "blob": "0c3f10d6b1070d489ad648c423f7733b6fd33a01"
+        }
+      },
+      {
+        "id": "gh-98a0a455b9acec89b64c",
+        "src": "/images/originals/github/2f11ee7717e4825feec1d0dbac937f7fea6065ec.jpg",
+        "width": 3000,
+        "height": 2024,
+        "alt": "Scene photograph: scenes 047",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-047",
+          "path": "/images/scenes/scenes-047.jpg",
+          "blob": "2f11ee7717e4825feec1d0dbac937f7fea6065ec"
+        }
+      },
+      {
+        "id": "gh-e86ce4f018610d4b0aee",
+        "src": "/images/originals/github/6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee.jpg",
+        "width": 4333,
+        "height": 3476,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-056",
+          "path": "/images/street/street-056.jpg",
+          "blob": "6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee"
+        }
+      },
+      {
+        "id": "gh-aa1de00a46b0980b68ec",
+        "src": "/images/originals/github/f7ec54a9481724c050104df559f148f1b1eccd74.jpg",
+        "width": 3582,
+        "height": 3060,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-059",
+          "path": "/images/street/street-059.jpg",
+          "blob": "f7ec54a9481724c050104df559f148f1b1eccd74"
+        }
+      },
+      {
+        "id": "gh-3b21ef1d54345f1d67b9",
+        "src": "/images/originals/github/99ec6b692e915600e19620cf635b57aabfe2d78e.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-070",
+          "path": "/images/scenes/scenes-070.jpg",
+          "blob": "99ec6b692e915600e19620cf635b57aabfe2d78e"
+        }
+      },
+      {
+        "id": "gh-9d1797dd9df122794ff3",
+        "src": "/images/originals/github/7bd51cf1d863163067dbc0e8e88e8442fe1e3d6b.jpg",
+        "width": 4528,
+        "height": 3573,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-092",
+          "path": "/images/scenes/scenes-092.jpg",
+          "blob": "7bd51cf1d863163067dbc0e8e88e8442fe1e3d6b"
+        }
+      },
+      {
+        "id": "gh-9ddd215977a385fa856e",
+        "src": "/images/originals/github/2a4679a41d740681aac88a0a4d2712b0a125d986.jpg",
+        "width": 4917,
+        "height": 3409,
+        "alt": "Tokyo photograph 20 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-020",
+          "path": "/images/series/tokyo-2026/020.jpg",
+          "blob": "2a4679a41d740681aac88a0a4d2712b0a125d986"
+        }
+      }
+    ]
+  },
+  {
+    "id": "japan",
+    "slug": "japan",
+    "title": "Japan",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "gh-a8861c501cc956c6086e",
+    "images": [
+      {
+        "id": "gh-de07c5afdc2dc3e12ba3",
+        "src": "/images/originals/github/49c6937dbe0a587e39339d8b497ec8251055e5a7.jpg",
+        "width": 4032,
+        "height": 5882,
+        "alt": "An urban street scene with passing traffic",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "home-008",
+          "path": "/images/home/008.jpg",
+          "blob": "49c6937dbe0a587e39339d8b497ec8251055e5a7"
+        }
+      },
+      {
+        "id": "gh-736f0e165f5135f479e2",
+        "src": "/images/originals/github/124c8d71360808fc6785bcb52b6c3c83a270df50.jpg",
+        "width": 1604,
+        "height": 3000,
+        "alt": "Street photograph: street 009",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-009",
+          "path": "/images/street/street-009.jpg",
+          "blob": "124c8d71360808fc6785bcb52b6c3c83a270df50"
+        }
+      },
+      {
+        "id": "gh-84982b409f42c228e1b8",
+        "src": "/images/originals/github/ca294495d7b8baac61b05258b3ac028fe49805e2.jpg",
+        "width": 1525,
+        "height": 2650,
+        "alt": "Street photograph: street 011",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-011",
+          "path": "/images/street/street-011.jpg",
+          "blob": "ca294495d7b8baac61b05258b3ac028fe49805e2"
+        }
+      },
+      {
+        "id": "gh-501cbc5b065b18e30149",
+        "src": "/images/originals/github/ca3acdc18095a8ca8a1822467f12ace8fe2c4a05.jpg",
+        "width": 2509,
+        "height": 3764,
+        "alt": "Nature photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "nature-013",
+          "path": "/images/nature/nature-013.jpg",
+          "blob": "ca3acdc18095a8ca8a1822467f12ace8fe2c4a05"
+        }
+      },
+      {
+        "id": "gh-4a55ba7ff06f0f4a8203",
+        "src": "/images/originals/github/7bcfe325cd37b6bb70a013464ba136a0cdf72173.jpg",
+        "width": 3386,
+        "height": 4885,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-057",
+          "path": "/images/street/street-057.jpg",
+          "blob": "7bcfe325cd37b6bb70a013464ba136a0cdf72173"
+        }
+      },
+      {
+        "id": "gh-10fe9295b22b7fb72650",
+        "src": "/images/originals/github/32965fe9848321c12d76ed0f2aadac24ed11d9ca.jpg",
+        "width": 3245,
+        "height": 4756,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-061",
+          "path": "/images/street/street-061.jpg",
+          "blob": "32965fe9848321c12d76ed0f2aadac24ed11d9ca"
+        }
+      },
+      {
+        "id": "gh-51def8e0f4e9dbcd5ada",
+        "src": "/images/originals/github/5bf77dca4092eb8dcbc3d5aa1b7a5ca8df2a8ef5.jpg",
+        "width": 3855,
+        "height": 5539,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-072",
+          "path": "/images/scenes/scenes-072.jpg",
+          "blob": "5bf77dca4092eb8dcbc3d5aa1b7a5ca8df2a8ef5"
+        }
+      },
+      {
+        "id": "gh-468bf8a04c8fc01ccf22",
+        "src": "/images/originals/github/e08afe4ded4ec8e9e9b30eddc99f1a8c77657aaa.jpg",
+        "width": 4807,
+        "height": 7492,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-054",
+          "path": "/images/street/street-054.jpg",
+          "blob": "e08afe4ded4ec8e9e9b30eddc99f1a8c77657aaa"
+        }
+      },
+      {
+        "id": "gh-627040cbaf5e158d272c",
+        "src": "/images/originals/github/baa165792733d5687ed4faf33ece14981ccf17e8.jpg",
+        "width": 3280,
+        "height": 5033,
+        "alt": "Street photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-052",
+          "path": "/images/street/street-052.jpg",
+          "blob": "baa165792733d5687ed4faf33ece14981ccf17e8"
+        }
+      },
+      {
+        "id": "gh-e2cedbbb36de3436e8bd",
+        "src": "/images/originals/github/6bb4259ff506a16b0d1da4151b202283b3242127.jpg",
+        "width": 3668,
+        "height": 5308,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-073",
+          "path": "/images/scenes/scenes-073.jpg",
+          "blob": "6bb4259ff506a16b0d1da4151b202283b3242127"
+        }
+      },
+      {
+        "id": "gh-a8861c501cc956c6086e",
+        "src": "/images/originals/github/b4c56819469829a59cec9bf79e9c8a66cbb5d4d5.jpg",
+        "width": 3856,
+        "height": 5660,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-079",
+          "path": "/images/scenes/scenes-079.jpg",
+          "blob": "b4c56819469829a59cec9bf79e9c8a66cbb5d4d5"
+        }
+      },
+      {
+        "id": "gh-d9237baf1ca1ae69caec",
+        "src": "/images/originals/github/8a080cbde3d54ceaa3345efcbb0352bbd4ffb3be.jpg",
+        "width": 3452,
+        "height": 5100,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-089",
+          "path": "/images/scenes/scenes-089.jpg",
+          "blob": "8a080cbde3d54ceaa3345efcbb0352bbd4ffb3be"
+        }
+      },
+      {
+        "id": "gh-c9d5fc20bb40c37b7f3e",
+        "src": "/images/originals/github/c9ae081714b65fefd18d5aed6ee75ab34ee7de73.jpg",
+        "width": 3937,
+        "height": 5905,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-091",
+          "path": "/images/scenes/scenes-091.jpg",
+          "blob": "c9ae081714b65fefd18d5aed6ee75ab34ee7de73"
+        }
+      },
+      {
+        "id": "gh-11b68a2aac3bb842a8c2",
+        "src": "/images/originals/github/15e677514438b5cf2598b45d31720cbe9c27f8d1.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Tokyo photograph 6 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-006",
+          "path": "/images/series/tokyo-2026/006.jpg",
+          "blob": "15e677514438b5cf2598b45d31720cbe9c27f8d1"
         }
       },
       {
@@ -976,477 +1866,69 @@
           "path": "/images/series/tokyo-2026/022.jpg",
           "blob": "ceef13d421c4b1c9c73e714af5b7de2658fa8f85"
         }
-      },
-      {
-        "id": "gh-39e44d18915645f44fc8",
-        "src": "/images/originals/github/608edb4dace34650ac8d9ec053caf05480a4867d.jpg",
-        "width": 5124,
-        "height": 3781,
-        "alt": "Tokyo photograph 11 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-011",
-          "path": "/images/series/tokyo-2026/011.jpg",
-          "blob": "608edb4dace34650ac8d9ec053caf05480a4867d"
-        }
-      },
-      {
-        "id": "gh-7c1ffc10c3e1813cecbf",
-        "src": "/images/originals/github/9af9ef7492dd5fb7e63bc02de7ca7b0da5ee8033.jpg",
-        "width": 5578,
-        "height": 2756,
-        "alt": "Tokyo photograph 14 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-014",
-          "path": "/images/series/tokyo-2026/014.jpg",
-          "blob": "9af9ef7492dd5fb7e63bc02de7ca7b0da5ee8033"
-        }
-      },
-      {
-        "id": "gh-23164ff2da57a3116af5",
-        "src": "/images/originals/github/1ab1ae919d6665b09db36f39c0af6d1323bd959e.jpg",
-        "width": 3189,
-        "height": 4791,
-        "alt": "Tokyo photograph 15 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-015",
-          "path": "/images/series/tokyo-2026/015.jpg",
-          "blob": "1ab1ae919d6665b09db36f39c0af6d1323bd959e"
-        }
-      },
-      {
-        "id": "gh-54b126b45bd8d06a99bd",
-        "src": "/images/originals/github/77fa87dfa3f39f16e8b44683e666af891a5cc1c1.jpg",
-        "width": 3925,
-        "height": 5894,
-        "alt": "Tokyo photograph 16 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-016",
-          "path": "/images/series/tokyo-2026/016.jpg",
-          "blob": "77fa87dfa3f39f16e8b44683e666af891a5cc1c1"
-        }
-      },
-      {
-        "id": "gh-eb25aec7c616e04ea5e6",
-        "src": "/images/originals/github/7f648c91e3df98c608fdd23f74c8f76fe75a6259.jpg",
-        "width": 5772,
-        "height": 3724,
-        "alt": "Tokyo photograph 17 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-017",
-          "path": "/images/series/tokyo-2026/017.jpg",
-          "blob": "7f648c91e3df98c608fdd23f74c8f76fe75a6259"
-        }
-      },
-      {
-        "id": "gh-d30d63d208b63e09f751",
-        "src": "/images/originals/github/05b1570a50212139708904ec0c3b3c5221c15fde.jpg",
-        "width": 6048,
-        "height": 4032,
-        "alt": "Tokyo photograph 18 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-018",
-          "path": "/images/series/tokyo-2026/018.jpg",
-          "blob": "05b1570a50212139708904ec0c3b3c5221c15fde"
-        }
-      },
-      {
-        "id": "gh-c919fd16279357fbe4a4",
-        "src": "/images/originals/github/debca2dec1d2e8d5ba9848249552bca8a2122ea6.jpg",
-        "width": 6048,
-        "height": 4032,
-        "alt": "Tokyo photograph 19 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-019",
-          "path": "/images/series/tokyo-2026/019.jpg",
-          "blob": "debca2dec1d2e8d5ba9848249552bca8a2122ea6"
-        }
-      },
-      {
-        "id": "gh-9ddd215977a385fa856e",
-        "src": "/images/originals/github/2a4679a41d740681aac88a0a4d2712b0a125d986.jpg",
-        "width": 4917,
-        "height": 3409,
-        "alt": "Tokyo photograph 20 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-020",
-          "path": "/images/series/tokyo-2026/020.jpg",
-          "blob": "2a4679a41d740681aac88a0a4d2712b0a125d986"
-        }
-      },
-      {
-        "id": "gh-6c61b4453820e64c641e",
-        "src": "/images/originals/github/34289168f58eef5f608db7392e3db5b5b2dec1ad.jpg",
-        "width": 5503,
-        "height": 3850,
-        "alt": "Tokyo photograph 21 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-021",
-          "path": "/images/series/tokyo-2026/021.jpg",
-          "blob": "34289168f58eef5f608db7392e3db5b5b2dec1ad"
-        }
-      },
-      {
-        "id": "gh-d0831ae135459a6dc376",
-        "src": "/images/originals/github/7b3240f4a0f2d94de39eba0a41a559cfaadbb100.jpg",
-        "width": 5306,
-        "height": 3771,
-        "alt": "Tokyo photograph 24 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-024",
-          "path": "/images/series/tokyo-2026/024.jpg",
-          "blob": "7b3240f4a0f2d94de39eba0a41a559cfaadbb100"
-        }
-      },
-      {
-        "id": "gh-6d86f38c6aa3b67ed8b4",
-        "src": "/images/originals/github/ce374146ef8bc3176808372a8ff2bb975ddd598b.jpg",
-        "width": 5779,
-        "height": 3853,
-        "alt": "Tokyo photograph 25 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-025",
-          "path": "/images/series/tokyo-2026/025.jpg",
-          "blob": "ce374146ef8bc3176808372a8ff2bb975ddd598b"
-        }
-      },
-      {
-        "id": "gh-37f65933039d0b2f6bb9",
-        "src": "/images/originals/github/c91a54112e6d9fa6bd87d994aa62ec15f803b91e.jpg",
-        "width": 5189,
-        "height": 3068,
-        "alt": "Tokyo photograph 27 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-027",
-          "path": "/images/series/tokyo-2026/027.jpg",
-          "blob": "c91a54112e6d9fa6bd87d994aa62ec15f803b91e"
-        }
-      },
-      {
-        "id": "gh-b6b44f4dabf847f53c55",
-        "src": "/images/originals/github/4b13702d292beecbf21a03f07647ef61d88784cc.jpg",
-        "width": 2941,
-        "height": 4228,
-        "alt": "Tokyo photograph 26 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-030",
-          "path": "/images/series/tokyo-2026/030.jpg",
-          "blob": "4b13702d292beecbf21a03f07647ef61d88784cc"
-        }
-      },
-      {
-        "id": "gh-1bf0b7d6bf6d47fec634",
-        "src": "/images/originals/github/1cec73ea4f0b2128ae25f37fbb8ec88d691127dd.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Tokyo photograph 27 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-031",
-          "path": "/images/series/tokyo-2026/031.jpg",
-          "blob": "1cec73ea4f0b2128ae25f37fbb8ec88d691127dd"
-        }
-      },
-      {
-        "id": "gh-23468693ad3362cade49",
-        "src": "/images/originals/github/b4c56819469829a59cec9bf79e9c8a66cbb5d4d5.jpg",
-        "width": 3856,
-        "height": 5660,
-        "alt": "Tokyo photograph 28 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-028",
-          "path": "/images/series/tokyo-2026/028.jpg",
-          "blob": "b4c56819469829a59cec9bf79e9c8a66cbb5d4d5"
-        }
-      },
-      {
-        "id": "gh-f782d4fcf996f340dc77",
-        "src": "/images/originals/github/ca3acdc18095a8ca8a1822467f12ace8fe2c4a05.jpg",
-        "width": 2509,
-        "height": 3764,
-        "alt": "Tokyo photograph 23 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-023",
-          "path": "/images/series/tokyo-2026/023.jpg",
-          "blob": "ca3acdc18095a8ca8a1822467f12ace8fe2c4a05"
-        }
       }
     ],
-    "github": {
-      "repository": "davidtaotao0711/bo-photography",
-      "key": "series:tokyo-2026"
-    }
+    "arrangement": "theme"
   },
   {
-    "id": "github-e450a3ce9a099935d077",
-    "slug": "github-e450a3ce9a099935d077",
-    "title": "Diptychs & Triptychs",
+    "id": "project-5199628e-5090-41ac-8a6a-bc4e8fff804f",
+    "slug": "project-5199628e-5090-41ac-8a6a-bc4e8fff804f",
+    "title": "新疆",
     "year": "",
     "location": "",
     "description": "",
-    "cover": "gh-1a299b58c3996e0d5a23",
+    "cover": "gh-06390414c4a3e9989ac9",
     "images": [
       {
-        "id": "gh-1a299b58c3996e0d5a23",
-        "src": "/images/originals/github/2c3f1befb20e5419db6f76884fb0a49443d8f99c.jpg",
-        "width": 6033,
-        "height": 4524,
-        "alt": "Diptychs & Triptychs photograph 1 by Bo David",
+        "id": "gh-1df1078c6af6735e23d8",
+        "src": "/images/originals/github/0cfeb317919445e25a49f9fbdd45ddc69d0d0102.jpg",
+        "width": 3936,
+        "height": 5285,
+        "alt": "Scenes photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-001",
-          "path": "/images/series/diptychs-and-triptychs/001.jpg",
-          "blob": "2c3f1befb20e5419db6f76884fb0a49443d8f99c"
+          "photoId": "scenes-075",
+          "path": "/images/scenes/scenes-075.jpg",
+          "blob": "0cfeb317919445e25a49f9fbdd45ddc69d0d0102"
         }
       },
       {
-        "id": "gh-4c4303ecf1fb3f164236",
-        "src": "/images/originals/github/b0b8b003d8b53c541bf2cb38aa183799977b998c.jpg",
-        "width": 4936,
-        "height": 6581,
-        "alt": "Diptychs & Triptychs photograph 19 by Bo David",
+        "id": "gh-38b64fe7063c6292ddb9",
+        "src": "/images/originals/github/1698c6b904e52c5d701be305080a306e75c9a5fc.jpg",
+        "width": 3984,
+        "height": 5285,
+        "alt": "Street photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-019",
-          "path": "/images/series/diptychs-and-triptychs/019.jpg",
-          "blob": "b0b8b003d8b53c541bf2cb38aa183799977b998c"
+          "photoId": "street-075",
+          "path": "/images/street/street-075.jpg",
+          "blob": "1698c6b904e52c5d701be305080a306e75c9a5fc"
         }
       },
       {
-        "id": "gh-9b17835c3e84236346fc",
-        "src": "/images/originals/github/46aad86671801995c13ab68a25063e1d9af74a73.jpg",
-        "width": 4936,
-        "height": 6581,
-        "alt": "Diptychs & Triptychs photograph 7 by Bo David",
+        "id": "gh-1ee3128c4989fcd5e7fa",
+        "src": "/images/originals/github/7e742a83e2d3b282429fdd771f47b2274eed1a17.jpg",
+        "width": 3246,
+        "height": 5869,
+        "alt": "Street photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-007",
-          "path": "/images/series/diptychs-and-triptychs/007.jpg",
-          "blob": "46aad86671801995c13ab68a25063e1d9af74a73"
+          "photoId": "street-076",
+          "path": "/images/street/street-076.jpg",
+          "blob": "7e742a83e2d3b282429fdd771f47b2274eed1a17"
         }
       },
       {
-        "id": "gh-2e5a83538e06490ee3fd",
-        "src": "/images/originals/github/837a21f77132b8f30957b0498554db4cc4333efc.jpg",
-        "width": 6338,
-        "height": 3565,
-        "alt": "Diptychs & Triptychs photograph 6 by Bo David",
+        "id": "gh-06390414c4a3e9989ac9",
+        "src": "/images/originals/github/0608c6931105f0a76b9d5a2c885e6ba06b2a2d49.jpg",
+        "width": 3496,
+        "height": 5357,
+        "alt": "Street photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-006",
-          "path": "/images/series/diptychs-and-triptychs/006.jpg",
-          "blob": "837a21f77132b8f30957b0498554db4cc4333efc"
-        }
-      },
-      {
-        "id": "gh-111e6293082b664026a7",
-        "src": "/images/originals/github/18a0e2b80f202bc7f93c2306865f3193e7e0c3db.jpg",
-        "width": 3060,
-        "height": 4590,
-        "alt": "Diptychs & Triptychs photograph 3 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-003",
-          "path": "/images/series/diptychs-and-triptychs/003.jpg",
-          "blob": "18a0e2b80f202bc7f93c2306865f3193e7e0c3db"
-        }
-      },
-      {
-        "id": "gh-5f6e74caf7d38bf58aef",
-        "src": "/images/originals/github/15759765a6fc3cbc3730023651487c7c1df0c8a1.jpg",
-        "width": 4791,
-        "height": 4791,
-        "alt": "Diptychs & Triptychs photograph 10 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-010",
-          "path": "/images/series/diptychs-and-triptychs/010.jpg",
-          "blob": "15759765a6fc3cbc3730023651487c7c1df0c8a1"
-        }
-      },
-      {
-        "id": "gh-3ca24843d982a253d391",
-        "src": "/images/originals/github/4ca6023ac305996f57bbc3be3750489653c06c32.jpg",
-        "width": 4936,
-        "height": 6582,
-        "alt": "Diptychs & Triptychs photograph 5 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-005",
-          "path": "/images/series/diptychs-and-triptychs/005.jpg",
-          "blob": "4ca6023ac305996f57bbc3be3750489653c06c32"
-        }
-      },
-      {
-        "id": "gh-b2e923db1d1d139c2624",
-        "src": "/images/originals/github/6d77de23c52e99f3a1dfcf2b3384c7478e56b0ab.jpg",
-        "width": 3060,
-        "height": 4590,
-        "alt": "Diptychs & Triptychs photograph 4 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-004",
-          "path": "/images/series/diptychs-and-triptychs/004.jpg",
-          "blob": "6d77de23c52e99f3a1dfcf2b3384c7478e56b0ab"
-        }
-      },
-      {
-        "id": "gh-7fc2b056f226d67bea18",
-        "src": "/images/originals/github/f68eb8647c936041b5c8eeebc5eb56444d374fde.jpg",
-        "width": 5700,
-        "height": 5700,
-        "alt": "Diptychs & Triptychs photograph 15 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-015",
-          "path": "/images/series/diptychs-and-triptychs/015.jpg",
-          "blob": "f68eb8647c936041b5c8eeebc5eb56444d374fde"
-        }
-      },
-      {
-        "id": "gh-c16aab10c0ab8889101b",
-        "src": "/images/originals/github/5a2abfbcaad4d0bf22a9a72bcf22d5ac6a2046a1.jpg",
-        "width": 4936,
-        "height": 6581,
-        "alt": "Diptychs & Triptychs photograph 16 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-016",
-          "path": "/images/series/diptychs-and-triptychs/016.jpg",
-          "blob": "5a2abfbcaad4d0bf22a9a72bcf22d5ac6a2046a1"
-        }
-      },
-      {
-        "id": "gh-672371db37e59ed2b94f",
-        "src": "/images/originals/github/f30a8d75b08b4bab02a6120e9b871f8b40a591c5.jpg",
-        "width": 6582,
-        "height": 4936,
-        "alt": "Diptychs & Triptychs photograph 14 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-014",
-          "path": "/images/series/diptychs-and-triptychs/014.jpg",
-          "blob": "f30a8d75b08b4bab02a6120e9b871f8b40a591c5"
-        }
-      },
-      {
-        "id": "gh-ce9af6257ab5d4331f45",
-        "src": "/images/originals/github/35b3f203ee7bd89041e2820e9d3a839dbd804f84.jpg",
-        "width": 4936,
-        "height": 6581,
-        "alt": "Diptychs & Triptychs photograph 17 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-017",
-          "path": "/images/series/diptychs-and-triptychs/017.jpg",
-          "blob": "35b3f203ee7bd89041e2820e9d3a839dbd804f84"
-        }
-      },
-      {
-        "id": "gh-7af655ba82953c99eb72",
-        "src": "/images/originals/github/1f2abf7c3df45bd9ac9ee2165e1b39d74f0819e9.jpg",
-        "width": 3442,
-        "height": 4590,
-        "alt": "Diptychs & Triptychs photograph 17 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-023",
-          "path": "/images/series/diptychs-and-triptychs/023.jpg",
-          "blob": "1f2abf7c3df45bd9ac9ee2165e1b39d74f0819e9"
-        }
-      },
-      {
-        "id": "gh-d1f87f7f9abb5de18f89",
-        "src": "/images/originals/github/baf932be8faf59294d9d16eaa8c469d6ed88e9e1.jpg",
-        "width": 2652,
-        "height": 4715,
-        "alt": "Diptychs & Triptychs photograph 15 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-021",
-          "path": "/images/series/diptychs-and-triptychs/021.jpg",
-          "blob": "baf932be8faf59294d9d16eaa8c469d6ed88e9e1"
-        }
-      },
-      {
-        "id": "gh-c6d2de14c6fe3a4351a1",
-        "src": "/images/originals/github/accf47d3c2d7d7611e4ca4850426521632e7705f.jpg",
-        "width": 3442,
-        "height": 4590,
-        "alt": "Diptychs & Triptychs photograph 14 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-020",
-          "path": "/images/series/diptychs-and-triptychs/020.jpg",
-          "blob": "accf47d3c2d7d7611e4ca4850426521632e7705f"
-        }
-      },
-      {
-        "id": "gh-021d3d3a779672c6c672",
-        "src": "/images/originals/github/3489e9904bacc95a2932b8ea0d0dca8de0edc8e9.jpg",
-        "width": 3442,
-        "height": 4590,
-        "alt": "Diptychs & Triptychs photograph 18 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-018",
-          "path": "/images/series/diptychs-and-triptychs/018.jpg",
-          "blob": "3489e9904bacc95a2932b8ea0d0dca8de0edc8e9"
-        }
-      },
-      {
-        "id": "gh-130af2c3446b7b93264a",
-        "src": "/images/originals/github/e6171b451c58bb3615010865d97a4d9220e2b2ac.jpg",
-        "width": 9876,
-        "height": 3289,
-        "alt": "Diptychs & Triptychs photograph 17 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "diptychs-and-triptychs-025",
-          "path": "/images/series/diptychs-and-triptychs/025.jpg",
-          "blob": "e6171b451c58bb3615010865d97a4d9220e2b2ac"
-        }
-      }
-    ],
-    "github": {
-      "repository": "davidtaotao0711/bo-photography",
-      "key": "series:diptychs-and-triptychs"
-    }
-  },
-  {
-    "id": "github-3b0137b9a3df628d0b0d",
-    "slug": "github-3b0137b9a3df628d0b0d",
-    "title": "Single&Loneliness",
-    "year": "",
-    "location": "",
-    "description": "Do they equal?",
-    "cover": "gh-acec29277f60ba3cda24",
-    "images": [
-      {
-        "id": "gh-acec29277f60ba3cda24",
-        "src": "/images/originals/github/ffd2671470a72b342a157da1c314d3dba35f6447.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Single&loneliness photograph 1 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-001",
-          "path": "/images/series/single-and-loneliness/001.jpg",
-          "blob": "ffd2671470a72b342a157da1c314d3dba35f6447"
+          "photoId": "street-077",
+          "path": "/images/street/street-077.jpg",
+          "blob": "0608c6931105f0a76b9d5a2c885e6ba06b2a2d49"
         }
       },
       {
@@ -1461,378 +1943,9 @@
           "path": "/images/series/single-and-loneliness/006.jpg",
           "blob": "4cdcf7b59acd803a3851106cf02b209f2f840ee6"
         }
-      },
-      {
-        "id": "gh-9a9770732e148aa3785c",
-        "src": "/images/originals/github/b96a9b4f015bd71196aed16a53d92a0e6035017e.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Single&loneliness photograph 7 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-007",
-          "path": "/images/series/single-and-loneliness/007.jpg",
-          "blob": "b96a9b4f015bd71196aed16a53d92a0e6035017e"
-        }
-      },
-      {
-        "id": "gh-f621c1db9c711ff44f7b",
-        "src": "/images/originals/github/e9b2ffd2661f3c7ecedf0e3bab0176e6ae0859bd.jpg",
-        "width": 5362,
-        "height": 2874,
-        "alt": "Single&loneliness photograph 8 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-008",
-          "path": "/images/series/single-and-loneliness/008.jpg",
-          "blob": "e9b2ffd2661f3c7ecedf0e3bab0176e6ae0859bd"
-        }
-      },
-      {
-        "id": "gh-fda2a3bad92626436de7",
-        "src": "/images/originals/github/2e4483916d3be6b8076a94974f86b08ebde6082d.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Single&loneliness photograph 5 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-005",
-          "path": "/images/series/single-and-loneliness/005.jpg",
-          "blob": "2e4483916d3be6b8076a94974f86b08ebde6082d"
-        }
-      },
-      {
-        "id": "gh-510403c70959ac75fbc5",
-        "src": "/images/originals/github/f62f62bd010f38df81a6141800524f673e06c153.jpg",
-        "width": 3644,
-        "height": 5999,
-        "alt": "Single&loneliness photograph 10 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-010",
-          "path": "/images/series/single-and-loneliness/010.jpg",
-          "blob": "f62f62bd010f38df81a6141800524f673e06c153"
-        }
-      },
-      {
-        "id": "gh-952ba5ea4f742e68a208",
-        "src": "/images/originals/github/3b198e78b781cb77f809ee31cab215089a474e56.jpg",
-        "width": 3890,
-        "height": 6048,
-        "alt": "Single&loneliness photograph 12 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-012",
-          "path": "/images/series/single-and-loneliness/012.jpg",
-          "blob": "3b198e78b781cb77f809ee31cab215089a474e56"
-        }
-      },
-      {
-        "id": "gh-9ce6a076fee1b74610fb",
-        "src": "/images/originals/github/bfe6054d27575103d35df11b4fd75c95be09f489.jpg",
-        "width": 4032,
-        "height": 5249,
-        "alt": "Single&loneliness photograph 13 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-013",
-          "path": "/images/series/single-and-loneliness/013.jpg",
-          "blob": "bfe6054d27575103d35df11b4fd75c95be09f489"
-        }
-      },
-      {
-        "id": "gh-b7ad05650efd933ddd17",
-        "src": "/images/originals/github/cc4f94f6e8644dd3b5bbecca1200a2c94feee746.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Single&loneliness photograph 14 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-014",
-          "path": "/images/series/single-and-loneliness/014.jpg",
-          "blob": "cc4f94f6e8644dd3b5bbecca1200a2c94feee746"
-        }
-      },
-      {
-        "id": "gh-4f2c52510402ddb88743",
-        "src": "/images/originals/github/b77fc10268c491328fcf4017eb9859ebdcbab254.jpg",
-        "width": 3950,
-        "height": 5439,
-        "alt": "Single&loneliness photograph 15 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "single-and-loneliness-015",
-          "path": "/images/series/single-and-loneliness/015.jpg",
-          "blob": "b77fc10268c491328fcf4017eb9859ebdcbab254"
-        }
       }
     ],
-    "github": {
-      "repository": "davidtaotao0711/bo-photography",
-      "key": "series:single-and-loneliness"
-    }
-  },
-  {
-    "id": "github-fd078db20ceabd38e455",
-    "slug": "github-fd078db20ceabd38e455",
-    "title": "Motion&Blur&Swing",
-    "year": "2025",
-    "location": "",
-    "description": "Just excuses of losing focus",
-    "cover": "gh-1d0d78235ee4722dc8f7",
-    "images": [
-      {
-        "id": "gh-383648f496af9e555350",
-        "src": "/images/originals/github/5ce91259e4e2c8cb959461a7f37d9a98a7f3cac4.jpg",
-        "width": 5977,
-        "height": 3795,
-        "alt": "Motion&Blur photograph 3 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-005",
-          "path": "/images/series/motion-and-blur/005.jpg",
-          "blob": "5ce91259e4e2c8cb959461a7f37d9a98a7f3cac4"
-        }
-      },
-      {
-        "id": "gh-f017b68ee87deb3a6479",
-        "src": "/images/originals/github/ab7865f7cd0b068573baab613675536ef9118e4a.jpg",
-        "width": 6048,
-        "height": 4032,
-        "alt": "Motion&Blur photograph 4 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-006",
-          "path": "/images/series/motion-and-blur/006.jpg",
-          "blob": "ab7865f7cd0b068573baab613675536ef9118e4a"
-        }
-      },
-      {
-        "id": "gh-8a8cc5bf8ce0055299f4",
-        "src": "/images/originals/github/63651771fe9fb2a60aff3e01503904844b0e357c.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Motion&Blur photograph 6 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-008",
-          "path": "/images/series/motion-and-blur/008.jpg",
-          "blob": "63651771fe9fb2a60aff3e01503904844b0e357c"
-        }
-      },
-      {
-        "id": "gh-d33115942474b8a4e127",
-        "src": "/images/originals/github/80f72072740831a9a8ccb86cc740e384fe8e44af.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Motion&Blur photograph 18 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-020",
-          "path": "/images/series/motion-and-blur/020.jpg",
-          "blob": "80f72072740831a9a8ccb86cc740e384fe8e44af"
-        }
-      },
-      {
-        "id": "gh-2c292222808abd7f2e9c",
-        "src": "/images/originals/github/b386913ecb47e19e337b9435551a68ac00526ebe.jpg",
-        "width": 3480,
-        "height": 5097,
-        "alt": "Motion&Blur photograph 20 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-022",
-          "path": "/images/series/motion-and-blur/022.jpg",
-          "blob": "b386913ecb47e19e337b9435551a68ac00526ebe"
-        }
-      },
-      {
-        "id": "gh-2c70dbabbf017ccf8732",
-        "src": "/images/originals/github/1acf85a393d87c34c7cfae1719055780ba875039.jpg",
-        "width": 6048,
-        "height": 3716,
-        "alt": "Motion&Blur photograph 5 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-007",
-          "path": "/images/series/motion-and-blur/007.jpg",
-          "blob": "1acf85a393d87c34c7cfae1719055780ba875039"
-        }
-      },
-      {
-        "id": "gh-a1ff6b78361350dc7272",
-        "src": "/images/originals/github/6b0092d780767e05f8131369b487562c7ad44638.jpg",
-        "width": 5891,
-        "height": 3695,
-        "alt": "Motion&Blur photograph 24 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-026",
-          "path": "/images/series/motion-and-blur/026.jpg",
-          "blob": "6b0092d780767e05f8131369b487562c7ad44638"
-        }
-      },
-      {
-        "id": "gh-9c22b46c1e21eae72ccb",
-        "src": "/images/originals/github/5452652921206858000d36f17b2eef41170c246d.jpg",
-        "width": 6048,
-        "height": 4032,
-        "alt": "Motion&Blur photograph 19 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-021",
-          "path": "/images/series/motion-and-blur/021.jpg",
-          "blob": "5452652921206858000d36f17b2eef41170c246d"
-        }
-      },
-      {
-        "id": "gh-2200a6acaa52a5c9f740",
-        "src": "/images/originals/github/9bd87a0730d428ba4a63593e3091bfe6aa9e18c0.jpg",
-        "width": 3797,
-        "height": 5461,
-        "alt": "Motion&Blur photograph 21 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-023",
-          "path": "/images/series/motion-and-blur/023.jpg",
-          "blob": "9bd87a0730d428ba4a63593e3091bfe6aa9e18c0"
-        }
-      },
-      {
-        "id": "gh-f6c2328544a52ac418d6",
-        "src": "/images/originals/github/1b4be78524e530e62b2ea394620432f3471abd83.jpg",
-        "width": 3854,
-        "height": 5562,
-        "alt": "Motion&Blur photograph 10 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-012",
-          "path": "/images/series/motion-and-blur/012.jpg",
-          "blob": "1b4be78524e530e62b2ea394620432f3471abd83"
-        }
-      },
-      {
-        "id": "gh-5e9ddca4227fea01b314",
-        "src": "/images/originals/github/5a55965571340c2dcb5f2c381a9e6f89eeb50739.jpg",
-        "width": 4366,
-        "height": 3258,
-        "alt": "Motion&Blur photograph 11 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-013",
-          "path": "/images/series/motion-and-blur/013.jpg",
-          "blob": "5a55965571340c2dcb5f2c381a9e6f89eeb50739"
-        }
-      },
-      {
-        "id": "gh-1d0d78235ee4722dc8f7",
-        "src": "/images/originals/github/ad51ddefbd58d42dd0dfb2638263fd27b88252d1.jpg",
-        "width": 5281,
-        "height": 3468,
-        "alt": "Motion&Blur photograph 1 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-001",
-          "path": "/images/series/motion-and-blur/001.jpg",
-          "blob": "ad51ddefbd58d42dd0dfb2638263fd27b88252d1"
-        }
-      },
-      {
-        "id": "gh-f0de60e7b4b0dc4630c4",
-        "src": "/images/originals/github/35becba9222c6cad6a7e60b22069f6429fbe375c.jpg",
-        "width": 3286,
-        "height": 4828,
-        "alt": "Motion&Blur photograph 14 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-016",
-          "path": "/images/series/motion-and-blur/016.jpg",
-          "blob": "35becba9222c6cad6a7e60b22069f6429fbe375c"
-        }
-      },
-      {
-        "id": "gh-642c5a11fb3f7afc9e3d",
-        "src": "/images/originals/github/c1eefd5e57f576056a8d875ae79f9e9e7948a78b.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Motion&Blur photograph 15 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-017",
-          "path": "/images/series/motion-and-blur/017.jpg",
-          "blob": "c1eefd5e57f576056a8d875ae79f9e9e7948a78b"
-        }
-      },
-      {
-        "id": "gh-f2314eaa469a13c11e75",
-        "src": "/images/originals/github/74c27422d52ad4f5f7ff980d940de2d2cca1d60e.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Motion&Blur photograph 24 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-032",
-          "path": "/images/series/motion-and-blur/032.jpg",
-          "blob": "74c27422d52ad4f5f7ff980d940de2d2cca1d60e"
-        }
-      },
-      {
-        "id": "gh-8bfbb8e8521d6f2fc349",
-        "src": "/images/originals/github/d6cae87f4bbf188693e9fc6c1f0eb2d15b08a79f.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Motion&Blur photograph 25 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-033",
-          "path": "/images/series/motion-and-blur/033.jpg",
-          "blob": "d6cae87f4bbf188693e9fc6c1f0eb2d15b08a79f"
-        }
-      },
-      {
-        "id": "gh-db6ecc46a054ef35d709",
-        "src": "/images/originals/github/328d8ba666ac0467aaacb239db7ebbe9821503d4.jpg",
-        "width": 2491,
-        "height": 6014,
-        "alt": "Motion&Blur photograph 22 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-024",
-          "path": "/images/series/motion-and-blur/024.jpg",
-          "blob": "328d8ba666ac0467aaacb239db7ebbe9821503d4"
-        }
-      },
-      {
-        "id": "gh-967e0b0b3c2142cbe297",
-        "src": "/images/originals/github/6e7832c7109cebfdd6ecbb7fb348efe5f4cfc7ad.jpg",
-        "width": 4032,
-        "height": 5942,
-        "alt": "Motion&Blur photograph 23 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-025",
-          "path": "/images/series/motion-and-blur/025.jpg",
-          "blob": "6e7832c7109cebfdd6ecbb7fb348efe5f4cfc7ad"
-        }
-      },
-      {
-        "id": "gh-3dd992469d0566f63c82",
-        "src": "/images/originals/github/c71fd246e9c51c77d67f65ca5768ab0601a7fa20.jpg",
-        "width": 3582,
-        "height": 4697,
-        "alt": "Motion&Blur photograph 9 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "motion-and-blur-011",
-          "path": "/images/series/motion-and-blur/011.jpg",
-          "blob": "c71fd246e9c51c77d67f65ca5768ab0601a7fa20"
-        }
-      }
-    ],
-    "github": {
-      "repository": "davidtaotao0711/bo-photography",
-      "key": "series:motion-and-blur"
-    }
+    "arrangement": "theme"
   },
   {
     "id": "github-2f23e841e448e200fd6a",

@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseRoute, adjacentIndex, neighborIndices } from '../src/lib/state';
-import { projects } from '../src/data/projects';
+import type { Project } from '../src/data/projects';
+const projects: Project[] = [{
+  id:'xinjiang',slug:'xinjiang',title:'Route test fixture',year:'',location:'',description:'',cover:'test-0',
+  images:Array.from({length:12}, (_,index)=>({id:`test-${index}`,src:`/test-${index}.jpg`,width:10,height:20,alt:`Test ${index}`})),
+}];
 const parse = (path: string) => parseRoute(new URL(path, 'http://localhost'), projects);
 
 test('deep links recover the exact project and zero-based image', () => {

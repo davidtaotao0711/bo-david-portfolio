@@ -2,6 +2,7 @@
 <html lang="zh-CN">
   <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex,nofollow" /><title>本地编辑器 — BO DAVID</title><link rel="stylesheet" href="/__editor/assets/style.css" /></head>
   <body>
+    <link rel="stylesheet" href="/gallery-layout.css" />
     <header class="editor-header"><a href="/">BO DAVID</a><span>本地编辑器</span><a href="/?mode=overview" target="_blank" rel="noopener">查看网站 ↗</a></header>
     <section id="github-login" hidden>
       <h1>连接你的 GitHub</h1>
@@ -17,13 +18,17 @@
       <details><summary>首次连接说明</summary><p>在 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">GitHub 创建细粒度访问令牌 ↗</a>，仅选择 bo-david-portfolio 仓库，授予 Contents（内容）读写权限，即可上传和排序。使用“从 GitHub 同步”时，可另建一个仅允许读取 bo-photography 的令牌，填入可选项。</p><p>完成后将令牌粘贴到上方。只有对私有仓库有相应权限的账号能编辑。</p></details>
     </section>
     <div class="editor-layout">
-      <aside><h2>项目</h2><p class="muted">上下移动可调整网站中的项目顺序。</p><nav id="project-list" aria-label="选择项目"></nav></aside>
+      <aside><h2>项目</h2><p class="muted">上下移动可调整网站中的项目顺序。</p><div class="toolbar project-actions"><button id="project-create" disabled>＋ 新建项目</button><button id="project-delete" disabled>删除当前项目</button></div><nav id="project-list" aria-label="选择项目"></nav></aside>
       <main>
         <div class="project-heading"><div><p class="eyebrow">照片与顺序</p><h1 id="project-name">正在读取项目…</h1><p id="project-count" class="muted"></p></div><a id="project-preview" target="_blank" rel="noopener">预览项目 ↗</a></div>
+        <label id="project-arrangement-setting" class="arrangement-setting">项目分类 <select id="project-arrangement"><option value="color">颜色 Color</option><option value="theme">主题 Theme</option></select><span class="help">自动保存。同一张照片可以分别加入颜色项目与主题项目。</span></label>
         <div class="toolbar">
           <button id="refresh-content" hidden>刷新内容</button>
           <button id="disconnect" hidden>断开连接</button>
           <button id="github-sync" disabled>从 GitHub 同步</button>
+          <button id="open-layout" class="primary" disabled>排版 / 空白占位（与正式页一致）</button>
+          <button id="index-color" disabled>编辑 INDEX · 颜色</button>
+          <button id="index-theme" disabled>编辑 INDEX · 主题</button>
           <button id="from-unassigned" disabled>从 Unassigned 添加图片</button>
           <label class="button upload-label" for="upload">上传照片<input id="upload" type="file" multiple accept="image/jpeg,image/png,image/webp,image/avif" disabled /></label>
           <button id="save" class="primary" disabled>保存顺序与封面</button>
@@ -35,14 +40,42 @@
         <p class="help">GitHub 来源：davidtaotao0711/bo-photography。所有同步照片保存在 Unassigned 总库，可多选添加到当前项目；总库保留原图，重复添加会自动跳过。同步保留本地顺序与封面。</p>
         <progress id="sync-progress" hidden aria-label="GitHub 同步进度"></progress>
         <p id="status" role="status" aria-live="polite">正在读取本地内容。</p>
+        <div id="photo-filters" class="orientation-filters" role="group" aria-label="按照片方向筛选"></div>
+        <p id="photo-filter-note" class="help" hidden>当前仅筛选显示，照片顺序不变；如需调整顺序，请切回“全部”。</p>
+        <p id="photo-filter-empty" class="help" hidden>当前分类没有照片。</p>
         <div id="photo-grid" aria-label="照片排序"></div>
         <p class="storage-note">照片和修改保存在此项目文件夹内。每次保存都会保留一份修改前的数据备份。</p>
       </main>
     </div>
+    <dialog id="remove-photo-dialog" class="project-dialog" aria-labelledby="remove-photo-title">
+      <h2 id="remove-photo-title">删除照片</h2>
+      <p id="remove-photo-description"></p>
+      <div class="toolbar"><button id="remove-photo-confirm" class="danger">确认移除</button><button id="remove-photo-cancel">取消</button></div>
+    </dialog>
+    <dialog id="create-dialog" class="project-dialog" aria-labelledby="create-title">
+      <h2 id="create-title">新建项目</h2>
+      <form id="create-form">
+        <label for="new-project-title">项目名称</label>
+        <input id="new-project-title" name="title" required maxlength="80" placeholder="例如：夏日散步" autocomplete="off" />
+        <label for="new-project-arrangement">项目分类</label>
+        <select id="new-project-arrangement"><option value="color">颜色 Color</option><option value="theme">主题 Theme（例如 Japan、新疆）</option></select>
+        <p class="help">创建后可上传照片，或从 Unassigned 添加。空项目暂不显示在网站上。</p>
+        <div class="toolbar"><button type="submit" class="primary">创建项目</button><button type="button" id="create-cancel">取消</button></div>
+      </form>
+    </dialog>
+    <dialog id="delete-dialog" class="project-dialog" aria-labelledby="delete-title">
+      <h2 id="delete-title">删除项目</h2>
+      <p id="delete-description"></p>
+      <p class="help">项目将从网站移除，照片会保留在 Unassigned 总库中。可以新建项目后重新添加。</p>
+      <div class="toolbar"><button id="delete-confirm" class="danger">确认删除项目</button><button id="delete-cancel">取消</button></div>
+    </dialog>
     <dialog id="library-dialog" aria-labelledby="library-title">
       <h2 id="library-title">从 Unassigned 添加图片</h2>
       <p>选择要加入当前项目的照片。添加后立即保存，总库中的照片会保留。</p>
-      <div class="toolbar"><button id="library-all">全选可添加照片</button><button id="library-none">取消选择</button><button id="library-add" class="primary" disabled>添加到当前项目（0）</button><button id="library-close">关闭</button></div>
+      <div id="library-filters" class="orientation-filters" role="group" aria-label="按总库照片方向筛选"></div>
+      <div class="toolbar"><button id="library-all">全选当前分类可添加照片</button><button id="library-none">清空全部选择</button><button id="library-add" class="primary" disabled>添加到当前项目（0）</button><button id="library-close">关闭</button></div>
+      <p id="library-selection" class="help" role="status"></p>
+      <p id="library-filter-empty" class="help" hidden>当前分类没有照片。</p>
       <p id="library-empty" hidden>总库还没有照片，请先点击“从 GitHub 同步”。</p>
       <div id="library-grid"></div>
     </dialog>

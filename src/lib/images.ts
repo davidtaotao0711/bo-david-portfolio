@@ -4,7 +4,9 @@ export type ImageAsset = { width: number; height: number; tiny: string; base: st
 const manifest = manifestData as Record<string, ImageAsset>;
 export function asset(image: PortfolioImage) { return manifest[image.id]; }
 export function srcset(image: ImageAsset, format: string, thumbnail = false) {
-  return image.widths.filter(w => !thumbnail || w <= 320).map(w => `${image.base}-${w}.${format} ${w}w`).join(', ');
+  return image.widths.filter(w => !thumbnail || w <= 640).map(w => `${image.base}-${w}.${format} ${w}w`).join(', ');
 }
-export const overviewSizes = '(max-width: 600px) calc((90vw - 48px) / 4), (max-width: 1000px) calc((97vw - 78px) / 6), calc((97vw - 130px) / 10)';
+export const overviewSizes = (image: Pick<PortfolioImage, 'width' | 'height'>) => image.width > image.height
+  ? '(max-width: 600px) calc((90vw - 27px) / 2), (max-width: 1000px) calc((97vw - 52px) / 4), calc((97vw - 78px) / 6)'
+  : '(max-width: 600px) calc((90vw - 39px) / 3), (max-width: 1000px) calc((97vw - 78px) / 6), calc((97vw - 117px) / 9)';
 export const indexSizes = '(max-width: 600px) calc((90vw - 24px) / 2), (max-width: 1000px) 31vw, 19vw';

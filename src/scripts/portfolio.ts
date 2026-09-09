@@ -1,9 +1,23 @@
-import { projects } from '../data/projects';
+import { projects, colorProjects, themeProjects } from '../data/projects';
+import type { Arrangement } from '../lib/arrangements';
+import { scatterReflow } from './scatter-reflow';
 import { asset, srcset } from '../lib/images';
 import { parseRoute, projectUrl, adjacentIndex, neighborIndices, type PageState, type Route } from '../lib/state';
 
 const main = document.querySelector<HTMLElement>('#main')!;
 const header = document.querySelector<HTMLElement>('.header')!;
+const sortToggle = document.querySelector<HTMLButtonElement>('#sort-toggle')!;
+let scatter: ReturnType<typeof scatterReflow> | undefined;
+function arrangementFor(url: URL): Arrangement {
+  const project = projects.find(p => `/${p.slug}` === url.pathname.replace(/\/$/, ''));
+  return project ? project.arrangement ?? 'color' : url.searchParams.get('sort') === 'theme' ? 'theme' : 'color';
+}
+let arrangement = arrangementFor(new URL(location.href));
+const sortedUrl = (url: string) => {
+  const target = new URL(url, location.origin);
+  target.searchParams.set('sort', arrangement);
+  return target.pathname + target.search;
+};
 let route: Route = parseRoute(new URL(location.href), projects);
 let transition: { finished: Promise<void>; skipTransition(): void } | undefined;
 const preloads = new Map<string, HTMLLinkElement>();
@@ -35,19 +49,20 @@ function viewerSizes(width: number, height: number) {
 }
 function renderViewer(slug: string, index: number, preserveFocus: boolean) {
   const project = projects.find(p => p.slug === slug)!;
-  const p = projects.indexOf(project);
+  const group = arrangement === 'theme' ? themeProjects : colorProjects;
+  const p = group.indexOf(project);
   if (!main.querySelector('.viewer')) clone('viewer');
   const image = project.images[index];
   const data = asset(image);
   const sizes = viewerSizes(image.width, image.height);
   const current = main.querySelector<HTMLElement>('#current-photo')!;
   current.style.setProperty('--ratio', String(image.width / image.height));
-  current.style.viewTransitionName = `photo-${image.id}`;
+  current.style.viewTransitionName = `photo-${project.slug}-${image.id}`;
   const picture = document.createElement('picture');
   picture.className = 'photo';
   picture.style.backgroundImage = `url('${data.tiny}')`;
   picture.style.aspectRatio = `${image.width}/${image.height}`;
-  for (const format of ['avif', 'webp']) {
+  for (const format of ['webp']) {
     const source = document.createElement('source');
     source.type = `image/${format}`;
     source.srcset = srcset(data, format);
@@ -64,11 +79,11 @@ function renderViewer(slug: string, index: number, preserveFocus: boolean) {
   main.querySelector('#project-title')!.textContent = project.title;
   main.querySelector('#image-status')!.textContent = `${project.title}, image ${index + 1} of ${project.images.length}`;
   const close = main.querySelector<HTMLAnchorElement>('#close-viewer')!;
-  close.href = (history.state as PageState).origin?.url ?? '/?mode=grid';
+  close.href = (history.state as PageState).origin?.url ?? sortedUrl('/?mode=grid');
   for (const [id, delta] of [['previous-project', -1], ['next-project', 1]] as const) {
-    const adjacent = projects[adjacentIndex(p, delta, projects.length)];
+    const adjacent = group[adjacentIndex(p, delta, group.length)];
     const link = main.querySelector<HTMLAnchorElement>(`#${id}`)!;
-    link.href = projectUrl(adjacent.slug);
+    link.href = sortedUrl(projectUrl(adjacent.slug));
     link.setAttribute('aria-label', `${delta < 0 ? 'Previous' : 'Next'} project: ${adjacent.title}`);
     link.title = adjacent.title;
   }
@@ -82,9 +97,9 @@ function renderViewer(slug: string, index: number, preserveFocus: boolean) {
     }
     const source = asset(photo);
     const link = document.createElement('link');
-    link.rel = 'preload'; link.as = 'image'; link.type = 'image/avif';
-    link.imageSrcset = srcset(source, 'avif'); link.imageSizes = viewerSizes(photo.width, photo.height);
-    link.href = `${source.base}-960.avif`;
+    link.rel = 'preload'; link.as = 'image'; link.type = 'image/webp';
+    link.imageSrcset = srcset(source, 'webp'); link.imageSizes = viewerSizes(photo.width, photo.height);
+    link.href = `${source.base}-960.webp`;
     link.fetchPriority = neighbor === index ? 'high' : 'low';
     link.dataset.viewerPreload = photo.id;
     preloads.set(photo.id, link); document.head.append(link);
@@ -95,6 +110,14 @@ function renderViewer(slug: string, index: number, preserveFocus: boolean) {
 
 function render(preserveFocus = false) {
   route = parseRoute(new URL(location.href), projects);
+  arrangement = arrangementFor(new URL(location.href));
+  sortToggle.hidden = route.kind !== 'archive';
+  const nextArrangement = arrangement === 'color' ? 'Theme' : 'Color';
+  sortToggle.textContent = `Sort by ${nextArrangement} ↗`;
+  sortToggle.setAttribute('aria-label', `Sort by ${nextArrangement}`);
+  header.querySelectorAll<HTMLAnchorElement>('a').forEach(link => {
+    link.href = sortedUrl(link.href);
+  });
   document.body.classList.toggle('viewing', route.kind === 'viewer');
   header.hidden = route.kind === 'viewer';
   const state = history.state as PageState;
@@ -103,7 +126,7 @@ function render(preserveFocus = false) {
   document.querySelector('meta[name="description"]')?.setAttribute('content', description);
   document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
   if (route.kind === 'viewer') {
-    const canonical = projectUrl(route.slug, route.index);
+    const canonical = sortedUrl(projectUrl(route.slug, route.index));
     if (location.pathname + location.search !== canonical) history.replaceState(state, '', canonical);
     renderViewer(route.slug, route.index, preserveFocus);
     document.title = `${projects.find(p => p.slug === (route as { slug: string }).slug)!.title} — BO DAVID`;
@@ -114,7 +137,7 @@ function render(preserveFocus = false) {
   for (const link of preloads.values()) link.remove();
   preloads.clear();
   if (route.kind === 'archive') {
-    clone(route.mode);
+    clone(`${route.mode}-${arrangement}`);
     header.querySelector('.page-label')!.textContent = route.mode === 'grid' ? 'Index' : 'Overview';
     document.title = `${route.mode === 'grid' ? 'Index' : 'Overview'} — BO DAVID`;
     const slug = route.slug;
@@ -138,6 +161,7 @@ function render(preserveFocus = false) {
 }
 
 function navigate(url: string, state: PageState, sharedImage?: HTMLElement, preserveFocus = false, returnImage?: string) {
+  scatter?.cancel();
   saveScroll();
   transition?.skipTransition();
   if (sharedImage) sharedImage.style.viewTransitionName = sharedImage.id;
@@ -157,14 +181,38 @@ function navigate(url: string, state: PageState, sharedImage?: HTMLElement, pres
 function changeImage(delta: number) {
   if (route.kind !== 'viewer') return;
   const project = projects.find(p => p.slug === (route as { slug: string }).slug)!;
-  navigate(projectUrl(project.slug, adjacentIndex(route.index, delta, project.images.length)), { ...history.state, bo: true }, undefined, true);
+  navigate(sortedUrl(projectUrl(project.slug, adjacentIndex(route.index, delta, project.images.length))), { ...history.state, bo: true }, undefined, true);
 }
 function closeViewer() {
   if (route.kind !== 'viewer') return;
   const origin = (history.state as PageState).origin;
   const id = projects.find(p => p.slug === (route as { slug: string }).slug)!.images[route.index].id;
-  navigate(origin?.url ?? '/?mode=grid', { bo: true, scroll: origin?.scroll, focus: origin?.focus }, undefined, false, `photo-${id}`);
+  navigate(origin?.url ?? sortedUrl('/?mode=grid'), { bo: true, scroll: origin?.scroll, focus: origin?.focus }, undefined, false, `photo-${route.slug}-${id}`);
 }
+
+sortToggle.addEventListener('click', () => {
+  if (route.kind !== 'archive' || scatter) return;
+  saveScroll(); transition?.skipTransition();
+  const next = arrangement === 'color' ? 'theme' : 'color';
+  const url = `/?mode=${route.mode}&sort=${next}`;
+  sortToggle.disabled = true;
+  try {
+    const running = scatterReflow(main, () => {
+      history.pushState({ bo: true, scroll: 0 }, '', url);
+      render();
+    });
+    scatter = running;
+    void running.finished.finally(() => {
+      if (scatter !== running) return;
+      scatter = undefined; sortToggle.disabled = false;
+      document.querySelector('#sort-status')!.textContent = `Photographs grouped by ${arrangement}.`;
+    });
+  } catch (error) {
+    scatter = undefined; sortToggle.disabled = false;
+    console.error('Photo transition failed', error);
+    render();
+  }
+});
 
 document.addEventListener('click', event => {
   if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -180,7 +228,7 @@ document.addEventListener('click', event => {
   if (next.kind === 'viewer') {
     let origin = (history.state as PageState).origin;
     if (route.kind === 'archive') {
-      const url = `/?mode=${route.mode}&slug=${next.slug}`;
+      const url = `/?mode=${route.mode}&slug=${next.slug}&sort=${arrangement}`;
       origin = { url, scroll: scrollY, focus: link.id };
       history.replaceState({ bo: true, scroll: scrollY, focus: link.id }, '', url);
     }
@@ -207,8 +255,9 @@ main.addEventListener('touchend', event => {
 }, { passive: true });
 main.addEventListener('touchcancel', () => touch = undefined, { passive: true });
 main.addEventListener('click', event => { if (Date.now() - swipedAt < 450) { event.preventDefault(); event.stopPropagation(); } }, true);
-addEventListener('popstate', () => { transition?.skipTransition(); render(); });
-addEventListener('pagehide', saveScroll);
+addEventListener('popstate', () => { scatter?.cancel(); transition?.skipTransition(); render(); });
+addEventListener('resize', () => scatter?.cancel());
+addEventListener('pagehide', () => { scatter?.cancel(); saveScroll(); });
 function hoverProject(target: EventTarget | null) {
   if (route.kind !== 'archive') return;
   const item = target instanceof Element ? target.closest<HTMLElement>('.archive-image') : null;
