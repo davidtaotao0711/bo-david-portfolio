@@ -1868,7 +1868,12 @@
         }
       }
     ],
-    "arrangement": "theme"
+    "arrangement": "theme",
+    "indexCard": {
+      "order": 0,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "project-5199628e-5090-41ac-8a6a-bc4e8fff804f",
@@ -1932,47 +1937,12 @@
         }
       }
     ],
-    "arrangement": "theme"
-  },
-  {
-    "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f",
-    "slug": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f",
-    "title": "金海湖",
-    "year": "",
-    "location": "",
-    "description": "",
-    "cover": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6",
-    "images": [
-      {
-        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6",
-        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6.jpg",
-        "width": 5574,
-        "height": 3842,
-        "alt": "金海湖 — 微信图片_20260622004757_1663_249"
-      },
-      {
-        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016",
-        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016.jpg",
-        "width": 5598,
-        "height": 3305,
-        "alt": "金海湖 — 微信图片_20260622004815_1664_249"
-      },
-      {
-        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05",
-        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05.jpg",
-        "width": 5832,
-        "height": 3497,
-        "alt": "金海湖 — 微信图片_20260622005824_1693_249"
-      },
-      {
-        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457",
-        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457.jpg",
-        "width": 5440,
-        "height": 3242,
-        "alt": "金海湖 — 微信图片_20260622005843_1694_249"
-      }
-    ],
-    "arrangement": "theme"
+    "arrangement": "theme",
+    "indexCard": {
+      "order": 1,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "show-in-fotografiska",
@@ -2012,7 +1982,12 @@
         "alt": "Show in fotografiska — 微信图片_20260622200021_1784_249"
       }
     ],
-    "arrangement": "theme"
+    "arrangement": "theme",
+    "indexCard": {
+      "order": 2,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "rodin",
@@ -2103,7 +2078,12 @@
         "kind": "photo",
         "id": "rodin-4cb06892-c0de-484f-890b-203327bfbc33"
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 3,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "backdrop-vinyl",
@@ -2194,7 +2174,12 @@
         "kind": "photo",
         "id": "backdrop-vinyl-924be169-fba0-4032-8446-79b4cdf3a191"
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 4,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "github-2f23e841e448e200fd6a",
@@ -5457,6 +5442,34 @@
         "width": 4032,
         "height": 6048,
         "alt": "辰山 — 微信图片_20250831222918_79_113"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6.jpg",
+        "width": 5574,
+        "height": 3842,
+        "alt": "金海湖 — 微信图片_20260622004757_1663_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016.jpg",
+        "width": 5598,
+        "height": 3305,
+        "alt": "金海湖 — 微信图片_20260622004815_1664_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05.jpg",
+        "width": 5832,
+        "height": 3497,
+        "alt": "金海湖 — 微信图片_20260622005824_1693_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457.jpg",
+        "width": 5440,
+        "height": 3242,
+        "alt": "金海湖 — 微信图片_20260622005843_1694_249"
       }
     ],
     "github": {
