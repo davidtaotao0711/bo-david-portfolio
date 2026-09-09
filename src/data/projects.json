@@ -1880,19 +1880,6 @@
     "cover": "gh-06390414c4a3e9989ac9",
     "images": [
       {
-        "id": "gh-1df1078c6af6735e23d8",
-        "src": "/images/originals/github/0cfeb317919445e25a49f9fbdd45ddc69d0d0102.jpg",
-        "width": 3936,
-        "height": 5285,
-        "alt": "Scenes photograph by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "scenes-075",
-          "path": "/images/scenes/scenes-075.jpg",
-          "blob": "0cfeb317919445e25a49f9fbdd45ddc69d0d0102"
-        }
-      },
-      {
         "id": "gh-38b64fe7063c6292ddb9",
         "src": "/images/originals/github/1698c6b904e52c5d701be305080a306e75c9a5fc.jpg",
         "width": 3984,
@@ -1946,6 +1933,268 @@
       }
     ],
     "arrangement": "theme"
+  },
+  {
+    "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f",
+    "slug": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f",
+    "title": "金海湖",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6",
+    "images": [
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-3d7e3a1a-5873-460f-8242-10d6f531bfc6.jpg",
+        "width": 5574,
+        "height": 3842,
+        "alt": "金海湖 — 微信图片_20260622004757_1663_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-62d498e6-d3f7-4e07-8780-96a6f5e89016.jpg",
+        "width": 5598,
+        "height": 3305,
+        "alt": "金海湖 — 微信图片_20260622004815_1664_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-1c515fd3-5bd3-4e79-80ad-83c2aa3d8e05.jpg",
+        "width": 5832,
+        "height": 3497,
+        "alt": "金海湖 — 微信图片_20260622005824_1693_249"
+      },
+      {
+        "id": "project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457",
+        "src": "/images/originals/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f/project-34f932eb-abbf-4311-a1b1-9c990a6c9b8f-511d1fd2-9b36-4982-aabf-d1f709c9f457.jpg",
+        "width": 5440,
+        "height": 3242,
+        "alt": "金海湖 — 微信图片_20260622005843_1694_249"
+      }
+    ],
+    "arrangement": "theme"
+  },
+  {
+    "id": "show-in-fotografiska",
+    "slug": "show-in-fotografiska",
+    "title": "Show in fotografiska",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "show-in-fotografiska-7a7efbc2-7b63-45ea-a6cc-0217f1d33655",
+    "images": [
+      {
+        "id": "show-in-fotografiska-7a7efbc2-7b63-45ea-a6cc-0217f1d33655",
+        "src": "/images/originals/show-in-fotografiska/show-in-fotografiska-7a7efbc2-7b63-45ea-a6cc-0217f1d33655.jpg",
+        "width": 3345,
+        "height": 5313,
+        "alt": "Show in fotografiska — 微信图片_20260622193540_1773_249"
+      },
+      {
+        "id": "show-in-fotografiska-73f8ce0e-9f62-4fd2-a4df-1c986b10749f",
+        "src": "/images/originals/show-in-fotografiska/show-in-fotografiska-73f8ce0e-9f62-4fd2-a4df-1c986b10749f.jpg",
+        "width": 3831,
+        "height": 5681,
+        "alt": "Show in fotografiska — 微信图片_20260622193600_1774_249"
+      },
+      {
+        "id": "show-in-fotografiska-2b90101a-0b35-49f1-a6db-dacdc5cb1286",
+        "src": "/images/originals/show-in-fotografiska/show-in-fotografiska-2b90101a-0b35-49f1-a6db-dacdc5cb1286.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Show in fotografiska — 微信图片_20260622200002_1783_249"
+      },
+      {
+        "id": "show-in-fotografiska-273bbb12-2379-40e1-a7b6-5eeeae6957d8",
+        "src": "/images/originals/show-in-fotografiska/show-in-fotografiska-273bbb12-2379-40e1-a7b6-5eeeae6957d8.jpg",
+        "width": 3215,
+        "height": 5290,
+        "alt": "Show in fotografiska — 微信图片_20260622200021_1784_249"
+      }
+    ],
+    "arrangement": "theme"
+  },
+  {
+    "id": "rodin",
+    "slug": "rodin",
+    "title": "Rodin",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "rodin-80796ebe-d99f-4ccc-9f3f-222f58165cce",
+    "images": [
+      {
+        "id": "rodin-80796ebe-d99f-4ccc-9f3f-222f58165cce",
+        "src": "/images/originals/rodin/rodin-80796ebe-d99f-4ccc-9f3f-222f58165cce.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Rodin — 微信图片_20260730202446_2122_249"
+      },
+      {
+        "id": "rodin-8eacbf60-a7ef-4a0d-80db-7a80430c8553",
+        "src": "/images/originals/rodin/rodin-8eacbf60-a7ef-4a0d-80db-7a80430c8553.jpg",
+        "width": 2994,
+        "height": 4652,
+        "alt": "Rodin — 微信图片_20260730202608_2130_249"
+      },
+      {
+        "id": "rodin-e127d8eb-7df8-4589-91ac-d469f8fcc333",
+        "src": "/images/originals/rodin/rodin-e127d8eb-7df8-4589-91ac-d469f8fcc333.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Rodin — 微信图片_20260730202748_2139_249"
+      },
+      {
+        "id": "rodin-303b62c3-1a03-4948-a267-e9674abcbbbf",
+        "src": "/images/originals/rodin/rodin-303b62c3-1a03-4948-a267-e9674abcbbbf.jpg",
+        "width": 3393,
+        "height": 4733,
+        "alt": "Rodin — 微信图片_20260730202937_2146_249"
+      },
+      {
+        "id": "rodin-18b2bbc5-2144-46cf-b626-5257be07bae5",
+        "src": "/images/originals/rodin/rodin-18b2bbc5-2144-46cf-b626-5257be07bae5.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Rodin — 微信图片_20260730210540_2153_249"
+      },
+      {
+        "id": "rodin-4b69ff7f-8f94-4b13-8a59-6c48655e3bf9",
+        "src": "/images/originals/rodin/rodin-4b69ff7f-8f94-4b13-8a59-6c48655e3bf9.jpg",
+        "width": 3229,
+        "height": 5070,
+        "alt": "Rodin — 微信图片_20260730212714_2156_249"
+      },
+      {
+        "id": "rodin-4cb06892-c0de-484f-890b-203327bfbc33",
+        "src": "/images/originals/rodin/rodin-4cb06892-c0de-484f-890b-203327bfbc33.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Rodin — 微信图片_20260730202840_2142_249"
+      }
+    ],
+    "arrangement": "theme",
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "rodin-80796ebe-d99f-4ccc-9f3f-222f58165cce"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-8eacbf60-a7ef-4a0d-80db-7a80430c8553"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-e127d8eb-7df8-4589-91ac-d469f8fcc333"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-303b62c3-1a03-4948-a267-e9674abcbbbf"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-18b2bbc5-2144-46cf-b626-5257be07bae5"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-4b69ff7f-8f94-4b13-8a59-6c48655e3bf9"
+      },
+      {
+        "kind": "photo",
+        "id": "rodin-4cb06892-c0de-484f-890b-203327bfbc33"
+      }
+    ]
+  },
+  {
+    "id": "backdrop-vinyl",
+    "slug": "backdrop-vinyl",
+    "title": "Backdrop Vinyl",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "backdrop-vinyl-805e9e2a-ee28-4946-a2b2-c0d0f0bd248a",
+    "images": [
+      {
+        "id": "backdrop-vinyl-805e9e2a-ee28-4946-a2b2-c0d0f0bd248a",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-805e9e2a-ee28-4946-a2b2-c0d0f0bd248a.jpg",
+        "width": 2075,
+        "height": 3130,
+        "alt": "Backdrop Vinyl — 微信图片_20260629190216_1879_249"
+      },
+      {
+        "id": "backdrop-vinyl-b3cf457b-ece3-47d7-8a2b-fb21ec90e5d7",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-b3cf457b-ece3-47d7-8a2b-fb21ec90e5d7.jpg",
+        "width": 1866,
+        "height": 2823,
+        "alt": "Backdrop Vinyl — 微信图片_20260629190228_1881_249"
+      },
+      {
+        "id": "backdrop-vinyl-88bf5cc4-dc8a-492b-9732-a0a1a85b34b7",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-88bf5cc4-dc8a-492b-9732-a0a1a85b34b7.jpg",
+        "width": 2075,
+        "height": 2958,
+        "alt": "Backdrop Vinyl — 微信图片_20260629190252_1884_249"
+      },
+      {
+        "id": "backdrop-vinyl-bb60c0cd-9e8a-4a86-a469-b61b039c15a5",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-bb60c0cd-9e8a-4a86-a469-b61b039c15a5.jpg",
+        "width": 3578,
+        "height": 5626,
+        "alt": "Backdrop Vinyl — 微信图片_20260905203150_2420_249"
+      },
+      {
+        "id": "backdrop-vinyl-c5067984-64dd-4cb2-88fe-af96faf79292",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-c5067984-64dd-4cb2-88fe-af96faf79292.jpg",
+        "width": 3854,
+        "height": 5657,
+        "alt": "Backdrop Vinyl — 微信图片_20260905203310_2424_249"
+      },
+      {
+        "id": "backdrop-vinyl-2b43967d-28a4-454a-890c-d9909807a6a4",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-2b43967d-28a4-454a-890c-d9909807a6a4.jpg",
+        "width": 3535,
+        "height": 5740,
+        "alt": "Backdrop Vinyl — 微信图片_20260905203324_2425_249"
+      },
+      {
+        "id": "backdrop-vinyl-924be169-fba0-4032-8446-79b4cdf3a191",
+        "src": "/images/originals/backdrop-vinyl/backdrop-vinyl-924be169-fba0-4032-8446-79b4cdf3a191.jpg",
+        "width": 3430,
+        "height": 5432,
+        "alt": "Backdrop Vinyl — 微信图片_20260905202833_2407_249"
+      }
+    ],
+    "arrangement": "theme",
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-805e9e2a-ee28-4946-a2b2-c0d0f0bd248a"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-b3cf457b-ece3-47d7-8a2b-fb21ec90e5d7"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-88bf5cc4-dc8a-492b-9732-a0a1a85b34b7"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-bb60c0cd-9e8a-4a86-a469-b61b039c15a5"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-c5067984-64dd-4cb2-88fe-af96faf79292"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-2b43967d-28a4-454a-890c-d9909807a6a4"
+      },
+      {
+        "kind": "photo",
+        "id": "backdrop-vinyl-924be169-fba0-4032-8446-79b4cdf3a191"
+      }
+    ]
   },
   {
     "id": "github-2f23e841e448e200fd6a",
@@ -5166,6 +5415,48 @@
           "path": "/images/series/motion-and-blur/011.jpg",
           "blob": "c71fd246e9c51c77d67f65ca5768ab0601a7fa20"
         }
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-b44bdc4b-e95e-424f-8861-5dc4d1b9f221",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-b44bdc4b-e95e-424f-8861-5dc4d1b9f221.jpg",
+        "width": 4032,
+        "height": 4838,
+        "alt": "辰山 — 微信图片_20250831222925_72_113"
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-5a5e8bd5-9beb-47f4-bec8-07902c502788",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-5a5e8bd5-9beb-47f4-bec8-07902c502788.jpg",
+        "width": 5148,
+        "height": 3312,
+        "alt": "辰山 — 微信图片_20250831222903_86_113"
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-2e83eebe-fe68-429c-85a3-14806953217b",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-2e83eebe-fe68-429c-85a3-14806953217b.jpg",
+        "width": 6048,
+        "height": 3547,
+        "alt": "辰山 — 微信图片_20250831222912_83_113"
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-de8739c7-2547-46b8-8841-081eb98c8ea2",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-de8739c7-2547-46b8-8841-081eb98c8ea2.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "辰山 — 微信图片_20250831222927_69_113"
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-6235b92a-aacb-407b-ae97-f688b4530337",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-6235b92a-aacb-407b-ae97-f688b4530337.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "辰山 — 微信图片_20250831222913_82_113"
+      },
+      {
+        "id": "project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-d8b4f209-fa07-438f-96c7-897c4748822f",
+        "src": "/images/originals/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e/project-bf0e524c-9144-4626-bc5a-eacf77c1da2e-d8b4f209-fa07-438f-96c7-897c4748822f.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "辰山 — 微信图片_20250831222918_79_113"
       }
     ],
     "github": {
