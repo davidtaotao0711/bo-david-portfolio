@@ -237,7 +237,12 @@
         "kind": "photo",
         "id": "gh-cb391d4296f9c77529c1"
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 0,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "green",
@@ -469,7 +474,12 @@
           "blob": "242805d59f1e147327faebfe527d83c251f8f694"
         }
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 1,
+      "before": [],
+      "after": []
+    }
   },
   {
     "id": "yellow",
@@ -714,7 +724,14 @@
           "blob": "ce374146ef8bc3176808372a8ff2bb975ddd598b"
         }
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 2,
+      "before": [
+        "portrait"
+      ],
+      "after": []
+    }
   },
   {
     "id": "monochrome",
@@ -1286,7 +1303,14 @@
         "kind": "photo",
         "id": "gh-1d0d78235ee4722dc8f7"
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 3,
+      "before": [
+        "portrait"
+      ],
+      "after": []
+    }
   },
   {
     "id": "mixed",
@@ -1609,7 +1633,14 @@
           "blob": "2a4679a41d740681aac88a0a4d2712b0a125d986"
         }
       }
-    ]
+    ],
+    "indexCard": {
+      "order": 4,
+      "before": [
+        "portrait"
+      ],
+      "after": []
+    }
   },
   {
     "id": "japan",
@@ -1927,7 +1958,9 @@
     "arrangement": "theme",
     "indexCard": {
       "order": 1,
-      "before": [],
+      "before": [
+        "portrait"
+      ],
       "after": []
     }
   },
@@ -1971,8 +2004,10 @@
     ],
     "arrangement": "theme",
     "indexCard": {
-      "order": 2,
-      "before": [],
+      "order": 3,
+      "before": [
+        "portrait"
+      ],
       "after": []
     }
   },
@@ -2067,7 +2102,7 @@
       }
     ],
     "indexCard": {
-      "order": 3,
+      "order": 2,
       "before": [],
       "after": []
     }
@@ -2165,7 +2200,9 @@
     "indexCard": {
       "order": 4,
       "before": [],
-      "after": []
+      "after": [
+        "portrait"
+      ]
     }
   },
   {
