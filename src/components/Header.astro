@@ -1,16 +1,18 @@
 ---
 interface Props { label?: string }
 const { label = 'Overview' } = Astro.props;
+import { withBase } from '../lib/base-path';
+const url = (path: string) => withBase(path, import.meta.env.BASE_URL);
 ---
 <a class="skip-link" href="#main">Skip to photographs</a>
 <header class="header">
-  <a href="/?mode=grid" class="identity">BO DAVID</a>
+  <a href={url('/?mode=grid')} class="identity">BO DAVID</a>
   <span class="page-label" aria-hidden="true">{label}</span>
   <nav aria-label="Main navigation">
     <button id="sort-toggle" type="button" aria-label="Sort by Theme">Sort by Theme ↗</button>
-    <a href="/?mode=grid" data-mode="grid">INDEX</a>
-    <a href="/?mode=overview" data-mode="overview">OVERVIEW</a>
-    <a href="/information" data-mode="information">INFORMATION</a>
+    <a href={url('/?mode=grid')} data-mode="grid">INDEX</a>
+    <a href={url('/?mode=overview')} data-mode="overview">OVERVIEW</a>
+    <a href={url('/information')} data-mode="information">INFORMATION</a>
   </nav>
 </header>
 <span id="sort-status" class="sr-only" role="status" aria-live="polite"></span>

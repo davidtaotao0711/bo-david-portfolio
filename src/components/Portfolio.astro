@@ -7,7 +7,12 @@ import { asset } from '../lib/images';
 import { galleryRuns } from '../lib/gallery-layout';
 import { indexCanvas } from '../lib/index-layout';
 import { profile } from '../data/profile';
-const currentProject = projects.find(project => `/${project.slug}` === Astro.url.pathname.replace(/\/$/, ''));
+import { stripBase, withBase } from '../lib/base-path';
+import { imageUrl } from '../lib/images';
+const base = import.meta.env.BASE_URL;
+const url = (path: string) => withBase(path, base);
+const currentPath = stripBase(Astro.url.pathname, base).replace(/\/$/, '');
+const currentProject = projects.find(project => `/${project.slug}` === currentPath);
 ---
 <Header />
 <main id="main" tabindex="-1"></main>
@@ -20,7 +25,7 @@ const currentProject = projects.find(project => `/${project.slug}` === Astro.url
           if (slot.kind === 'blank') return <span class="gallery-cell gallery-blank" aria-hidden="true"></span>;
           const i = project.images.findIndex(image => image.id === slot.id);
           const image = project.images[i];
-          return <a class="archive-image gallery-cell" href={`/${project.slug}?s=${i}&sort=${arrangement}`} data-project={project.slug} data-image={i} data-photo={photoKey(image)} data-thumb={`${asset(image).base}-320.webp`} id={`photo-${project.slug}-${image.id}`} aria-label={`${project.title}, image ${i + 1}`}>
+          return <a class="archive-image gallery-cell" href={url(`/${project.slug}?s=${i}&sort=${arrangement}`)} data-project={project.slug} data-image={i} data-photo={photoKey(image)} data-thumb={imageUrl(asset(image),320,'webp',base)} id={`photo-${project.slug}-${image.id}`} aria-label={`${project.title}, image ${i + 1}`}>
             <Photo image={image} eager={p === 0 && i < 10} />
           </a>;
         })}
@@ -34,7 +39,7 @@ const currentProject = projects.find(project => `/${project.slug}` === Astro.url
       if(slot.kind==='blank')return <span class="index-blank" style={`aspect-ratio:${slot.orientation==='portrait'?'2/3':'3/2'}`} aria-hidden="true"></span>;
       const project=groups.find(project=>project.id===slot.id)!;
       return <>
-      <a class="archive-image project-cover" href={`/${project.slug}?s=${project.images.findIndex(i => i.id === project.cover)}&sort=${arrangement}`} data-project={project.slug} data-photo={photoKey(project.images.find(i => i.id === project.cover)!)} data-thumb={`${asset(project.images.find(i => i.id === project.cover)!).base}-320.webp`} id={`photo-${project.slug}-${project.cover}`} aria-label={project.title}>
+      <a class="archive-image project-cover" href={url(`/${project.slug}?s=${project.images.findIndex(i => i.id === project.cover)}&sort=${arrangement}`)} data-project={project.slug} data-photo={photoKey(project.images.find(i => i.id === project.cover)!)} data-thumb={imageUrl(asset(project.images.find(i => i.id === project.cover)!),320,'webp',base)} id={`photo-${project.slug}-${project.cover}`} aria-label={project.title}>
         <Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} eager={p < 3} />
         <span class="cover-caption">{project.title}</span>
       </a>
@@ -56,7 +61,7 @@ const currentProject = projects.find(project => `/${project.slug}` === Astro.url
 </template>
 <template id="viewer-template">
   <section class="viewer" aria-label="Project viewer">
-    <header class="viewer-header"><h1 id="project-title"></h1><a id="close-viewer" href="/?mode=grid">Close</a></header>
+    <header class="viewer-header"><h1 id="project-title"></h1><a id="close-viewer" href={url('/?mode=grid')}>Close</a></header>
     <div class="image-stage">
       <div id="current-photo"></div>
       <button class="image-hit previous-image" aria-label="Previous image"></button>
@@ -69,7 +74,7 @@ const currentProject = projects.find(project => `/${project.slug}` === Astro.url
   </section>
 </template>
 <noscript><div class="archive index-grid">
-  {currentProject ? currentProject.images.map(image => <Photo image={image} thumbnail={false} />) : colorProjects.map(project => <a href={`/${project.slug}?s=0`}><Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} /></a>)}
+  {currentProject ? currentProject.images.map(image => <Photo image={image} thumbnail={false} />) : colorProjects.map(project => <a href={url(`/${project.slug}?s=0`)}><Photo image={project.images.find(i => i.id === project.cover)!} thumbnail={false} /></a>)}
   <p>Enable JavaScript to browse image sequences and the contact sheet.</p>
 </div><style>.photo img{opacity:1}</style></noscript>
 <script>import '../scripts/portfolio';</script>

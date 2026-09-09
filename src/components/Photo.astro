@@ -1,13 +1,14 @@
 ---
 import type { PortfolioImage } from '../data/projects';
-import { asset, srcset, overviewSizes, indexSizes } from '../lib/images';
+import { asset, imageUrl, srcset, overviewSizes, indexSizes } from '../lib/images';
 import { frameRatio } from '../lib/gallery-layout';
 interface Props { image: PortfolioImage; thumbnail?: boolean; eager?: boolean }
 const { image, thumbnail = true, eager = false } = Astro.props;
 const data = asset(image);
 const sizes = thumbnail ? overviewSizes(image) : indexSizes;
+const base = import.meta.env.BASE_URL;
 ---
 <picture class="photo archive-frame" style={`aspect-ratio:${frameRatio(image)};background-image:url('${data.tiny}')`}>
-  <source type="image/webp" srcset={srcset(data, 'webp', thumbnail)} sizes={sizes} />
-  <img src={`${data.base}-320.jpg`} srcset={srcset(data, 'jpg', thumbnail)} sizes={sizes} width={image.width} height={image.height} alt={image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'} />
+  <source type="image/webp" srcset={srcset(data, 'webp', thumbnail, base)} sizes={sizes} />
+  <img src={imageUrl(data, 320, 'jpg', base)} srcset={srcset(data, 'jpg', thumbnail, base)} sizes={sizes} width={image.width} height={image.height} alt={image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'} />
 </picture>

@@ -5,6 +5,8 @@ import { openLayoutEditor, hasUnsavedLayout } from './layout-editor';
 import type { LayoutSlot } from '../lib/gallery-layout';
 import { indexCanvas, indexProjects } from '../lib/index-layout';
 const hosted = document.documentElement.dataset.editor === 'github';
+const siteBase = hosted ? location.pathname.replace(/\/editor\/?$/, '') : '';
+const publicUrl = (path: string) => path.startsWith('/') ? `${siteBase}${path}` : path;
 let remote: GitHubEditor | undefined;
 type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
 const $ = <T extends HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
@@ -91,7 +93,7 @@ function button(text: string, label: string, action: () => void, edge = false) {
   return element;
 }
 function setState(next: Snapshot) {
-  state = next;
+  state = hosted ? { ...next, thumbnails: Object.fromEntries(Object.entries(next.thumbnails).map(([id, url]) => [id, publicUrl(url)])) } : next;
   if (!state.projects.some(project => project.slug === selected)) selected = state.projects[0]?.slug ?? '';
   order = project()?.images.map(image => image.id) ?? []; cover = project()?.cover ?? ''; dirty = false;
   render();
@@ -153,7 +155,7 @@ function renderProjectHeading() {
   $('#project-preview').hidden = !project()?.images.length || library;
   $('#project-arrangement-setting').hidden = !project() || library;
   $<HTMLSelectElement>('#project-arrangement').value = project()?.arrangement ?? 'color';
-  $<HTMLAnchorElement>('#project-preview').href = `/?mode=overview&slug=${selected}&sort=${project()?.arrangement ?? 'color'}`;
+  $<HTMLAnchorElement>('#project-preview').href = publicUrl(`/?mode=overview&slug=${selected}&sort=${project()?.arrangement ?? 'color'}`);
 }
 function render() {
   renderProjectHeading();
@@ -279,7 +281,7 @@ $('#from-unassigned').addEventListener('click', () => {
     input.disabled = project().images.some(p => samePhoto(p, photo));
     input.setAttribute('aria-label', `选择 ${photo.alt}`);
     input.addEventListener('change', updateLibraryCount);
-    const img = document.createElement('img'); img.src = state.thumbnails[photo.id] || photo.src; img.alt = photo.alt; img.loading = 'lazy';
+    const img = document.createElement('img'); img.src = state.thumbnails[photo.id] || publicUrl(photo.src); img.alt = photo.alt; img.loading = 'lazy';
     const caption = document.createElement('span'); caption.textContent = input.disabled ? '已在当前项目' : photo.alt;
     label.append(input, img, caption); grid.append(label);
   }
@@ -384,7 +386,7 @@ if (hosted) {
     event.preventDefault(); const input = $<HTMLInputElement>('#github-token');
     $<HTMLButtonElement>('#connect').disabled = true; $('#login-status').textContent = '正在验证 GitHub 权限…';
     try {
-      const response = await fetch('/__editor/assets/manifest.json', {cache:'no-store'});
+      const response = await fetch('../__editor/assets/manifest.json', {cache:'no-store'});
       if (!response.ok) throw new Error('网站图片索引暂不可用，请稍后重试。');
       remote = new GitHubEditor(await response.json());
       const sourceInput = $<HTMLInputElement>('#github-source-token');
