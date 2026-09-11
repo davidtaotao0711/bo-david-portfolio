@@ -1928,6 +1928,13 @@
         "alt": "Unassigned — 微信图片_2026-09-10_131803_062"
       },
       {
+        "id": "github-2f23e841e448e200fd6a-1286fc64-20d4-4311-808c-2a9274afae36",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-1286fc64-20d4-4311-808c-2a9274afae36.jpg",
+        "width": 3703,
+        "height": 5590,
+        "alt": "Unassigned — 微信图片_20260910200522_2455_249"
+      },
+      {
         "id": "github-2f23e841e448e200fd6a-e9e12932-4771-4190-9f31-dd54b92af335",
         "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-e9e12932-4771-4190-9f31-dd54b92af335.jpg",
         "width": 3677,
@@ -1935,11 +1942,25 @@
         "alt": "Unassigned — 微信图片_2026-09-10_131937_603"
       },
       {
-        "id": "github-2f23e841e448e200fd6a-014002b6-dcd2-4879-8f4f-a32b94d1140d",
-        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-014002b6-dcd2-4879-8f4f-a32b94d1140d.jpg",
-        "width": 5473,
-        "height": 3414,
-        "alt": "Unassigned — 微信图片_2026-09-10_131808_582"
+        "id": "github-2f23e841e448e200fd6a-a4ab0699-b4ba-4ed2-89a3-138d798b59d5",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-a4ab0699-b4ba-4ed2-89a3-138d798b59d5.jpg",
+        "width": 3949,
+        "height": 5509,
+        "alt": "Unassigned — 微信图片_20260910200635_2459_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-8e65710a-f3e7-4703-9d3a-c8656f223b94",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-8e65710a-f3e7-4703-9d3a-c8656f223b94.jpg",
+        "width": 3609,
+        "height": 5848,
+        "alt": "Unassigned — 微信图片_20260910200730_2463_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-606587a5-d394-448f-99a9-4b416efde73c",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-606587a5-d394-448f-99a9-4b416efde73c.jpg",
+        "width": 3539,
+        "height": 5273,
+        "alt": "Unassigned — 微信图片_20260910200705_2461_249"
       },
       {
         "id": "github-2f23e841e448e200fd6a-2bdda8f9-cdff-485b-897f-25c177c454d9",
@@ -1947,32 +1968,6 @@
         "width": 5349,
         "height": 3674,
         "alt": "Unassigned — 微信图片_2026-09-10_131928_968"
-      },
-      {
-        "id": "gh-060ed26f16c58f2b672b",
-        "src": "/images/originals/github/0cca839a6b39f46d1f21e0590940263a73996dc2.jpg",
-        "width": 5061,
-        "height": 3416,
-        "alt": "Scenes photograph by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "scenes-090",
-          "path": "/images/scenes/scenes-090.jpg",
-          "blob": "0cca839a6b39f46d1f21e0590940263a73996dc2"
-        }
-      },
-      {
-        "id": "gh-39e44d18915645f44fc8",
-        "src": "/images/originals/github/608edb4dace34650ac8d9ec053caf05480a4867d.jpg",
-        "width": 5124,
-        "height": 3781,
-        "alt": "Tokyo photograph 11 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-011",
-          "path": "/images/series/tokyo-2026/011.jpg",
-          "blob": "608edb4dace34650ac8d9ec053caf05480a4867d"
-        }
       },
       {
         "id": "gh-d0831ae135459a6dc376",
@@ -1993,6 +1988,74 @@
         "width": 5598,
         "height": 3685,
         "alt": "Unassigned — 微信图片_2026-09-10_095420_071"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-e3f2d487-1746-4243-ac3b-8a62cf157c17",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-e3f2d487-1746-4243-ac3b-8a62cf157c17.jpg",
+        "width": 4960,
+        "height": 3664,
+        "alt": "Unassigned — 微信图片_20260910200649_2460_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-014002b6-dcd2-4879-8f4f-a32b94d1140d",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-014002b6-dcd2-4879-8f4f-a32b94d1140d.jpg",
+        "width": 5473,
+        "height": 3414,
+        "alt": "Unassigned — 微信图片_2026-09-10_131808_582"
+      },
+      {
+        "id": "gh-39e44d18915645f44fc8",
+        "src": "/images/originals/github/608edb4dace34650ac8d9ec053caf05480a4867d.jpg",
+        "width": 5124,
+        "height": 3781,
+        "alt": "Tokyo photograph 11 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-011",
+          "path": "/images/series/tokyo-2026/011.jpg",
+          "blob": "608edb4dace34650ac8d9ec053caf05480a4867d"
+        }
+      },
+      {
+        "id": "gh-060ed26f16c58f2b672b",
+        "src": "/images/originals/github/0cca839a6b39f46d1f21e0590940263a73996dc2.jpg",
+        "width": 5061,
+        "height": 3416,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-090",
+          "path": "/images/scenes/scenes-090.jpg",
+          "blob": "0cca839a6b39f46d1f21e0590940263a73996dc2"
+        }
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-fcff2c33-8c50-4455-8b43-c0d095c1c2a9",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-fcff2c33-8c50-4455-8b43-c0d095c1c2a9.jpg",
+        "width": 3856,
+        "height": 5390,
+        "alt": "Unassigned — 微信图片_20260910200536_2456_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-30b4ed76-fefa-485d-a94d-e0159649d3f6",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-30b4ed76-fefa-485d-a94d-e0159649d3f6.jpg",
+        "width": 3750,
+        "height": 5625,
+        "alt": "Unassigned — 微信图片_20260910200558_2457_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-4daee005-b4c0-4bfd-b6b9-99eb9c4dc1f2",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-4daee005-b4c0-4bfd-b6b9-99eb9c4dc1f2.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Unassigned — 微信图片_20260910200617_2458_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-993d8711-af76-44e9-99df-79abfe83d2d0",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-993d8711-af76-44e9-99df-79abfe83d2d0.jpg",
+        "width": 3668,
+        "height": 5026,
+        "alt": "Unassigned — 微信图片_20260910200721_2462_249"
       }
     ],
     "arrangement": "theme",
@@ -2000,7 +2063,186 @@
       "order": 0,
       "before": [],
       "after": []
-    }
+    },
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "gh-de07c5afdc2dc3e12ba3"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-736f0e165f5135f479e2"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-84982b409f42c228e1b8"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-501cbc5b065b18e30149"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-4a55ba7ff06f0f4a8203"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-10fe9295b22b7fb72650"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-51def8e0f4e9dbcd5ada"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-468bf8a04c8fc01ccf22"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-627040cbaf5e158d272c"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-e2cedbbb36de3436e8bd"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-a8861c501cc956c6086e"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-d9237baf1ca1ae69caec"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-c9d5fc20bb40c37b7f3e"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-11b68a2aac3bb842a8c2"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-365541dfb82a9e1e283d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-3e4e7132a7ff1516f8c9"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-df683075a95fd8c59923"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-18f14e9303bd3529a5b1"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-2b2fdc20-5801-4aab-918c-b1a501a9e389"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-72744285-d7aa-4cff-9737-8e0504a0b585"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-f7c2933f-8c99-4cc2-886d-dffcb4a7b7b2"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-46e7053f-ccb2-4153-b847-839db92b0c0e"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-1286fc64-20d4-4311-808c-2a9274afae36"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-e9e12932-4771-4190-9f31-dd54b92af335"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-a4ab0699-b4ba-4ed2-89a3-138d798b59d5"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-8e65710a-f3e7-4703-9d3a-c8656f223b94"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-606587a5-d394-448f-99a9-4b416efde73c"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-2bdda8f9-cdff-485b-897f-25c177c454d9"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-78bdb110-d1da-4067-b628-1b27c9874e95",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-d0831ae135459a6dc376"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-3e075392-3528-49ea-bb0d-8f48fcdde470"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-005de79b-08f0-48f1-911b-972be451246a",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-e3f2d487-1746-4243-ac3b-8a62cf157c17"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-014002b6-dcd2-4879-8f4f-a32b94d1140d"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-98941012-14bb-4469-ae4a-ad4b2208fa5d",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-e4e2cb7c-c99a-4e44-a394-3232804c8305",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-39e44d18915645f44fc8"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-060ed26f16c58f2b672b"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-d0b91220-6c78-44fb-a0be-2d2f63d8d94c",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-fcff2c33-8c50-4455-8b43-c0d095c1c2a9"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-30b4ed76-fefa-485d-a94d-e0159649d3f6"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-4daee005-b4c0-4bfd-b6b9-99eb9c4dc1f2"
+      },
+      {
+        "kind": "photo",
+        "id": "github-2f23e841e448e200fd6a-993d8711-af76-44e9-99df-79abfe83d2d0"
+      }
+    ]
   },
   {
     "id": "project-5199628e-5090-41ac-8a6a-bc4e8fff804f",
@@ -2462,6 +2704,46 @@
         "width": 1947,
         "height": 1280,
         "alt": "Unassigned — 微信图片_2026-09-10_131843_385"
+      }
+    ],
+    "arrangement": "theme"
+  },
+  {
+    "id": "hajime-sorayama",
+    "slug": "hajime-sorayama",
+    "title": "Hajime Sorayama",
+    "year": "",
+    "location": "",
+    "description": "",
+    "cover": "github-2f23e841e448e200fd6a-12014975-4b8d-4c93-80b1-67d5f6cc4ac0",
+    "images": [
+      {
+        "id": "github-2f23e841e448e200fd6a-12014975-4b8d-4c93-80b1-67d5f6cc4ac0",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-12014975-4b8d-4c93-80b1-67d5f6cc4ac0.jpg",
+        "width": 2147,
+        "height": 3221,
+        "alt": "Unassigned — 微信图片_20260910200406_2450_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-927da3e8-922b-4489-9e4f-7bc77f7ebafa",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-927da3e8-922b-4489-9e4f-7bc77f7ebafa.jpg",
+        "width": 3445,
+        "height": 5778,
+        "alt": "Unassigned — 微信图片_20260910200421_2451_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-5070e480-5476-4150-ab73-32b9e0511f7e",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-5070e480-5476-4150-ab73-32b9e0511f7e.jpg",
+        "width": 3879,
+        "height": 6048,
+        "alt": "Unassigned — 微信图片_20260910200431_2452_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-cbb892e3-e3fd-4e12-a2fa-8ed949d393c4",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-cbb892e3-e3fd-4e12-a2fa-8ed949d393c4.jpg",
+        "width": 3504,
+        "height": 5379,
+        "alt": "Unassigned — 微信图片_20260910200442_2453_249"
       }
     ],
     "arrangement": "theme"
@@ -5986,6 +6268,104 @@
         "width": 3677,
         "height": 5728,
         "alt": "Unassigned — 微信图片_2026-09-10_131937_603"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-12014975-4b8d-4c93-80b1-67d5f6cc4ac0",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-12014975-4b8d-4c93-80b1-67d5f6cc4ac0.jpg",
+        "width": 2147,
+        "height": 3221,
+        "alt": "Unassigned — 微信图片_20260910200406_2450_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-927da3e8-922b-4489-9e4f-7bc77f7ebafa",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-927da3e8-922b-4489-9e4f-7bc77f7ebafa.jpg",
+        "width": 3445,
+        "height": 5778,
+        "alt": "Unassigned — 微信图片_20260910200421_2451_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-5070e480-5476-4150-ab73-32b9e0511f7e",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-5070e480-5476-4150-ab73-32b9e0511f7e.jpg",
+        "width": 3879,
+        "height": 6048,
+        "alt": "Unassigned — 微信图片_20260910200431_2452_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-cbb892e3-e3fd-4e12-a2fa-8ed949d393c4",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-cbb892e3-e3fd-4e12-a2fa-8ed949d393c4.jpg",
+        "width": 3504,
+        "height": 5379,
+        "alt": "Unassigned — 微信图片_20260910200442_2453_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-bbedd95b-989a-488d-8553-2dc10e564af1",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-bbedd95b-989a-488d-8553-2dc10e564af1.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Unassigned — 微信图片_20260910200505_2454_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-1286fc64-20d4-4311-808c-2a9274afae36",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-1286fc64-20d4-4311-808c-2a9274afae36.jpg",
+        "width": 3703,
+        "height": 5590,
+        "alt": "Unassigned — 微信图片_20260910200522_2455_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-fcff2c33-8c50-4455-8b43-c0d095c1c2a9",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-fcff2c33-8c50-4455-8b43-c0d095c1c2a9.jpg",
+        "width": 3856,
+        "height": 5390,
+        "alt": "Unassigned — 微信图片_20260910200536_2456_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-30b4ed76-fefa-485d-a94d-e0159649d3f6",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-30b4ed76-fefa-485d-a94d-e0159649d3f6.jpg",
+        "width": 3750,
+        "height": 5625,
+        "alt": "Unassigned — 微信图片_20260910200558_2457_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-4daee005-b4c0-4bfd-b6b9-99eb9c4dc1f2",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-4daee005-b4c0-4bfd-b6b9-99eb9c4dc1f2.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Unassigned — 微信图片_20260910200617_2458_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-a4ab0699-b4ba-4ed2-89a3-138d798b59d5",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-a4ab0699-b4ba-4ed2-89a3-138d798b59d5.jpg",
+        "width": 3949,
+        "height": 5509,
+        "alt": "Unassigned — 微信图片_20260910200635_2459_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-e3f2d487-1746-4243-ac3b-8a62cf157c17",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-e3f2d487-1746-4243-ac3b-8a62cf157c17.jpg",
+        "width": 4960,
+        "height": 3664,
+        "alt": "Unassigned — 微信图片_20260910200649_2460_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-606587a5-d394-448f-99a9-4b416efde73c",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-606587a5-d394-448f-99a9-4b416efde73c.jpg",
+        "width": 3539,
+        "height": 5273,
+        "alt": "Unassigned — 微信图片_20260910200705_2461_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-993d8711-af76-44e9-99df-79abfe83d2d0",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-993d8711-af76-44e9-99df-79abfe83d2d0.jpg",
+        "width": 3668,
+        "height": 5026,
+        "alt": "Unassigned — 微信图片_20260910200721_2462_249"
+      },
+      {
+        "id": "github-2f23e841e448e200fd6a-8e65710a-f3e7-4703-9d3a-c8656f223b94",
+        "src": "/images/originals/github-2f23e841e448e200fd6a/github-2f23e841e448e200fd6a-8e65710a-f3e7-4703-9d3a-c8656f223b94.jpg",
+        "width": 3609,
+        "height": 5848,
+        "alt": "Unassigned — 微信图片_20260910200730_2463_249"
       }
     ],
     "github": {
