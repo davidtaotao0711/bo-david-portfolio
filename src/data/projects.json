@@ -517,19 +517,6 @@
     "cover": "gh-234eea3720b38ac48326",
     "images": [
       {
-        "id": "gh-ec7a8c535cc31a5aea6c",
-        "src": "/images/originals/github/76f28b619018bb9756b297f3b1eb0688de630c50.jpg",
-        "width": 2000,
-        "height": 3000,
-        "alt": "Scene photograph: scenes 013",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "scenes-013",
-          "path": "/images/scenes/scenes-013.jpg",
-          "blob": "76f28b619018bb9756b297f3b1eb0688de630c50"
-        }
-      },
-      {
         "id": "gh-cfe95465a808dd8d6269",
         "src": "/images/originals/github/c7f7c7e8f4ae81edd06c4be5a91c33452a0858e2.jpg",
         "width": 1822,
@@ -582,19 +569,6 @@
         }
       },
       {
-        "id": "gh-234eea3720b38ac48326",
-        "src": "/images/originals/github/8c0910d54a262612e192e9730cb4a95cc051ed57.jpg",
-        "width": 3950,
-        "height": 6048,
-        "alt": "Scenes photograph by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "scenes-068",
-          "path": "/images/scenes/scenes-068.jpg",
-          "blob": "8c0910d54a262612e192e9730cb4a95cc051ed57"
-        }
-      },
-      {
         "id": "gh-38b64fe7063c6292ddb9",
         "src": "/images/originals/github/1698c6b904e52c5d701be305080a306e75c9a5fc.jpg",
         "width": 3984,
@@ -605,32 +579,6 @@
           "photoId": "street-075",
           "path": "/images/street/street-075.jpg",
           "blob": "1698c6b904e52c5d701be305080a306e75c9a5fc"
-        }
-      },
-      {
-        "id": "gh-a72419790a90e38672ff",
-        "src": "/images/originals/github/828661736387dfec85010239003c64673b331d5b.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Scenes photograph by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "scenes-077",
-          "path": "/images/scenes/scenes-077.jpg",
-          "blob": "828661736387dfec85010239003c64673b331d5b"
-        }
-      },
-      {
-        "id": "gh-3f81d1abd01447a0a998",
-        "src": "/images/originals/github/48de3b15d19e034fd92dfad6e6eb02c6fff79068.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "Tokyo photograph 2 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "tokyo-2026-002",
-          "path": "/images/series/tokyo-2026/002.jpg",
-          "blob": "48de3b15d19e034fd92dfad6e6eb02c6fff79068"
         }
       },
       {
@@ -660,29 +608,16 @@
         }
       },
       {
-        "id": "gh-53c82d4809c43729dc9a",
-        "src": "/images/originals/github/3b42f0f1f069f462c4ed1aa9159eff864cb35729.jpg",
-        "width": 3687,
-        "height": 5774,
-        "alt": "KASHGAR Livestock Market photograph 13 by Bo David",
+        "id": "gh-ec7a8c535cc31a5aea6c",
+        "src": "/images/originals/github/76f28b619018bb9756b297f3b1eb0688de630c50.jpg",
+        "width": 2000,
+        "height": 3000,
+        "alt": "Scene photograph: scenes 013",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "kashgar-livestock-market-013",
-          "path": "/images/series/kashgar-livestock-market/013.jpg",
-          "blob": "3b42f0f1f069f462c4ed1aa9159eff864cb35729"
-        }
-      },
-      {
-        "id": "gh-ef97a1dbfb22b0797f10",
-        "src": "/images/originals/github/39640eda2fcc854a2692757aa4bfa632a81f3472.jpg",
-        "width": 4032,
-        "height": 6048,
-        "alt": "KASHGAR Livestock Market photograph 57 by Bo David",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "kashgar-livestock-market-057",
-          "path": "/images/series/kashgar-livestock-market/057.jpg",
-          "blob": "39640eda2fcc854a2692757aa4bfa632a81f3472"
+          "photoId": "scenes-013",
+          "path": "/images/scenes/scenes-013.jpg",
+          "blob": "76f28b619018bb9756b297f3b1eb0688de630c50"
         }
       },
       {
@@ -699,6 +634,32 @@
         }
       },
       {
+        "id": "gh-ef97a1dbfb22b0797f10",
+        "src": "/images/originals/github/39640eda2fcc854a2692757aa4bfa632a81f3472.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "KASHGAR Livestock Market photograph 57 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "kashgar-livestock-market-057",
+          "path": "/images/series/kashgar-livestock-market/057.jpg",
+          "blob": "39640eda2fcc854a2692757aa4bfa632a81f3472"
+        }
+      },
+      {
+        "id": "gh-53c82d4809c43729dc9a",
+        "src": "/images/originals/github/3b42f0f1f069f462c4ed1aa9159eff864cb35729.jpg",
+        "width": 3687,
+        "height": 5774,
+        "alt": "KASHGAR Livestock Market photograph 13 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "kashgar-livestock-market-013",
+          "path": "/images/series/kashgar-livestock-market/013.jpg",
+          "blob": "3b42f0f1f069f462c4ed1aa9159eff864cb35729"
+        }
+      },
+      {
         "id": "gh-b35ceebadfc0ff54a12d",
         "src": "/images/originals/github/137d4b5c21324936f1d42b47d316e524ec973fbe.jpg",
         "width": 2450,
@@ -709,45 +670,6 @@
           "photoId": "scenes-010",
           "path": "/images/scenes/scenes-010.jpg",
           "blob": "137d4b5c21324936f1d42b47d316e524ec973fbe"
-        }
-      },
-      {
-        "id": "gh-63b0024d83c41dbf46dd",
-        "src": "/images/originals/github/626535a70c18b51bad70dd77c80d8f0ac6daa64d.jpg",
-        "width": 3000,
-        "height": 2000,
-        "alt": "Portrait photograph: portrait 007",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "portrait-007",
-          "path": "/images/portrait/portrait-007.jpg",
-          "blob": "626535a70c18b51bad70dd77c80d8f0ac6daa64d"
-        }
-      },
-      {
-        "id": "gh-b2b8f675b9b7440854f3",
-        "src": "/images/originals/github/a036877b39590b0301bdd142db5ef498e1aaac38.jpg",
-        "width": 3000,
-        "height": 2025,
-        "alt": "Street photograph: street 018",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "street-018",
-          "path": "/images/street/street-018.jpg",
-          "blob": "a036877b39590b0301bdd142db5ef498e1aaac38"
-        }
-      },
-      {
-        "id": "gh-bfde8efabf5c45834afc",
-        "src": "/images/originals/github/8aaa9d245f518a3218c7cdf7778e6cc711991dc7.jpg",
-        "width": 3000,
-        "height": 2047,
-        "alt": "Street photograph: street 023",
-        "github": {
-          "repository": "davidtaotao0711/bo-photography",
-          "photoId": "street-023",
-          "path": "/images/street/street-023.jpg",
-          "blob": "8aaa9d245f518a3218c7cdf7778e6cc711991dc7"
         }
       },
       {
@@ -764,16 +686,29 @@
         }
       },
       {
-        "id": "gh-e86ce4f018610d4b0aee",
-        "src": "/images/originals/github/6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee.jpg",
-        "width": 4333,
-        "height": 3476,
-        "alt": "Street photograph by Bo David",
+        "id": "gh-bfde8efabf5c45834afc",
+        "src": "/images/originals/github/8aaa9d245f518a3218c7cdf7778e6cc711991dc7.jpg",
+        "width": 3000,
+        "height": 2047,
+        "alt": "Street photograph: street 023",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "street-056",
-          "path": "/images/street/street-056.jpg",
-          "blob": "6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee"
+          "photoId": "street-023",
+          "path": "/images/street/street-023.jpg",
+          "blob": "8aaa9d245f518a3218c7cdf7778e6cc711991dc7"
+        }
+      },
+      {
+        "id": "gh-b2b8f675b9b7440854f3",
+        "src": "/images/originals/github/a036877b39590b0301bdd142db5ef498e1aaac38.jpg",
+        "width": 3000,
+        "height": 2025,
+        "alt": "Street photograph: street 018",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "street-018",
+          "path": "/images/street/street-018.jpg",
+          "blob": "a036877b39590b0301bdd142db5ef498e1aaac38"
         }
       },
       {
@@ -816,16 +751,89 @@
         }
       },
       {
-        "id": "gh-1c057c46cc1d71ae0c5e",
-        "src": "/images/originals/github/b1f9523771463b850ae971d018ae9ed2d8e896b1.jpg",
-        "width": 3130,
-        "height": 2075,
-        "alt": "KASHGAR Livestock Market photograph 2 by Bo David",
+        "id": "gh-e86ce4f018610d4b0aee",
+        "src": "/images/originals/github/6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee.jpg",
+        "width": 4333,
+        "height": 3476,
+        "alt": "Street photograph by Bo David",
         "github": {
           "repository": "davidtaotao0711/bo-photography",
-          "photoId": "kashgar-livestock-market-002",
-          "path": "/images/series/kashgar-livestock-market/002.jpg",
-          "blob": "b1f9523771463b850ae971d018ae9ed2d8e896b1"
+          "photoId": "street-056",
+          "path": "/images/street/street-056.jpg",
+          "blob": "6f2fa6fcda559d90cf9cee7a7e63219d1f2b7bee"
+        }
+      },
+      {
+        "id": "gh-63b0024d83c41dbf46dd",
+        "src": "/images/originals/github/626535a70c18b51bad70dd77c80d8f0ac6daa64d.jpg",
+        "width": 3000,
+        "height": 2000,
+        "alt": "Portrait photograph: portrait 007",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "portrait-007",
+          "path": "/images/portrait/portrait-007.jpg",
+          "blob": "626535a70c18b51bad70dd77c80d8f0ac6daa64d"
+        }
+      },
+      {
+        "id": "yellow-62b8914a-1202-47cb-b879-6d4ddaae3be1",
+        "src": "/images/originals/yellow/yellow-62b8914a-1202-47cb-b879-6d4ddaae3be1.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Warm color — 微信图片_20261021091623_647_111"
+      },
+      {
+        "id": "gh-234eea3720b38ac48326",
+        "src": "/images/originals/github/8c0910d54a262612e192e9730cb4a95cc051ed57.jpg",
+        "width": 3950,
+        "height": 6048,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-068",
+          "path": "/images/scenes/scenes-068.jpg",
+          "blob": "8c0910d54a262612e192e9730cb4a95cc051ed57"
+        }
+      },
+      {
+        "id": "yellow-71fb2894-a079-49c6-a036-28eea759bc44",
+        "src": "/images/originals/yellow/yellow-71fb2894-a079-49c6-a036-28eea759bc44.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Warm color — 微信图片_20261021091633_648_111"
+      },
+      {
+        "id": "gh-a72419790a90e38672ff",
+        "src": "/images/originals/github/828661736387dfec85010239003c64673b331d5b.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Scenes photograph by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "scenes-077",
+          "path": "/images/scenes/scenes-077.jpg",
+          "blob": "828661736387dfec85010239003c64673b331d5b"
+        }
+      },
+      {
+        "id": "yellow-8d55883a-343e-4602-a5ab-ae5fd7208cc7",
+        "src": "/images/originals/yellow/yellow-8d55883a-343e-4602-a5ab-ae5fd7208cc7.jpg",
+        "width": 4032,
+        "height": 5011,
+        "alt": "Warm color — 微信图片_20261021091603_645_111"
+      },
+      {
+        "id": "gh-3f81d1abd01447a0a998",
+        "src": "/images/originals/github/48de3b15d19e034fd92dfad6e6eb02c6fff79068.jpg",
+        "width": 4032,
+        "height": 6048,
+        "alt": "Tokyo photograph 2 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "tokyo-2026-002",
+          "path": "/images/series/tokyo-2026/002.jpg",
+          "blob": "48de3b15d19e034fd92dfad6e6eb02c6fff79068"
         }
       },
       {
@@ -866,6 +874,26 @@
           "path": "/images/series/kashgar-livestock-market/062.jpg",
           "blob": "b0e26f5f509c153c72b735a37f56b011c3a91afd"
         }
+      },
+      {
+        "id": "yellow-9340c1ef-3759-480a-95a4-1503e56b4cee",
+        "src": "/images/originals/yellow/yellow-9340c1ef-3759-480a-95a4-1503e56b4cee.jpg",
+        "width": 6048,
+        "height": 4032,
+        "alt": "Warm color — 微信图片_20261021091616_646_111"
+      },
+      {
+        "id": "gh-1c057c46cc1d71ae0c5e",
+        "src": "/images/originals/github/b1f9523771463b850ae971d018ae9ed2d8e896b1.jpg",
+        "width": 3130,
+        "height": 2075,
+        "alt": "KASHGAR Livestock Market photograph 2 by Bo David",
+        "github": {
+          "repository": "davidtaotao0711/bo-photography",
+          "photoId": "kashgar-livestock-market-002",
+          "path": "/images/series/kashgar-livestock-market/002.jpg",
+          "blob": "b1f9523771463b850ae971d018ae9ed2d8e896b1"
+        }
       }
     ],
     "indexCard": {
@@ -874,7 +902,208 @@
         "portrait"
       ],
       "after": []
-    }
+    },
+    "layout": [
+      {
+        "kind": "photo",
+        "id": "gh-cfe95465a808dd8d6269"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-9709c64964ee414773b5"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-5c297e0a3ce8956d96a2"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-6e55384bc606d1d0b05a"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-38b64fe7063c6292ddb9"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-116dde54-e076-414c-9ffa-b7fd95193a55",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-51d54d5c5eb7138abd12"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-5ea8328c19a1155bd6fe"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-efc490b7-bf8e-4d25-bb18-9e8e5340828b",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-ec7a8c535cc31a5aea6c"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-4c9a323f-ce25-48c6-a4ab-90c34c66e471",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-d58653f8-be4f-4766-b328-bae88d15ab87",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b4bd1713877aa5c9f4b8"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-9ea03e47-e235-4202-b4cb-5caa45e3f0b8",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-ef97a1dbfb22b0797f10"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-6c93d91f-a154-45de-9ce1-c9bbfbd1619b",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-0107b01b-d2ce-4a33-8183-583fe35700bd",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-53c82d4809c43729dc9a"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b35ceebadfc0ff54a12d"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-d925ff4caf08af2329c2"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-bfde8efabf5c45834afc"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-2aca9c77-ca4f-4fb6-9252-3cef613299d1",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-b2b8f675b9b7440854f3"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-fd0f33391a3a51e2868c"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-1ab91e59654cbabd7133"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-6d86f38c6aa3b67ed8b4"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-e86ce4f018610d4b0aee"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-3138c69c-a63a-4ef6-8705-9ace60d94650",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-e9b74748-b24e-4cf7-88d1-60713347740f",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-63b0024d83c41dbf46dd"
+      },
+      {
+        "kind": "photo",
+        "id": "yellow-62b8914a-1202-47cb-b879-6d4ddaae3be1"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-234eea3720b38ac48326"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-2fd7904a-9e77-4598-987d-cc5176bdf39d",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "yellow-71fb2894-a079-49c6-a036-28eea759bc44"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-8743ffec-f940-4529-8e2a-e9ab9219fb48",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-02048f10-f313-4cce-97f4-61075317dbf3",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-22c81db7-b96d-4dc6-b845-f83eead68b7e",
+        "orientation": "portrait"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-a72419790a90e38672ff"
+      },
+      {
+        "kind": "photo",
+        "id": "yellow-8d55883a-343e-4602-a5ab-ae5fd7208cc7"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-3f81d1abd01447a0a998"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-ce231f3a5841f9da2cb6"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-65d88bbc305a4cc388e4"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-1cd0259656bf92469268"
+      },
+      {
+        "kind": "photo",
+        "id": "yellow-9340c1ef-3759-480a-95a4-1503e56b4cee"
+      },
+      {
+        "kind": "blank",
+        "id": "blank-0c0debe1-e653-4b88-988e-da2cf4aebb83",
+        "orientation": "landscape"
+      },
+      {
+        "kind": "photo",
+        "id": "gh-1c057c46cc1d71ae0c5e"
+      }
+    ]
   },
   {
     "id": "monochrome",
