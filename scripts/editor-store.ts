@@ -6,8 +6,9 @@ import type { Project } from '../src/data/projects';
 import { saveProjectLayout } from '../src/lib/gallery-layout';
 import { saveIndexLayout } from '../src/lib/index-layout';
 import { generateAsset, type GeneratedAsset } from './image-pipeline';
+import { cloudThumbnail } from '../src/lib/cloud-photos';
 
-import { EditorError, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement } from '../src/lib/github-model';
+import { EditorError, addFromCloud, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement } from '../src/lib/github-model';
 export { EditorError } from '../src/lib/github-model';
 export function reorder<T extends { id: string }>(items: T[], ids: unknown): T[] {
   if (!Array.isArray(ids) || ids.length !== items.length || new Set(ids).size !== items.length || ids.some(id => typeof id !== 'string' || !items.some(item => item.id === id))) throw new EditorError('顺序数据不完整，请刷新后重试。');
@@ -28,7 +29,9 @@ export class EditorStore {
     const raw = await readFile(this.dataPath, 'utf8');
     const projects: Project[] = JSON.parse(raw);
     const manifest: Record<string, GeneratedAsset> = JSON.parse(await readFile(this.manifestPath, 'utf8'));
-    return { projects, revision: createHash('sha256').update(raw).digest('hex'), thumbnails: Object.fromEntries(Object.entries(manifest).map(([id, image]) => [id, `${image.base}-320.webp`])) };
+    const thumbnails = Object.fromEntries(Object.entries(manifest).map(([id, image]) => [id, `${image.base}-320.webp`]));
+    for (const photo of projects.flatMap(project => project.images)) if (photo.cloud) thumbnails[photo.id] = cloudThumbnail(photo);
+    return { projects, revision: createHash('sha256').update(raw).digest('hex'), thumbnails };
   }
   mutate(revision: string | undefined, action: (projects: Project[]) => Promise<void> | void) {
     const operation = this.queue.then(async () => {
@@ -76,6 +79,9 @@ export class EditorStore {
   }
   addFromLibrary(revision: string | undefined, slug: string, ids: unknown) {
     return this.mutate(revision, projects => addFromUnassigned(projects, slug, ids));
+  }
+  addFromCloud(revision: string | undefined, slug: string, assets: unknown) {
+    return this.mutate(revision, projects => addFromCloud(projects, slug, assets));
   }
   createProject(revision: string | undefined, title: unknown, arrangement: unknown = 'color') {
     return this.mutate(revision, projects => { createProject(projects, title, `project-${randomUUID()}`, arrangement); });

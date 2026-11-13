@@ -12,7 +12,8 @@ await copyFile('src/editor/editor.css',resolve(output,'__editor/assets/style.css
 await build({entryPoints:['src/editor/editor.ts'],outfile:resolve(output,'__editor/assets/editor.js'),bundle:true,minify:true,platform:'browser',format:'esm',target:'es2022'});
 const projects=JSON.parse(await readFile('src/data/projects.json','utf8'));
 const manifest=JSON.parse(await readFile('src/data/image-manifest.json','utf8'));
-const published=Object.fromEntries(projects.flatMap((p:{images:{id:string;src:string}[]})=>p.images).map((p:{id:string;src:string})=>[p.id,{base:manifest[p.id].base,original:p.src}]));
+const published=Object.fromEntries(projects.flatMap((project:{images:{id:string;src:string}[]})=>project.images)
+  .filter((photo:{id:string}) => manifest[photo.id]).map((photo:{id:string;src:string})=>[photo.id,{base:manifest[photo.id].base,original:photo.src}]));
 await writeFile(resolve(output,'__editor/assets/manifest.json'),JSON.stringify(published));
 // Raw originals remain in the private source repository; the website serves variants.
 const originals=resolve(output,'images/originals');

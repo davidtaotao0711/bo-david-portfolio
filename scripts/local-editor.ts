@@ -60,7 +60,7 @@ export default function localEditor(root: URL): AstroIntegration {
               return send(200, await store.upload(revision, slug, buffer, filename));
             }
             if (!request.headers['content-type']?.startsWith('application/json')) throw new EditorError('需要 JSON 请求。');
-            const raw = await body(request, 100_000);
+            const raw = await body(request, url.pathname === '/__editor/from-cloud' ? 1_000_000 : 100_000);
             let data;
             try { data = JSON.parse(raw.toString()); } catch { throw new EditorError('请求数据不正确。'); }
             if (url.pathname === '/__editor/order') return send(200, await store.saveOrder(revision, slug, data.ids, data.cover));
@@ -78,6 +78,7 @@ export default function localEditor(root: URL): AstroIntegration {
             if (url.pathname === '/__editor/projects-delete') return send(200, await store.deleteProject(revision, slug));
             if (url.pathname === '/__editor/photos-remove') return send(200, await store.removePhotos(revision, slug, data.ids));
             if (url.pathname === '/__editor/from-unassigned') return send(200, await store.addFromLibrary(revision, slug, data.ids));
+            if (url.pathname === '/__editor/from-cloud') return send(200, await store.addFromCloud(revision, slug, data.assets));
             if (url.pathname === '/__editor/projects-order') return send(200, await store.saveProjectOrder(revision, data.ids));
             if (url.pathname === '/__editor/clear-placeholders') return send(200, await store.clearPlaceholders(revision, slug));
             throw new EditorError('未找到此操作。', 404);

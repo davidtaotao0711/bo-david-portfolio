@@ -1,7 +1,8 @@
 import type { Project, PortfolioImage } from '../data/projects';
 import { saveProjectLayout, type LayoutSlot } from '../lib/gallery-layout';
 import { saveIndexLayout } from '../lib/index-layout';
-import { groupsFromData, mergeGroup, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement, repository as sourceRepository } from '../lib/github-model';
+import { groupsFromData, mergeGroup, addFromCloud, addFromUnassigned, createProject, deleteProject, removePhotos, setArrangement, repository as sourceRepository } from '../lib/github-model';
+import { cloudThumbnail } from '../lib/cloud-photos';
 export type Snapshot = { projects: Project[]; revision: string; thumbnails: Record<string, string> };
 export type Job = { state: 'idle' | 'running' | 'complete' | 'error'; message: string; completed: number; total: number };
 type PublishedAsset = { base: string; original: string };
@@ -50,6 +51,7 @@ export class GitHubEditor {
     const projects: Project[] = await this.json(dataPath, contentRepository, ref.object.sha);
     const thumbnails: Record<string, string> = {};
     for (const photo of projects.flatMap(p => p.images)) {
+      if (photo.cloud) { thumbnails[photo.id] = cloudThumbnail(photo); continue; }
       const asset = this.published[photo.id];
       if (asset?.original === photo.src) thumbnails[photo.id] = `${asset.base}-320.webp`;
       else {
@@ -72,7 +74,7 @@ export class GitHubEditor {
     await this.api(`${contentRepository}/git/refs/heads/main`, 'PATCH', { sha: next.sha, force: false });
     return this.load();
   }
-  async edit(path: string, slug: string, data: {ids?: string[]; cover?: string; title?: string; arrangement?: 'color' | 'theme'; layout?:LayoutSlot[]}, file?: File) {
+  async edit(path: string, slug: string, data: {ids?: string[]; cover?: string; title?: string; arrangement?: 'color' | 'theme'; layout?:LayoutSlot[]; assets?: unknown}, file?: File) {
     const projects = structuredClone(this.state.projects);
     if(path==='/index-layout'){
       saveIndexLayout(projects,data.arrangement,data.layout);
@@ -106,6 +108,9 @@ export class GitHubEditor {
     if (path === '/photos-remove') {
       removePhotos(projects, slug, data.ids);
       return this.commit(projects, 'Remove photos from project');
+    } else if (path === '/from-cloud') {
+      addFromCloud(projects, slug, data.assets);
+      return this.commit(projects, 'Add cloud photos to project');
     } else if (path === '/from-unassigned') {
       addFromUnassigned(projects, slug, data.ids);
       return this.commit(projects, 'Add library photos to project');

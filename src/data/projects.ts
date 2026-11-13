@@ -5,6 +5,7 @@ export interface PortfolioImage {
   height: number;
   alt: string;
   placeholderColor?: string;
+  cloud?: { variants: { width: number; src: string }[]; placeholder?: string };
   github?: { repository: string; photoId: string; path: string; blob: string };
 }
 
