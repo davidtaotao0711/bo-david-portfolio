@@ -1,4 +1,5 @@
 import type {Project, PortfolioImage} from '../data/projects';
+import { toCloudPhoto } from './cloud-photos';
 export const repository = 'davidtaotao0711/bo-photography';
 export class EditorError extends Error { constructor(message: string, public status = 400) { super(message); } }
 type RemotePhoto = { id: string; image: string; series?: string; alt?: string; title?: string; order?: number };
@@ -70,6 +71,21 @@ export function addFromUnassigned(projects: Project[], slug: string, ids: unknow
   for (const id of ids) {
     const photo = library.images.find(image => image.id === id)!;
     if (!target.images.some(image => samePhoto(image, photo))) target.images.push(structuredClone(photo));
+  }
+  if (!target.images.some(image => image.id === target.cover)) target.cover = target.images[0].id;
+}
+
+export function addFromCloud(projects: Project[], slug: string, assets: unknown) {
+  const target = projects.find(project => project.slug === slug && project.github?.key !== 'unassigned');
+  if (!target || !Array.isArray(assets) || !assets.length || assets.length > 100) {
+    throw new EditorError('请选择项目和 1–100 张云端照片。');
+  }
+  const photos = assets.map(value => {
+    try { return toCloudPhoto(value); }
+    catch (error) { throw new EditorError((error as Error).message); }
+  });
+  for (const photo of photos) {
+    if (!target.images.some(image => samePhoto(image, photo) || image.github?.path === photo.src)) target.images.push(photo);
   }
   if (!target.images.some(image => image.id === target.cover)) target.cover = target.images[0].id;
 }

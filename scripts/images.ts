@@ -28,7 +28,7 @@ for (const project of projects) {
     }
     usedIds.add(photo.id);
     imageSources.set(photo.id, source);
-    uniquePhotos.push(photo);
+    if (!photo.cloud) uniquePhotos.push(photo);
   }
 }
 let completed = 0;

@@ -1,8 +1,8 @@
 import type { Project } from '../data/projects';
 import { GitHubEditor } from './github-client';
 import { samePhoto } from '../lib/github-model';
+import { cloudEditor } from '../lib/cloud-photos';
 import { openLayoutEditor, hasUnsavedLayout } from './layout-editor';
-import type { LayoutSlot } from '../lib/gallery-layout';
 import { indexCanvas, indexProjects } from '../lib/index-layout';
 const hosted = document.documentElement.dataset.editor === 'github';
 const siteBase = hosted ? location.pathname.replace(/\/editor\/?$/, '') : '';
@@ -18,6 +18,8 @@ let dirty = false;
 let busy = false;
 let dragged: string | undefined;
 let removingPhotoId: string | undefined;
+let cloudPicker: Window | null = null;
+let cloudTarget = '';
 const orientationOptions = ['all', 'landscape', 'portrait', 'square'] as const;
 type OrientationFilter = typeof orientationOptions[number];
 const orientationLabels = {all:'全部',landscape:'横图',portrait:'竖图',square:'方图'};
@@ -74,6 +76,7 @@ function controls() {
   $<HTMLButtonElement>('#refresh-content').disabled = busy || dirty;
   $<HTMLButtonElement>('#github-sync').disabled = busy || dirty;
   $<HTMLButtonElement>('#from-unassigned').disabled = busy || dirty || !project() || project()?.github?.key === 'unassigned';
+  $<HTMLButtonElement>('#from-cloud').disabled = busy || dirty || !project() || project()?.github?.key === 'unassigned';
   $<HTMLButtonElement>('#save').disabled = busy || !dirty;
   $<HTMLButtonElement>('#discard').disabled = busy || !dirty;
   $<HTMLInputElement>('#upload').disabled = busy || dirty || !project();
@@ -202,7 +205,7 @@ function render() {
   renderPhotos(); controls();
 }
 async function request(path: string, data: unknown, file?: File): Promise<Snapshot> {
-  if (hosted) return remote!.edit(path, selected, data as {ids?:string[];cover?:string;title?:string;arrangement?:'color'|'theme';layout?:LayoutSlot[]}, file);
+  if (hosted) return remote!.edit(path, selected, data as Parameters<GitHubEditor['edit']>[2], file);
   const response = await fetch(`/__editor${path}?project=${encodeURIComponent(selected)}`, { method: 'POST', headers: { 'X-BO-Editor': 'local', 'If-Match': state.revision, 'Content-Type': file ? 'application/octet-stream' : 'application/json', ...(file ? { 'X-File-Name': encodeURIComponent(file.name) } : {}) }, body: file ?? JSON.stringify(data) });
   const result = await response.json();
   if (!response.ok) throw new Error(result.error ?? '保存失败，请重试。');
@@ -263,6 +266,22 @@ $('#delete-confirm').addEventListener('click', () => {
 });
 $('#save').addEventListener('click', () => void operation(() => request('/order', { ids: order, cover }), '顺序与封面已保存，网站已更新。'));
 const libraryDialog = $<HTMLDialogElement>('#library-dialog');
+$('#from-cloud').addEventListener('click', () => {
+  if (busy || dirty || !project()) return;
+  cloudTarget = selected;
+  const url = `${cloudEditor}/editor/cloud-picker?${new URLSearchParams({ origin: location.origin })}`;
+  cloudPicker = window.open(url, 'bo-cloud-picker', 'popup,width=1100,height=850');
+  if (!cloudPicker) status('请允许弹出云端图库窗口。', true);
+});
+window.addEventListener('message', event => {
+  if (!cloudPicker || event.source !== cloudPicker || event.origin !== cloudEditor || event.data?.type !== 'bo-cloud-photos') return;
+  cloudPicker = null;
+  if (busy || dirty || selected !== cloudTarget) {
+    status('当前项目已切换或有未保存的修改，请重新打开图库。', true);
+    return;
+  }
+  void operation(() => request('/from-cloud', { assets: event.data.assets }), '云端照片已加入当前项目。');
+});
 function updateLibraryCount() {
   const count = $('#library-grid').querySelectorAll('input:checked').length;
   const hiddenCount = $('#library-grid').querySelectorAll('[hidden] input:checked').length;
